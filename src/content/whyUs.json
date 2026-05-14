@@ -1,8 +1,24 @@
 {
   "items": [
-    { "icon": "trophy", "title": "5+ Năm Kinh Nghiệm",     "desc": "Từ xe phổ thông đến siêu xe, đội ngũ giàu kinh nghiệm thực chiến." },
-    { "icon": "shield", "title": "Chất Liệu Chính Hãng",   "desc": "3M USA, Avery Dennison, Teckwrap — nhập khẩu chính ngạch, có CO/CQ." },
-    { "icon": "hand",   "title": "Thi Công Thủ Công",      "desc": "Cắt gấp mí thủ công tỉ mỉ — không dùng máy ép, đảm bảo độ bền tối đa." },
-    { "icon": "doc",    "title": "Bảo Hành Dài Hạn",       "desc": "Cam kết chất lượng bằng văn bản, hỗ trợ sau bán nhanh chóng." }
+    {
+      "icon": "trophy",
+      "title": "9+ Năm Kinh Nghiệm",
+      "desc": "Từ xe phổ thông đến siêu xe, đội ngũ giàu kinh nghiệm thực chiến."
+    },
+    {
+      "icon": "shield",
+      "title": "Chất Liệu Chính Hãng",
+      "desc": "3M USA, Avery Dennison, Teckwrap — nhập khẩu chính ngạch, có CO/CQ."
+    },
+    {
+      "icon": "hand",
+      "title": "Thi Công Thủ Công",
+      "desc": "Cắt gấp mí thủ công tỉ mỉ — không dùng máy ép, đảm bảo độ bền tối đa."
+    },
+    {
+      "icon": "doc",
+      "title": "Bảo Hành Dài Hạn",
+      "desc": "Cam kết chất lượng bằng văn bản, hỗ trợ sau bán nhanh chóng."
+    }
   ]
 }
