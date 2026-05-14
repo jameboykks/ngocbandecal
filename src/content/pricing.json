@@ -1,0 +1,41 @@
+[
+  {
+    "name": "GÓI CƠ BẢN",
+    "sub": "Wrap đổi màu decal thường",
+    "price": "8.000.000",
+    "unit": "VNĐ / xe 4 chỗ",
+    "features": [
+      "Decal chất lượng tiêu chuẩn",
+      "Thi công tỉ mỉ",
+      "Bảo hành 1 năm",
+      "Tư vấn màu sắc"
+    ],
+    "featured": false
+  },
+  {
+    "name": "GÓI CAO CẤP",
+    "sub": "PPF 3M / Teckwrap USA",
+    "price": "15.000.000",
+    "unit": "VNĐ / xe 4 chỗ",
+    "features": [
+      "PPF chính hãng nhập khẩu",
+      "Cắt gấp mí thủ công",
+      "Bảo hành 3-5 năm",
+      "Bảo dưỡng định kỳ miễn phí"
+    ],
+    "featured": true
+  },
+  {
+    "name": "GÓI COMBO VIP",
+    "sub": "Wrap + PPF + Film + Detailing",
+    "price": "25.000.000",
+    "unit": "VNĐ / xe 4 chỗ",
+    "features": [
+      "Full combo trọn gói",
+      "Ưu đãi giá hấp dẫn",
+      "Bảo hành toàn diện",
+      "Detailing định kỳ kèm theo"
+    ],
+    "featured": false
+  }
+]

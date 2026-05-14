@@ -1,0 +1,258 @@
+backend:
+  name: github
+  repo: jameboykks/ngocbandecal
+  branch: main
+  base_url: https://ngocbandecal.vercel.app
+  auth_endpoint: api/auth
+
+# Where uploaded images go (relative to repo root)
+media_folder: "public/images/ngoc-ban/uploads"
+public_folder: "/images/ngoc-ban/uploads"
+
+# Force published commits straight to main
+publish_mode: simple
+
+site_url: https://ngocbandecal.vercel.app
+display_url: https://ngocbandecal.vercel.app
+logo_url: https://ngocbandecal.vercel.app/favicon.svg
+locale: vi
+
+collections:
+  # ============================================================
+  # Settings (file collection — single instances)
+  # ============================================================
+  - name: settings
+    label: "⚙️ Cài đặt chung"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: src/content/site.json
+        name: site
+        label: "Thông tin shop"
+        fields:
+          - { name: name,        label: "Tên ngắn",        widget: string }
+          - { name: fullName,    label: "Tên đầy đủ",      widget: string }
+          - { name: owner,       label: "Chủ shop",        widget: string }
+          - { name: experience,  label: "Năm kinh nghiệm", widget: string }
+          - { name: address,     label: "Địa chỉ",         widget: string }
+          - { name: hotline,     label: "Hotline (hiển thị)", widget: string }
+          - { name: hotlineRaw,  label: "Hotline (số sạch để gọi)", widget: string }
+          - { name: email,       label: "Email",           widget: string }
+          - { name: hours,       label: "Giờ làm việc",    widget: string }
+          - { name: facebook,    label: "Link Facebook",   widget: string }
+          - { name: tiktok,      label: "Link TikTok",     widget: string }
+          - { name: zalo,        label: "Link Zalo",       widget: string }
+          - { name: messenger,   label: "Link Messenger",  widget: string }
+          - { name: maps,        label: "Link Google Maps",widget: string }
+          - { name: socialProof, label: "Câu social proof",widget: string }
+
+      - file: src/content/stats.json
+        name: stats
+        label: "Số liệu Hero (4 con số)"
+        fields:
+          - name: items
+            label: Stats
+            widget: list
+            min: 4
+            max: 4
+            summary: "{{fields.value}} {{fields.label}}"
+            fields:
+              - { name: value, label: "Giá trị (vd: 5000+)", widget: string }
+              - { name: label, label: "Nhãn (vd: Khách hàng)", widget: string }
+
+      - file: src/content/brands.json
+        name: brands
+        label: "Hãng xe (marquee)"
+        fields:
+          - name: items
+            label: "Danh sách hãng (chữ in hoa)"
+            widget: list
+            field: { name: brand, label: Brand, widget: string }
+
+      - file: src/content/whyUs.json
+        name: whyUs
+        label: "Vì sao chọn Ngọc Bàn (4 mục)"
+        fields:
+          - name: items
+            label: Items
+            widget: list
+            min: 4
+            max: 4
+            summary: "{{fields.title}}"
+            fields:
+              - { name: icon,  label: "Icon (trophy/shield/hand/doc)", widget: select, options: [trophy, shield, hand, doc] }
+              - { name: title, label: "Tiêu đề",       widget: string }
+              - { name: desc,  label: "Mô tả",         widget: text }
+
+      - file: src/content/process.json
+        name: process
+        label: "Quy trình thi công (5 bước)"
+        fields:
+          - name: items
+            label: Steps
+            widget: list
+            min: 5
+            max: 5
+            summary: "{{fields.n}}. {{fields.title}}"
+            fields:
+              - { name: n,     label: "Số thứ tự (vd: 01)", widget: string }
+              - { name: title, label: "Tên bước",            widget: string }
+              - { name: desc,  label: "Mô tả",               widget: text }
+
+      - file: src/content/pricing.json
+        name: pricing
+        label: "Bảng giá (3 gói)"
+        fields:
+          - name: items
+            label: "Gói dịch vụ"
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.name}} — {{fields.price}}đ"
+            fields:
+              - { name: name,     label: "Tên gói",                 widget: string }
+              - { name: sub,      label: "Mô tả ngắn",              widget: string }
+              - { name: price,    label: "Giá (vd: 8.000.000)",     widget: string }
+              - { name: unit,     label: "Đơn vị (VNĐ/xe 4 chỗ)",   widget: string }
+              - name: features
+                label: "Tính năng (mỗi dòng 1 tính năng)"
+                widget: list
+                field: { name: item, label: Item, widget: string }
+              - { name: featured, label: "Nổi bật (gói khuyến nghị)", widget: boolean, default: false }
+
+      - file: src/content/testimonials.json
+        name: testimonials
+        label: "Cảm nhận khách hàng"
+        fields:
+          - name: items
+            label: Reviews
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: text, label: "Nội dung review", widget: text }
+              - { name: name, label: "Tên khách",       widget: string }
+              - { name: area, label: "Khu vực",         widget: string }
+
+      - file: src/content/faqs.json
+        name: faqs
+        label: "FAQ (Câu hỏi thường gặp)"
+        fields:
+          - name: items
+            label: FAQs
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { name: q, label: "Câu hỏi",  widget: string }
+              - { name: a, label: "Trả lời",  widget: text }
+
+      - file: src/content/videos.json
+        name: videos
+        label: "Video TikTok (3 thumbnail)"
+        fields:
+          - name: items
+            label: Videos
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Tiêu đề",        widget: string }
+              - { name: thumb, label: "Ảnh thumbnail",  widget: image }
+              - { name: url,   label: "Link TikTok",    widget: string }
+
+      - file: src/content/beforeAfter.json
+        name: beforeAfter
+        label: "Trước & Sau (slider)"
+        fields:
+          - name: items
+            label: Pairs
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title,  label: "Tiêu đề",          widget: string }
+              - { name: before, label: "Ảnh TRƯỚC",        widget: image }
+              - { name: after,  label: "Ảnh SAU",          widget: image }
+              - { name: tag,    label: "Loại dịch vụ",     widget: string }
+
+  # ============================================================
+  # Services (file collection wrapped as a single list — easier to reorder)
+  # ============================================================
+  - name: services
+    label: "🛠️ Dịch vụ (6 dịch vụ chính)"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: src/content/services.json
+        name: services
+        label: "Danh sách dịch vụ"
+        fields:
+          - name: items
+            label: Services
+            widget: list
+            summary: "{{fields.n}}. {{fields.title}}"
+            fields:
+              - { name: n,         label: "Số (01-06)",                widget: string }
+              - { name: slug,      label: "Slug URL (vd: wrap-doi-mau)", widget: string }
+              - { name: title,     label: "Tên dịch vụ (CHỮ HOA)",     widget: string }
+              - { name: desc,      label: "Mô tả ngắn",                widget: text }
+              - { name: icon,      label: "Icon",                      widget: select, options: [paint, shield, sun, pen, sparkle, wrench] }
+              - { name: cover,     label: "Ảnh đại diện",              widget: image }
+              - name: features
+                label: "Tính năng nổi bật"
+                widget: list
+                field: { name: item, label: Item, widget: string }
+              - { name: priceFrom, label: "Giá từ (vd: 8.000.000)",    widget: string }
+
+  # ============================================================
+  # Portfolio
+  # ============================================================
+  - name: portfolio
+    label: "🖼️ Tác phẩm (Portfolio)"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: src/content/portfolio.json
+        name: portfolio
+        label: "Danh sách tác phẩm"
+        fields:
+          - name: items
+            label: Items
+            widget: list
+            summary: "#{{fields.id}} — {{fields.car}}"
+            fields:
+              - { name: id,   label: "ID (số)", widget: number, value_type: int, min: 1, step: 1 }
+              - { name: tag,  label: "Loại dịch vụ", widget: select, options: ["Wrap đổi màu", "PPF", "Tem xe", "Film cách nhiệt"] }
+              - { name: car,  label: "Tên xe / mô tả", widget: string }
+              - { name: img,  label: "Ảnh", widget: image }
+              - { name: size, label: "Kích thước hiển thị", widget: select, options: [normal, tall, wide], default: normal }
+
+  # ============================================================
+  # Blog posts (folder collection — each post = own file)
+  # ============================================================
+  - name: posts
+    label: "📰 Bài viết Blog"
+    folder: "src/content/posts"
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    editor:
+      preview: false
+    fields:
+      - { name: slug,     label: "Slug URL",   widget: string, hint: "Vd: huong-dan-chon-mau-wrap-2026 (không dấu, dùng dấu gạch nối)" }
+      - { name: title,    label: "Tiêu đề",    widget: string }
+      - { name: excerpt,  label: "Tóm tắt",    widget: text }
+      - { name: cover,    label: "Ảnh bìa",    widget: image }
+      - { name: date,     label: "Ngày đăng",  widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: cat,      label: "Danh mục",   widget: string, hint: "Vd: Wrap Decal, PPF, Film Cách Nhiệt..." }
+      - { name: readTime, label: "Thời gian đọc (vd: 6 phút)", widget: string }
+      - name: body
+        label: "Nội dung (mỗi đoạn nhập 1 dòng)"
+        widget: list
+        field: { name: paragraph, label: Đoạn, widget: text }
