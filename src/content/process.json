@@ -16,14 +16,14 @@
       "desc": "Sắp xếp lịch thi công phù hợp với lịch trình của khách."
     },
     {
-      "n": "05",
-      "title": "Bàn Giao",
-      "desc": "Kiểm tra chất lượng kỹ lưỡng, bảo hành dài hạn sau bàn giao."
-    },
-    {
       "n": "04",
       "title": "Kiểm tra ",
       "desc": "Tiếp nhận - Kiểm tra tình trạng xe , báo cáo với khách hàng về tình trạng trước khi thi công - Xử lý bề mặt,..."
+    },
+    {
+      "n": "05",
+      "title": "Thi Công - Kiểm Tra - Bàn giao ",
+      "desc": ". Tiến hành thi công trong phòng khép kín , đạt chuẩn \n. Kiểm tra lại sản phẩm sau khi hoàn thành \n. Bàn giao sản phẩm đến trực tiếp cho khách hàng "
     }
   ]
 }
