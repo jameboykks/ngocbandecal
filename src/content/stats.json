@@ -1,8 +1,20 @@
 {
   "items": [
-    { "value": "5000+", "label": "Khách hàng" },
-    { "value": "5+", "label": "Năm kinh nghiệm" },
-    { "value": "50+", "label": "Dòng xe" },
-    { "value": "100%", "label": "Bảo hành" }
+    {
+      "value": "5000+",
+      "label": "Khách hàng"
+    },
+    {
+      "value": "50+",
+      "label": "Dòng xe"
+    },
+    {
+      "value": "100%",
+      "label": "Bảo hành"
+    },
+    {
+      "value": "9+ Năm kinh nghiệm ",
+      "label": "Được chứng nhận kỉ thuật đạt chuẩn của 3M "
+    }
   ]
 }
