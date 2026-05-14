@@ -1,6 +1,8 @@
-[
-  { "value": "5000+", "label": "Khách hàng" },
-  { "value": "5+", "label": "Năm kinh nghiệm" },
-  { "value": "50+", "label": "Dòng xe" },
-  { "value": "100%", "label": "Bảo hành" }
-]
+{
+  "items": [
+    { "value": "5000+", "label": "Khách hàng" },
+    { "value": "5+", "label": "Năm kinh nghiệm" },
+    { "value": "50+", "label": "Dòng xe" },
+    { "value": "100%", "label": "Bảo hành" }
+  ]
+}

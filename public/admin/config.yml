@@ -68,7 +68,9 @@ collections:
           - name: items
             label: "Danh sách hãng (chữ in hoa)"
             widget: list
-            field: { name: brand, label: Brand, widget: string }
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Tên hãng (vd: PORSCHE)", widget: string }
 
       - file: src/content/whyUs.json
         name: whyUs

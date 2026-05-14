@@ -1,6 +1,7 @@
 // Content is sourced from JSON files in ../content/.
 // Edit those JSON files (or use the /admin Decap CMS) to change site content.
-// This file just re-exports them for compatibility with existing component imports.
+// Each list-style file is wrapped in { "items": [...] } so Decap can edit it
+// as a "files" collection — we unwrap the .items here for the components.
 
 import siteData from '../content/site.json';
 import statsData from '../content/stats.json';
@@ -15,7 +16,6 @@ import testimonialsData from '../content/testimonials.json';
 import faqsData from '../content/faqs.json';
 import videosData from '../content/videos.json';
 
-// Glob-import every blog post JSON; sort newest first.
 const postModules = import.meta.glob<{ default: Post }>('../content/posts/*.json', { eager: true });
 
 export type Post = {
@@ -38,17 +38,17 @@ export type PortfolioItem = {
 };
 
 export const SITE = siteData;
-export const STATS = statsData;
-export const BRANDS = brandsData;
-export const SERVICES = servicesData;
-export const PORTFOLIO = portfolioData as PortfolioItem[];
-export const BEFORE_AFTER = beforeAfterData;
-export const PRICING = pricingData;
-export const PROCESS = processData;
-export const WHY_US = whyUsData;
-export const TESTIMONIALS = testimonialsData;
-export const FAQS = faqsData;
-export const VIDEOS = videosData;
+export const STATS = statsData.items;
+export const BRANDS = brandsData.items.map(b => b.name);
+export const SERVICES = servicesData.items;
+export const PORTFOLIO = portfolioData.items as PortfolioItem[];
+export const BEFORE_AFTER = beforeAfterData.items;
+export const PRICING = pricingData.items;
+export const PROCESS = processData.items;
+export const WHY_US = whyUsData.items;
+export const TESTIMONIALS = testimonialsData.items;
+export const FAQS = faqsData.items;
+export const VIDEOS = videosData.items;
 
 export const FILTERS = ['Tất cả', 'Wrap đổi màu', 'PPF', 'Tem xe', 'Film cách nhiệt'];
 

@@ -1,98 +1,100 @@
-[
-  {
-    "n": "01",
-    "slug": "wrap-doi-mau",
-    "title": "WRAP ĐỔI MÀU Ô TÔ",
-    "desc": "Decal Avery, Teckwrap, 3M USA. Thay đổi diện mạo xe không cần sơn lại — bảo vệ sơn zin nguyên bản.",
-    "icon": "paint",
-    "cover": "/images/ngoc-ban/portfolio/p017.webp",
-    "features": [
-      "Decal cao cấp Avery, Teckwrap, 3M nhập khẩu chính ngạch",
-      "Hơn 200 màu sắc & kết cấu (matte, satin, gloss, chrome, chuyển màu)",
-      "Bảo vệ sơn zin — gỡ ra không để lại keo",
-      "Thi công 2-3 ngày tuỳ độ phức tạp",
-      "Bảo hành 1-2 năm tuỳ chất liệu"
-    ],
-    "priceFrom": "8.000.000"
-  },
-  {
-    "n": "02",
-    "slug": "dan-ppf",
-    "title": "DÁN PPF BẢO VỆ SƠN",
-    "desc": "Lớp áo giáp trong suốt bảo vệ sơn zin khỏi trầy xước, bụi đá. Cắt gấp mí thủ công tỉ mỉ.",
-    "icon": "shield",
-    "cover": "/images/ngoc-ban/portfolio/p018.webp",
-    "features": [
-      "PPF 3M Pro Series, Teckwrap PPF chính hãng có CO/CQ",
-      "Cắt gấp mí thủ công 100% — không hở viền, không bám bụi",
-      "Tự lành (self-healing) vết xước nhỏ dưới nhiệt mặt trời",
-      "Chống ố vàng theo thời gian, độ trong suốt 99%",
-      "Bảo hành 5-10 năm"
-    ],
-    "priceFrom": "15.000.000"
-  },
-  {
-    "n": "03",
-    "slug": "film-cach-nhiet",
-    "title": "FILM CÁCH NHIỆT",
-    "desc": "3M Crystalline, Ceramax, film chuyển màu. Chống nóng, chống UV, bảo vệ nội thất.",
-    "icon": "sun",
-    "cover": "/images/ngoc-ban/portfolio/p019.webp",
-    "features": [
-      "3M Crystalline — chuẩn Mỹ, chống nóng tới 97% IR",
-      "Ceramax công nghệ ceramic — bền đẹp lâu dài",
-      "Film chuyển màu (chameleon) cao cấp",
-      "Chống UV 99%, bảo vệ da & nội thất xe",
-      "Bảo hành 5-7 năm"
-    ],
-    "priceFrom": "5.000.000"
-  },
-  {
-    "n": "04",
-    "slug": "tem-xe",
-    "title": "THIẾT KẾ & DÁN TEM XE",
-    "desc": "Tem sườn, tem UV trong cao cấp, tem quảng cáo. Design riêng theo yêu cầu khách hàng.",
-    "icon": "pen",
-    "cover": "/images/ngoc-ban/portfolio/p020.webp",
-    "features": [
-      "Đội ngũ designer riêng — tư vấn concept theo cá tính",
-      "Tem UV trong cao cấp — bền màu trên 5 năm",
-      "In offset & in kỹ thuật số chất lượng cao",
-      "Tem quảng cáo doanh nghiệp, tem sườn thể thao",
-      "Hoàn thiện 1-2 ngày sau duyệt thiết kế"
-    ],
-    "priceFrom": "2.000.000"
-  },
-  {
-    "n": "05",
-    "slug": "cham-soc-xe",
-    "title": "CHĂM SÓC XE CHUYÊN SÂU",
-    "desc": "Detailing nội ngoại thất, đánh bóng, phủ Ceramic, vệ sinh khoang máy chuyên nghiệp.",
-    "icon": "sparkle",
-    "cover": "/images/ngoc-ban/portfolio/p021.webp",
-    "features": [
-      "Đánh bóng 3 bước phục hồi sơn xe cũ",
-      "Phủ Ceramic 9H chống xước, chống nước",
-      "Detailing nội thất — diệt khuẩn, khử mùi sâu",
-      "Vệ sinh khoang máy chuyên nghiệp",
-      "Phủ ghế da, làm mới taplo nứt"
-    ],
-    "priceFrom": "1.500.000"
-  },
-  {
-    "n": "06",
-    "slug": "do-do-phu-kien",
-    "title": "ĐỒ ĐỘ & PHỤ KIỆN",
-    "desc": "Mâm, đèn bi, cách âm, ghế da Nappa, camera hành trình, phủ gầm và nhiều phụ kiện cao cấp.",
-    "icon": "wrench",
-    "cover": "/images/ngoc-ban/portfolio/p022.webp",
-    "features": [
-      "Mâm độ chính hãng BBS, Vossen, Rays...",
-      "Đèn bi LED/Laser — sáng vượt trội, tiết kiệm điện",
-      "Cách âm Dynamat, STP — êm như Mercedes",
-      "Bọc ghế da Nappa, da bò Italy",
-      "Camera hành trình 360°, cảm biến áp suất lốp"
-    ],
-    "priceFrom": "3.000.000"
-  }
-]
+{
+  "items": [
+    {
+      "n": "01",
+      "slug": "wrap-doi-mau",
+      "title": "WRAP ĐỔI MÀU Ô TÔ",
+      "desc": "Decal Avery, Teckwrap, 3M USA. Thay đổi diện mạo xe không cần sơn lại — bảo vệ sơn zin nguyên bản.",
+      "icon": "paint",
+      "cover": "/images/ngoc-ban/portfolio/p017.webp",
+      "features": [
+        "Decal cao cấp Avery, Teckwrap, 3M nhập khẩu chính ngạch",
+        "Hơn 200 màu sắc & kết cấu (matte, satin, gloss, chrome, chuyển màu)",
+        "Bảo vệ sơn zin — gỡ ra không để lại keo",
+        "Thi công 2-3 ngày tuỳ độ phức tạp",
+        "Bảo hành 1-2 năm tuỳ chất liệu"
+      ],
+      "priceFrom": "8.000.000"
+    },
+    {
+      "n": "02",
+      "slug": "dan-ppf",
+      "title": "DÁN PPF BẢO VỆ SƠN",
+      "desc": "Lớp áo giáp trong suốt bảo vệ sơn zin khỏi trầy xước, bụi đá. Cắt gấp mí thủ công tỉ mỉ.",
+      "icon": "shield",
+      "cover": "/images/ngoc-ban/portfolio/p018.webp",
+      "features": [
+        "PPF 3M Pro Series, Teckwrap PPF chính hãng có CO/CQ",
+        "Cắt gấp mí thủ công 100% — không hở viền, không bám bụi",
+        "Tự lành (self-healing) vết xước nhỏ dưới nhiệt mặt trời",
+        "Chống ố vàng theo thời gian, độ trong suốt 99%",
+        "Bảo hành 5-10 năm"
+      ],
+      "priceFrom": "15.000.000"
+    },
+    {
+      "n": "03",
+      "slug": "film-cach-nhiet",
+      "title": "FILM CÁCH NHIỆT",
+      "desc": "3M Crystalline, Ceramax, film chuyển màu. Chống nóng, chống UV, bảo vệ nội thất.",
+      "icon": "sun",
+      "cover": "/images/ngoc-ban/portfolio/p019.webp",
+      "features": [
+        "3M Crystalline — chuẩn Mỹ, chống nóng tới 97% IR",
+        "Ceramax công nghệ ceramic — bền đẹp lâu dài",
+        "Film chuyển màu (chameleon) cao cấp",
+        "Chống UV 99%, bảo vệ da & nội thất xe",
+        "Bảo hành 5-7 năm"
+      ],
+      "priceFrom": "5.000.000"
+    },
+    {
+      "n": "04",
+      "slug": "tem-xe",
+      "title": "THIẾT KẾ & DÁN TEM XE",
+      "desc": "Tem sườn, tem UV trong cao cấp, tem quảng cáo. Design riêng theo yêu cầu khách hàng.",
+      "icon": "pen",
+      "cover": "/images/ngoc-ban/portfolio/p020.webp",
+      "features": [
+        "Đội ngũ designer riêng — tư vấn concept theo cá tính",
+        "Tem UV trong cao cấp — bền màu trên 5 năm",
+        "In offset & in kỹ thuật số chất lượng cao",
+        "Tem quảng cáo doanh nghiệp, tem sườn thể thao",
+        "Hoàn thiện 1-2 ngày sau duyệt thiết kế"
+      ],
+      "priceFrom": "2.000.000"
+    },
+    {
+      "n": "05",
+      "slug": "cham-soc-xe",
+      "title": "CHĂM SÓC XE CHUYÊN SÂU",
+      "desc": "Detailing nội ngoại thất, đánh bóng, phủ Ceramic, vệ sinh khoang máy chuyên nghiệp.",
+      "icon": "sparkle",
+      "cover": "/images/ngoc-ban/portfolio/p021.webp",
+      "features": [
+        "Đánh bóng 3 bước phục hồi sơn xe cũ",
+        "Phủ Ceramic 9H chống xước, chống nước",
+        "Detailing nội thất — diệt khuẩn, khử mùi sâu",
+        "Vệ sinh khoang máy chuyên nghiệp",
+        "Phủ ghế da, làm mới taplo nứt"
+      ],
+      "priceFrom": "1.500.000"
+    },
+    {
+      "n": "06",
+      "slug": "do-do-phu-kien",
+      "title": "ĐỒ ĐỘ & PHỤ KIỆN",
+      "desc": "Mâm, đèn bi, cách âm, ghế da Nappa, camera hành trình, phủ gầm và nhiều phụ kiện cao cấp.",
+      "icon": "wrench",
+      "cover": "/images/ngoc-ban/portfolio/p022.webp",
+      "features": [
+        "Mâm độ chính hãng BBS, Vossen, Rays...",
+        "Đèn bi LED/Laser — sáng vượt trội, tiết kiệm điện",
+        "Cách âm Dynamat, STP — êm như Mercedes",
+        "Bọc ghế da Nappa, da bò Italy",
+        "Camera hành trình 360°, cảm biến áp suất lốp"
+      ],
+      "priceFrom": "3.000.000"
+    }
+  ]
+}

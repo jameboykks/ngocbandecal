@@ -1,7 +1,9 @@
-[
-  { "n": "01", "title": "Tư Vấn",  "desc": "Lắng nghe nhu cầu, tư vấn chất liệu phù hợp với xe và ngân sách." },
-  { "n": "02", "title": "Báo Giá", "desc": "Báo giá chi tiết, minh bạch từng hạng mục, không phát sinh." },
-  { "n": "03", "title": "Lên Lịch","desc": "Sắp xếp lịch thi công phù hợp với lịch trình của khách." },
-  { "n": "04", "title": "Thi Công","desc": "Đội ngũ kỹ thuật thực hiện tỉ mỉ, chuyên nghiệp từng chi tiết." },
-  { "n": "05", "title": "Bàn Giao","desc": "Kiểm tra chất lượng kỹ lưỡng, bảo hành dài hạn sau bàn giao." }
-]
+{
+  "items": [
+    { "n": "01", "title": "Tư Vấn",   "desc": "Lắng nghe nhu cầu, tư vấn chất liệu phù hợp với xe và ngân sách." },
+    { "n": "02", "title": "Báo Giá",  "desc": "Báo giá chi tiết, minh bạch từng hạng mục, không phát sinh." },
+    { "n": "03", "title": "Lên Lịch", "desc": "Sắp xếp lịch thi công phù hợp với lịch trình của khách." },
+    { "n": "04", "title": "Thi Công", "desc": "Đội ngũ kỹ thuật thực hiện tỉ mỉ, chuyên nghiệp từng chi tiết." },
+    { "n": "05", "title": "Bàn Giao", "desc": "Kiểm tra chất lượng kỹ lưỡng, bảo hành dài hạn sau bàn giao." }
+  ]
+}
