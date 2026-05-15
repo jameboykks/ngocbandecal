@@ -40,6 +40,19 @@
         "Khử mùi sau khi hoàn thành ",
         "Nhận và Giao xe miễn phí "
       ]
+    },
+    {
+      "featured": false,
+      "name": "GÓI DÁN PPF THÔNG THƯỜNG ",
+      "price": "25 - 36 TRIỆU ",
+      "unit": "SEDAN - SUV ",
+      "sub": "PPF TECKWRAP USA ",
+      "features": [
+        "PPF nhập khẩu chính hãng ",
+        "Bảo hành điện tử 5 năm ( 3 năm ố màu ) ",
+        "Chịu được nhiệt độ cao , tỉ lệ ngã màu 3 năm ",
+        "Độ bóng vừa phải , có hiệu ứng lá sen kháng nước "
+      ]
     }
   ]
 }
