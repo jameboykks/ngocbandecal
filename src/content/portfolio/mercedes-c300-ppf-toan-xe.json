@@ -1,36 +1,45 @@
 {
-  "slug": "mercedes-c300-ppf-toan-xe",
-  "id": 2,
-  "title": "Mercedes C300 — PPF Toàn Xe",
-  "tag": "PPF",
-  "cover": "/images/ngoc-ban/portfolio/p002.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p002.webp",
-    "/images/ngoc-ban/portfolio/p053.webp",
-    "/images/ngoc-ban/portfolio/p061.webp",
-    "/images/ngoc-ban/portfolio/p088.webp"
-  ],
   "size": "wide",
+  "slug": "Volkswagen Beetle Dune",
   "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7830080403413_9bde5b2a22818d482d135f623e8f945a.jpg",
+    "/images/ngoc-ban/uploads/z7830080377951_21ba5e5b81752f6151a1bc29783f50d3.jpg",
+    "/images/ngoc-ban/uploads/z7830080428510_f5ff80d3237bf56d58ccf1a68c294635.jpg",
+    "/images/ngoc-ban/uploads/z7830080428168_8e3534f863a89ced7347a656a277f3f5.jpg",
+    "/images/ngoc-ban/uploads/z7830080421803_bd5b4bb0a1338d85ce19b0e81852386d.jpg",
+    "/images/ngoc-ban/uploads/z7830080417095_7f032e92ac54da3b42ac37555203b866.jpg",
+    "/images/ngoc-ban/uploads/z7830080407157_16c1af5b016b11925b9b7f9b328e1dfb.jpg",
+    "/images/ngoc-ban/uploads/z7830080386584_8cd2f675dd0cc42ffbca02b8b3388422.jpg",
+    "/images/ngoc-ban/uploads/z7830080385512_4e1e8ec896ced71aa670909ddb7c5434.jpg",
+    "/images/ngoc-ban/uploads/z7830080373232_e9a778c5a3eb5cde58f1b3cda5865c02.jpg",
+    "/images/ngoc-ban/uploads/z7830080357414_6c0b3dd3aeca2ac11b0890eb354bc67e.jpg",
+    "/images/ngoc-ban/uploads/z7830080385512_4e1e8ec896ced71aa670909ddb7c5434.jpg",
+    "/images/ngoc-ban/uploads/z7830087332475_3b78b5136a7ea6a9c3951f58e7d16bba.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7830080357414_6c0b3dd3aeca2ac11b0890eb354bc67e.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Mercedes C300"
+      "label": "Dòng xe : Volkswagen Beetle Dune",
+      "value": "100"
     },
     {
-      "label": "Dịch vụ",
-      "value": "Dán PPF bảo vệ sơn"
+      "label": "Dịch vụ: Dán decal đổi màu xe ",
+      "value": "100"
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Chất liệu decal ",
+      "value": "Decal cao cấp "
     },
     {
       "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "value": "2-3 ngày "
     }
   ],
-  "description": "Mercedes C300 — PPF Toàn Xe — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Volkswagen Beetle Dune - WRAP ",
+  "content": "",
+  "tag": "Wrap đổi màu",
+  "id": 3,
+  "description": "  Volkswagen Beetle Dune \" Vàng Cát Nhám - Matte/Satin Sand \" : Tạo vẻ đẹp khỏe khoắn, bụi bặm, rất hợp với phong cách off-road nhẹ của bản Dune.— một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
