@@ -163,3 +163,13 @@ body {
 .studio-border {
   border-color: rgba(163,132,58,0.28);
 }
+
+.fs-viewer:fullscreen {
+  aspect-ratio: auto;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+.fs-viewer:fullscreen .absolute.inset-0 {
+  inset: 0;
+}
