@@ -2,9 +2,11 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { PORTFOLIO } from '../data/site';
+import { PORTFOLIO, SHOWCASE } from '../data/site';
 
-const FEATURED = PORTFOLIO.slice(0, 6);
+// Use admin-curated featured items; fall back to first 6 by id if admin hasn't ticked any.
+const featuredItems = PORTFOLIO.filter(p => p.featured);
+const FEATURED = (featuredItems.length > 0 ? featuredItems : PORTFOLIO).slice(0, 8);
 
 export default function HorizontalShowcase() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,16 +22,16 @@ export default function HorizontalShowcase() {
         <div className="absolute left-0 top-0 h-full w-full pointer-events-none">
           <div className="container-x h-full flex flex-col justify-center">
             <div className="max-w-md">
-              <div className="eyebrow mb-5">Featured Projects</div>
+              <div className="eyebrow mb-5">{SHOWCASE.eyebrow}</div>
               <h2 className="h-display text-5xl md:text-6xl mb-5 text-bg-primary">
-                CINEMATIC<br /><span className="text-gold-gradient">SHOWCASE</span>
+                {SHOWCASE.headingLine1}<br /><span className="text-gold-gradient">{SHOWCASE.headingLine2}</span>
               </h2>
               <p className="font-serif italic text-bg-primary/65 mb-6">
-                Cuộn xuống để xem những dự án nổi bật trượt qua màn hình theo style cinematic.
+                {SHOWCASE.description}
               </p>
               <div className="flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-bg-primary/45">
                 <span className="w-8 h-px bg-accent" />
-                Cuộn để xem
+                {SHOWCASE.scrollHint}
               </div>
             </div>
           </div>

@@ -194,6 +194,16 @@ collections:
               - { name: after,  label: "Ảnh SAU",          widget: image }
               - { name: tag,    label: "Loại dịch vụ",     widget: string }
 
+      - file: src/content/showcase.json
+        name: showcase
+        label: "Cinematic Showcase (heading + nội dung)"
+        fields:
+          - { name: eyebrow,      label: "Eyebrow (chữ nhỏ trên đầu)",                widget: string }
+          - { name: headingLine1, label: "Dòng tiêu đề 1 (chữ trắng)",                widget: string, hint: "VD: CINEMATIC" }
+          - { name: headingLine2, label: "Dòng tiêu đề 2 (highlight vàng)",           widget: string, hint: "VD: SHOWCASE" }
+          - { name: description,  label: "Mô tả ngắn dưới tiêu đề",                   widget: text }
+          - { name: scrollHint,   label: "Gợi ý cuộn (góc dưới của heading)",         widget: string, hint: "VD: Cuộn để xem" }
+
   # ============================================================
   # Services (file collection wrapped as a single list — easier to reorder)
   # ============================================================
@@ -251,7 +261,7 @@ collections:
         summary: "Ảnh {{index}}"
         field: { name: image, label: "Ảnh", widget: image }
       - { name: size,    label: "Kích thước trong grid", widget: select, options: [normal, tall, wide], default: normal }
-      - { name: featured, label: "Featured (hiển thị ở Cinematic Showcase trang chủ)", widget: boolean, default: false }
+      - { name: featured, label: "Featured (hiển thị ở Cinematic Showcase trang chủ)", widget: boolean, default: false, hint: "Tick để dự án này lên Cinematic Showcase. Nếu không tick item nào, hệ thống tự dùng 6 dự án đầu (theo ID)." }
       - { name: date,    label: "Ngày thi công (tuỳ chọn)", widget: string, required: false, hint: "Vd: 2026-04-15" }
       - name: specs
         label: "Thông số kỹ thuật (key/value)"
