@@ -77,10 +77,10 @@ export default function HorizontalShowcase() {
             className="relative shrink-0 w-[70vw] md:w-[55vw] lg:w-[42vw] xl:w-[36vw] aspect-[4/5] flex items-center justify-center bg-gradient-to-br from-accent/20 via-bg-contrast-soft to-bg-contrast border border-accent group"
           >
             <div className="text-center">
-              <div className="text-[10px] tracking-[0.3em] uppercase text-accent mb-4">Còn nhiều hơn nữa</div>
-              <div className="font-display text-4xl md:text-5xl text-gold-gradient mb-4">XEM TẤT CẢ</div>
+              <div className="text-[10px] tracking-[0.3em] uppercase text-accent mb-4">{SHOWCASE.endCardEyebrow}</div>
+              <div className="font-display text-4xl md:text-5xl text-gold-gradient mb-4">{SHOWCASE.endCardHeading}</div>
               <div className="inline-flex items-center gap-2 text-sm tracking-[0.25em] uppercase text-bg-primary">
-                Vào Gallery <ArrowRight size={16} className="group-hover:translate-x-2 transition" />
+                {SHOWCASE.endCardCTA} <ArrowRight size={16} className="group-hover:translate-x-2 transition" />
               </div>
             </div>
           </Link>

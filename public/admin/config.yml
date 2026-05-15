@@ -198,11 +198,14 @@ collections:
         name: showcase
         label: "Cinematic Showcase (heading + nội dung)"
         fields:
-          - { name: eyebrow,      label: "Eyebrow (chữ nhỏ trên đầu)",                widget: string }
-          - { name: headingLine1, label: "Dòng tiêu đề 1 (chữ trắng)",                widget: string, hint: "VD: CINEMATIC" }
-          - { name: headingLine2, label: "Dòng tiêu đề 2 (highlight vàng)",           widget: string, hint: "VD: SHOWCASE" }
-          - { name: description,  label: "Mô tả ngắn dưới tiêu đề",                   widget: text }
-          - { name: scrollHint,   label: "Gợi ý cuộn (góc dưới của heading)",         widget: string, hint: "VD: Cuộn để xem" }
+          - { name: eyebrow,         label: "Eyebrow (chữ nhỏ trên đầu)",                widget: string }
+          - { name: headingLine1,    label: "Dòng tiêu đề 1 (chữ trắng)",                widget: string, hint: "VD: CINEMATIC" }
+          - { name: headingLine2,    label: "Dòng tiêu đề 2 (highlight vàng)",           widget: string, hint: "VD: SHOWCASE" }
+          - { name: description,     label: "Mô tả ngắn dưới tiêu đề",                   widget: text }
+          - { name: scrollHint,      label: "Gợi ý cuộn (góc dưới của heading)",         widget: string, hint: "VD: Cuộn để xem" }
+          - { name: endCardEyebrow,  label: "Card cuối — Eyebrow",                       widget: string, hint: "VD: Còn nhiều hơn nữa" }
+          - { name: endCardHeading,  label: "Card cuối — Tiêu đề lớn (gradient vàng)",   widget: string, hint: "VD: XEM TẤT CẢ" }
+          - { name: endCardCTA,      label: "Card cuối — Nút CTA",                       widget: string, hint: "VD: Vào Gallery" }
 
   # ============================================================
   # Services (file collection wrapped as a single list — easier to reorder)
