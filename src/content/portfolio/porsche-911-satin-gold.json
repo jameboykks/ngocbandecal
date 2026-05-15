@@ -1,0 +1,36 @@
+{
+  "slug": "porsche-911-satin-gold",
+  "id": 1,
+  "title": "Porsche 911 — Satin Gold",
+  "tag": "Wrap đổi màu",
+  "cover": "/images/ngoc-ban/portfolio/p001.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p001.webp",
+    "/images/ngoc-ban/portfolio/p029.webp",
+    "/images/ngoc-ban/portfolio/p045.webp",
+    "/images/ngoc-ban/portfolio/p072.webp"
+  ],
+  "size": "tall",
+  "featured": true,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "Porsche 911"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Wrap đổi màu ô tô"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "Porsche 911 — Satin Gold — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}

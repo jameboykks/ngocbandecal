@@ -63,9 +63,9 @@ export default function ServiceDetail() {
                 <div className="eyebrow mb-5 mt-12">Một Số Tác Phẩm</div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {gallery.map(g => (
-                    <div key={g.id} className="aspect-square overflow-hidden bg-bg-card group cursor-pointer">
-                      <img src={g.img} alt={g.car} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-                    </div>
+                    <Link key={g.id} to={`/tac-pham/${g.slug}`} className="aspect-square overflow-hidden bg-bg-card group cursor-pointer block">
+                      <img src={g.cover ?? g.img} alt={g.title ?? g.car ?? ''} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                    </Link>
                   ))}
                 </div>
               </>

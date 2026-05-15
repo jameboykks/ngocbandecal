@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import ServicesList from './pages/ServicesList';
 import ServiceDetail from './pages/ServiceDetail';
 import PortfolioFull from './pages/PortfolioFull';
+import PortfolioDetail from './pages/PortfolioDetail';
 import PricingPage from './pages/PricingPage';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
@@ -34,6 +35,7 @@ export default function App() {
             <Route path="/dich-vu" element={<ServicesList />} />
             <Route path="/dich-vu/:slug" element={<ServiceDetail />} />
             <Route path="/tac-pham" element={<PortfolioFull />} />
+            <Route path="/tac-pham/:slug" element={<PortfolioDetail />} />
             <Route path="/bang-gia" element={<PricingPage />} />
             <Route path="/lien-he" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />

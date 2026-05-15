@@ -1,0 +1,36 @@
+{
+  "slug": "range-rover-sport",
+  "id": 6,
+  "title": "Range Rover Sport",
+  "tag": "PPF",
+  "cover": "/images/ngoc-ban/portfolio/p006.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p006.webp",
+    "/images/ngoc-ban/portfolio/p095.webp",
+    "/images/ngoc-ban/portfolio/p107.webp",
+    "/images/ngoc-ban/portfolio/p041.webp"
+  ],
+  "size": "wide",
+  "featured": false,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "Range Rover Sport"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Dán PPF bảo vệ sơn"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "Range Rover Sport — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}

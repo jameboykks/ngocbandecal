@@ -1,0 +1,36 @@
+{
+  "slug": "bmw-x7-ppf-pro-series",
+  "id": 10,
+  "title": "BMW X7 — PPF Pro Series",
+  "tag": "PPF",
+  "cover": "/images/ngoc-ban/portfolio/p010.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p010.webp",
+    "/images/ngoc-ban/portfolio/p074.webp",
+    "/images/ngoc-ban/portfolio/p019.webp",
+    "/images/ngoc-ban/portfolio/p042.webp"
+  ],
+  "size": "tall",
+  "featured": false,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "BMW X7"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Dán PPF bảo vệ sơn"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "BMW X7 — PPF Pro Series — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}

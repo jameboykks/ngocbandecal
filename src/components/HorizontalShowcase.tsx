@@ -44,8 +44,8 @@ export default function HorizontalShowcase() {
               data-cursor="view"
             >
               <img
-                src={p.img}
-                alt={p.car}
+                src={p.cover ?? p.img}
+                alt={p.title ?? p.car ?? ''}
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 loading="lazy"
@@ -61,8 +61,8 @@ export default function HorizontalShowcase() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-3 text-bg-primary">{p.car}</h3>
-                <Link to="/tac-pham" className="inline-flex items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-accent hover:gap-3 transition-all">
+                <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-3 text-bg-primary">{p.title ?? p.car}</h3>
+                <Link to={`/tac-pham/${p.slug}`} className="inline-flex items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-accent hover:gap-3 transition-all">
                   Xem chi tiết <ArrowRight size={12} />
                 </Link>
               </div>

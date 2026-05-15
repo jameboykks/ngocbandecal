@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X } from 'lucide-react';
+import { ArrowRight, X, ExternalLink } from 'lucide-react';
 import { PORTFOLIO, FILTERS } from '../data/site';
 
 export default function Portfolio() {
@@ -56,8 +57,8 @@ export default function Portfolio() {
                 ].join(' ')}
               >
                 <img
-                  src={p.img}
-                  alt={p.car}
+                  src={p.cover ?? p.img}
+                  alt={p.title ?? p.car ?? ''}
                   loading="lazy"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
@@ -65,7 +66,7 @@ export default function Portfolio() {
                 <span className="absolute inset-0 bg-gradient-to-t from-bg-contrast/95 via-bg-contrast/35 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="text-[10px] tracking-[0.25em] uppercase text-accent mb-1">{p.tag}</div>
-                  <div className="font-display text-xl tracking-wider text-bg-primary">{p.car}</div>
+                  <div className="font-display text-xl tracking-wider text-bg-primary">{p.title ?? p.car}</div>
                 </div>
                 <span className="absolute top-3 right-3 w-9 h-9 border border-border-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                   <ArrowRight size={14} className="text-accent" />
@@ -76,12 +77,12 @@ export default function Portfolio() {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="#contact"
+          <Link
+            to="/tac-pham"
             className="inline-flex items-center gap-3 px-8 py-4 border border-accent/35 text-[12px] tracking-[0.25em] uppercase text-bg-primary hover:border-accent hover:text-accent transition"
           >
             Xem Tất Cả Tác Phẩm <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -109,10 +110,17 @@ export default function Portfolio() {
               onClick={(e) => e.stopPropagation()}
               className="max-w-5xl w-full"
             >
-              <img src={lightbox.img} alt={lightbox.car} className="w-full max-h-[75vh] object-contain" />
-              <div className="mt-4 text-center">
+              <img src={lightbox.cover ?? lightbox.img} alt={lightbox.title ?? lightbox.car ?? ''} className="w-full max-h-[70vh] object-contain" />
+              <div className="mt-5 text-center">
                 <div className="text-[11px] tracking-[0.3em] uppercase text-accent mb-2">{lightbox.tag}</div>
-                <div className="font-display text-3xl tracking-wider">{lightbox.car}</div>
+                <div className="font-display text-3xl tracking-wider mb-5">{lightbox.title ?? lightbox.car}</div>
+                <Link
+                  to={`/tac-pham/${lightbox.slug}`}
+                  onClick={() => setLightbox(null)}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
+                >
+                  Xem Chi Tiết <ExternalLink size={14} />
+                </Link>
               </div>
             </motion.div>
           </motion.div>

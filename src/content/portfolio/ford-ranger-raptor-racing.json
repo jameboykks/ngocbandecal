@@ -1,0 +1,36 @@
+{
+  "slug": "ford-ranger-raptor-racing",
+  "id": 12,
+  "title": "Ford Ranger Raptor — Racing",
+  "tag": "Tem xe",
+  "cover": "/images/ngoc-ban/portfolio/p012.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p012.webp",
+    "/images/ngoc-ban/portfolio/p108.webp",
+    "/images/ngoc-ban/portfolio/p094.webp",
+    "/images/ngoc-ban/portfolio/p035.webp"
+  ],
+  "size": "normal",
+  "featured": false,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "Ford Ranger Raptor"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Thiết kế & dán tem xe"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "Ford Ranger Raptor — Racing — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}

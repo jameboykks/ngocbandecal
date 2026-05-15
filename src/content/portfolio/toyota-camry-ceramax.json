@@ -1,0 +1,36 @@
+{
+  "slug": "toyota-camry-ceramax",
+  "id": 11,
+  "title": "Toyota Camry — Ceramax",
+  "tag": "Film cách nhiệt",
+  "cover": "/images/ngoc-ban/portfolio/p011.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p011.webp",
+    "/images/ngoc-ban/portfolio/p085.webp",
+    "/images/ngoc-ban/portfolio/p111.webp",
+    "/images/ngoc-ban/portfolio/p093.webp"
+  ],
+  "size": "wide",
+  "featured": false,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "Toyota Camry"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Film cách nhiệt"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "Toyota Camry — Ceramax — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}

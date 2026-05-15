@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X } from 'lucide-react';
+import { ArrowRight, X, ExternalLink } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { PORTFOLIO, FILTERS, BRANDS } from '../data/site';
 
@@ -14,7 +15,8 @@ export default function PortfolioFull() {
   const items = useMemo(() => {
     return PORTFOLIO.filter(p => {
       const okTag = tag === 'Tất cả' || p.tag === tag;
-      const okBrand = brand === 'Tất cả hãng' || p.car.toUpperCase().includes(brand);
+      const haystack = (p.title ?? p.car ?? '').toUpperCase();
+      const okBrand = brand === 'Tất cả hãng' || haystack.includes(brand);
       return okTag && okBrand;
     });
   }, [tag, brand]);
@@ -85,11 +87,11 @@ export default function PortfolioFull() {
                       p.size === 'wide' ? 'col-span-2' : '',
                     ].join(' ')}
                   >
-                    <img src={p.img} alt={p.car} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src={p.cover ?? p.img} alt={p.title ?? p.car ?? ''} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <span className="absolute inset-0 bg-gradient-to-t from-bg-primary/95 via-bg-primary/40 to-transparent opacity-70 group-hover:opacity-95 transition-opacity" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                       <div className="text-[10px] tracking-[0.25em] uppercase text-accent mb-1">{p.tag}</div>
-                      <div className="font-display text-xl tracking-wider text-text-primary">{p.car}</div>
+                      <div className="font-display text-xl tracking-wider text-text-primary">{p.title ?? p.car}</div>
                     </div>
                     <span className="absolute top-3 right-3 w-9 h-9 border border-border-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                       <ArrowRight size={14} className="text-accent" />
@@ -111,10 +113,17 @@ export default function PortfolioFull() {
           >
             <button onClick={() => setLightbox(null)} className="absolute top-6 right-6 p-2 text-text-primary hover:text-accent" aria-label="Close"><X size={28} /></button>
             <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.95, opacity: 0 }} onClick={e => e.stopPropagation()} className="max-w-5xl w-full">
-              <img src={lightbox.img} alt={lightbox.car} className="w-full max-h-[75vh] object-contain" />
-              <div className="mt-4 text-center">
+              <img src={lightbox.cover ?? lightbox.img} alt={lightbox.title ?? lightbox.car ?? ''} className="w-full max-h-[70vh] object-contain" />
+              <div className="mt-5 text-center">
                 <div className="text-[11px] tracking-[0.3em] uppercase text-accent mb-2">{lightbox.tag}</div>
-                <div className="font-display text-3xl tracking-wider">{lightbox.car}</div>
+                <div className="font-display text-3xl tracking-wider mb-5">{lightbox.title ?? lightbox.car}</div>
+                <Link
+                  to={`/tac-pham/${lightbox.slug}`}
+                  onClick={() => setLightbox(null)}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
+                >
+                  Xem Chi Tiết <ExternalLink size={14} />
+                </Link>
               </div>
             </motion.div>
           </motion.div>

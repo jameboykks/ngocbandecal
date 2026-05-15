@@ -1,0 +1,36 @@
+{
+  "slug": "audi-a5-matte-black",
+  "id": 5,
+  "title": "Audi A5 — Matte Black",
+  "tag": "Wrap đổi màu",
+  "cover": "/images/ngoc-ban/portfolio/p005.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p005.webp",
+    "/images/ngoc-ban/portfolio/p043.webp",
+    "/images/ngoc-ban/portfolio/p084.webp",
+    "/images/ngoc-ban/portfolio/p092.webp"
+  ],
+  "size": "tall",
+  "featured": false,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "Audi A5"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Wrap đổi màu ô tô"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "Audi A5 — Matte Black — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}

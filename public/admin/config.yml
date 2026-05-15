@@ -34,7 +34,22 @@ collections:
           - { name: name,        label: "Tên ngắn",        widget: string }
           - { name: fullName,    label: "Tên đầy đủ",      widget: string }
           - { name: owner,       label: "Chủ shop",        widget: string }
-          - { name: experience,  label: "Năm kinh nghiệm", widget: string }
+          - {
+              name: yearsOfExperience,
+              label: "Năm kinh nghiệm (số nguyên — VD: 6)",
+              widget: number,
+              value_type: int,
+              min: 1,
+              step: 1,
+              hint: "Sửa con số này → tự đồng bộ Hero stats card 'Năm kinh nghiệm' + Why Us card 1 ('X+ Năm Kinh Nghiệm') và mọi nơi hiển thị 'X+ năm kinh nghiệm'."
+            }
+          - {
+              name: experience,
+              label: "(Tự sinh) Câu năm kinh nghiệm",
+              widget: string,
+              required: false,
+              hint: "KHÔNG cần sửa — code tự sinh từ trường ở trên. Field giữ lại để tránh lỗi schema."
+            }
           - { name: address,     label: "Địa chỉ",         widget: string }
           - { name: hotline,     label: "Hotline (hiển thị)", widget: string }
           - { name: hotlineRaw,  label: "Hotline (số sạch để gọi)", widget: string }
@@ -57,6 +72,7 @@ collections:
             min: 4
             max: 4
             summary: "{{fields.value}} {{fields.label}}"
+            hint: "Lưu ý: card có nhãn 'Năm kinh nghiệm' bị override tự động từ Cài đặt chung > Năm kinh nghiệm. Sửa value ở đây sẽ không có hiệu lực — chỉnh ở Cài đặt chung."
             fields:
               - { name: value, label: "Giá trị (vd: 5000+)", widget: string }
               - { name: label, label: "Nhãn (vd: Khách hàng)", widget: string }
@@ -82,6 +98,7 @@ collections:
             min: 4
             max: 4
             summary: "{{fields.title}}"
+            hint: "Lưu ý: tiêu đề mục #1 (về số năm kinh nghiệm) bị override tự động từ Cài đặt chung > Năm kinh nghiệm. Sửa title ở đây sẽ không có hiệu lực — chỉnh ở Cài đặt chung."
             fields:
               - { name: icon,  label: "Icon (trophy/shield/hand/doc)", widget: select, options: [trophy, shield, hand, doc] }
               - { name: title, label: "Tiêu đề",       widget: string }
@@ -208,28 +225,43 @@ collections:
               - { name: priceFrom, label: "Giá từ (vd: 8.000.000)",    widget: string }
 
   # ============================================================
-  # Portfolio
+  # Portfolio (folder collection — mỗi tác phẩm = 1 file riêng)
   # ============================================================
   - name: portfolio
     label: "🖼️ Tác phẩm (Portfolio)"
-    delete: false
+    folder: "src/content/portfolio"
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "#{{id}} — {{title}} [{{tag}}]"
+    sortable_fields: [id, title, tag, date]
     editor:
       preview: false
-    files:
-      - file: src/content/portfolio.json
-        name: portfolio
-        label: "Danh sách tác phẩm"
+    fields:
+      - { name: slug,    label: "Slug URL (chữ thường, gạch nối — vd: porsche-911-satin-gold)", widget: string }
+      - { name: id,      label: "ID (số — dùng để sort thứ tự hiển thị)", widget: number, value_type: int, min: 1, step: 1 }
+      - { name: title,   label: "Tiêu đề tác phẩm (dài, có thể vài dòng)", widget: string }
+      - { name: tag,     label: "Loại dịch vụ", widget: select, options: ["Wrap đổi màu", "PPF", "Tem xe", "Film cách nhiệt"] }
+      - { name: cover,   label: "Ảnh đại diện (hiển thị ở grid)", widget: image }
+      - name: gallery
+        label: "Gallery ảnh (hiển thị ở trang chi tiết — kéo thêm ảnh)"
+        widget: list
+        summary: "Ảnh {{index}}"
+        field: { name: image, label: "Ảnh", widget: image }
+      - { name: size,    label: "Kích thước trong grid", widget: select, options: [normal, tall, wide], default: normal }
+      - { name: featured, label: "Featured (hiển thị ở Cinematic Showcase trang chủ)", widget: boolean, default: false }
+      - { name: date,    label: "Ngày thi công (tuỳ chọn)", widget: string, required: false, hint: "Vd: 2026-04-15" }
+      - name: specs
+        label: "Thông số kỹ thuật (key/value)"
+        widget: list
+        summary: "{{fields.label}}: {{fields.value}}"
         fields:
-          - name: items
-            label: Items
-            widget: list
-            summary: "#{{fields.id}} — {{fields.car}}"
-            fields:
-              - { name: id,   label: "ID (số)", widget: number, value_type: int, min: 1, step: 1 }
-              - { name: tag,  label: "Loại dịch vụ", widget: select, options: ["Wrap đổi màu", "PPF", "Tem xe", "Film cách nhiệt"] }
-              - { name: car,  label: "Tên xe / mô tả", widget: string }
-              - { name: img,  label: "Ảnh", widget: image }
-              - { name: size, label: "Kích thước hiển thị", widget: select, options: [normal, tall, wide], default: normal }
+          - { name: label, label: "Nhãn (vd: Dòng xe)", widget: string }
+          - { name: value, label: "Giá trị", widget: string }
+      - { name: description, label: "Mô tả ngắn (hiện ở sidebar)", widget: text, required: false }
+      - { name: content, label: "Nội dung chi tiết (xuống dòng 2 lần để tách đoạn)", widget: text, required: false, hint: "Để trống nếu không cần. Phần này hiển thị ở dưới trang chi tiết." }
 
   # ============================================================
   # Blog posts (folder collection — each post = own file)

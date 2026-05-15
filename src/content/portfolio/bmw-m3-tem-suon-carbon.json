@@ -1,0 +1,36 @@
+{
+  "slug": "bmw-m3-tem-suon-carbon",
+  "id": 3,
+  "title": "BMW M3 — Tem Sườn Carbon",
+  "tag": "Tem xe",
+  "cover": "/images/ngoc-ban/portfolio/p003.webp",
+  "gallery": [
+    "/images/ngoc-ban/portfolio/p003.webp",
+    "/images/ngoc-ban/portfolio/p106.webp",
+    "/images/ngoc-ban/portfolio/p087.webp",
+    "/images/ngoc-ban/portfolio/p079.webp"
+  ],
+  "size": "normal",
+  "featured": true,
+  "date": "",
+  "specs": [
+    {
+      "label": "Dòng xe",
+      "value": "BMW M3"
+    },
+    {
+      "label": "Dịch vụ",
+      "value": "Thiết kế & dán tem xe"
+    },
+    {
+      "label": "Chất liệu",
+      "value": "Liên hệ để biết chi tiết"
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày"
+    }
+  ],
+  "description": "BMW M3 — Tem Sườn Carbon — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
+  "content": ""
+}
