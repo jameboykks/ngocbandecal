@@ -1,18 +1,22 @@
 {
-  "slug": "bmw-m3-tem-suon-carbon",
-  "id": 3,
-  "title": "BMW M3 — Tem Sườn Carbon",
-  "tag": "Tem xe",
-  "cover": "/images/ngoc-ban/portfolio/p003.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p003.webp",
-    "/images/ngoc-ban/portfolio/p106.webp",
-    "/images/ngoc-ban/portfolio/p087.webp",
-    "/images/ngoc-ban/portfolio/p079.webp"
-  ],
   "size": "normal",
+  "slug": "AUDI A5 -  GOLD MATTE ",
   "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7826579966449_7e6fecb11683119de12f8f7d33ed935b.jpg",
+    "/images/ngoc-ban/uploads/z7826580004521_7b027bf405f40277ea7cb3d9a9957002.jpg",
+    "/images/ngoc-ban/uploads/z7826579972411_2b46577e6b3413cfbc6ecd2ab6e642cd.jpg",
+    "/images/ngoc-ban/uploads/z7833671010879_c743faa3943672c98d0ed98feeaac88b.jpg",
+    "/images/ngoc-ban/uploads/z7833671013146_b19f8425002d1154fd05d9ee6363a5cf.jpg",
+    "/images/ngoc-ban/uploads/z7833671018452_eaea5a8bdf2af6d6ea4f27d00d7a627a.jpg",
+    "/images/ngoc-ban/uploads/z7833671018701_0827dc27ef5bdd36fcaffb280309e027.jpg",
+    "/images/ngoc-ban/uploads/z7833671020908_ae7cafc02e6e47d16210a90e7c7a7ef3.jpg",
+    "/images/ngoc-ban/uploads/z7826580017817_33dcd5afe5f14f33cdf716ba6c39b559.jpg",
+    "/images/ngoc-ban/uploads/z7826580027455_8ca865392d5bf20d9d23efd9c395f8f5.jpg",
+    "/images/ngoc-ban/uploads/z7826580020380_52b68759a8db68189fd289a0f4527d81.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7826580004521_7b027bf405f40277ea7cb3d9a9957002.jpg",
   "specs": [
     {
       "label": "Dòng xe",
@@ -29,8 +33,27 @@
     {
       "label": "Thời gian thi công",
       "value": "2-3 ngày"
+    },
+    {
+      "label": "Dòng xe : ",
+      "value": "Audi A5 Coupe "
+    },
+    {
+      "label": "Dịch vụ : ",
+      "value": "Wrap Đổi Màu Xe "
+    },
+    {
+      "label": "Chất liệu :",
+      "value": "Decal nhập khẩu chính hãng gốc mỹ \" Avery Dennision USA \" "
+    },
+    {
+      "label": "Thời gian thi công",
+      "value": "2-3 ngày "
     }
   ],
-  "description": "BMW M3 — Tem Sườn Carbon — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "AUDI A5 -  WRAPPING DECAL GOLD MATTE  AVERY DENISION ",
+  "content": "",
+  "tag": "Wrap đổi màu",
+  "id": 3,
+  "description": "AUDI A5 -  WRAPPING DECAL GOLD MATTE  AVERY DENISION  \n\" Việc dán đổi màu (wrapping) cho Audi A5 bằng decal Gold Matte (vàng mờ) từ thương hiệu Avery Dennison là một lựa chọn tuyệt vời. Lớp decal này mang đến vẻ đẹp sang trọng, đẳng cấp trong từng chi tiết "
 }
