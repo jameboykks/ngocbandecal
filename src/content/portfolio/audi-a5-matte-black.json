@@ -1,5 +1,5 @@
 {
-  "size": "tall",
+  "size": "normal",
   "slug": "Porsche 718 -Gloss-Red ",
   "featured": false,
   "date": "",
@@ -33,6 +33,10 @@
     {
       "label": "Thời gian thi công ",
       "value": "2-3 ngày "
+    },
+    {
+      "label": "Bảo hành ",
+      "value": "3 năm điện tử "
     }
   ],
   "title": "Porsche 718 -Gloss-Red ",
