@@ -1,36 +1,42 @@
 {
-  "slug": "bmw-x7-ppf-pro-series",
-  "id": 10,
-  "title": "BMW X7 — PPF Pro Series",
-  "tag": "PPF",
-  "cover": "/images/ngoc-ban/portfolio/p010.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p010.webp",
-    "/images/ngoc-ban/portfolio/p074.webp",
-    "/images/ngoc-ban/portfolio/p019.webp",
-    "/images/ngoc-ban/portfolio/p042.webp"
-  ],
   "size": "tall",
+  "slug": "porsche-maccan-blue-wrap1",
   "featured": false,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7834507932252_d12c049f8846116edd35542a810519db.jpg",
+    "/images/ngoc-ban/uploads/z7834507988240_0e4e709905861c2b98a75dba893599b6.jpg",
+    "/images/ngoc-ban/uploads/z7834507937953_d818e749199ae17322eb15397de66cc4.jpg",
+    "/images/ngoc-ban/uploads/z7834507961963_3092c963bf37f778d7d17e47524e642e.jpg",
+    "/images/ngoc-ban/uploads/z7834507972136_7efa562755df050a644ffc8fe18dc555.jpg",
+    "/images/ngoc-ban/uploads/z7834507941345_7f5d2e471d4740d6c452bfc662ff0b7e.jpg",
+    "/images/ngoc-ban/uploads/z7834507952530_6cd1cf224b846f7e7a9027473622636c.jpg",
+    "/images/ngoc-ban/uploads/z7834507982665_2cdb460c16dcbef535e4a382c0f4ed3b.jpg",
+    "/images/ngoc-ban/uploads/z7834507952790_4e652132dabbf234ab141c313342b2a0.jpg",
+    "/images/ngoc-ban/uploads/z7834507961708_f9d47a449dd56bb61a8c334d190a9266.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7834507927821_ad9c374cdbe196d10368f659b856501c.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "BMW X7"
+      "label": "Dòng xe ",
+      "value": "Porsche Maccan "
     },
     {
-      "label": "Dịch vụ",
-      "value": "Dán PPF bảo vệ sơn"
+      "label": "Chất liệu ",
+      "value": "Thương hiệu decal cao cấp SINGAPORE AXFILM "
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Thời gian bảo hành ",
+      "value": "3 năm "
     },
     {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Thời gian thi công ",
+      "value": "2-3 ngày "
     }
   ],
-  "description": "BMW X7 — PPF Pro Series — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Porsche Maccan - Blue Wrap ",
+  "content": "",
+  "tag": "Wrap đổi màu",
+  "id": 10,
+  "description": "Porsche Maccan - Blue Wrap / Là một trong những lựa chọn nâng cấp diện mạo phổ biến nhất, giúp mang lại vẻ ngoài thể thao, cá tính và sang trọng cho dòng SUV này.\nDưới đây là một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện khắt khe và tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
