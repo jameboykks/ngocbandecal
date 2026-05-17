@@ -1,36 +1,39 @@
 {
-  "slug": "audi-rs6-stealth-ppf",
-  "id": 14,
-  "title": "Audi RS6 — Stealth PPF",
-  "tag": "PPF",
-  "cover": "/images/ngoc-ban/portfolio/p014.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p014.webp",
-    "/images/ngoc-ban/portfolio/p075.webp",
-    "/images/ngoc-ban/portfolio/p060.webp",
-    "/images/ngoc-ban/portfolio/p052.webp"
-  ],
-  "size": "tall",
-  "featured": false,
+  "size": "normal",
+  "slug": "linkco08-film-cach-nhiet-3m",
+  "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7836265194603_51c2cd042a49bde9eabc7e065d270722.jpg",
+    "/images/ngoc-ban/uploads/z7836265391193_5750d8e8a96a5dffffa676cbb2650ccf.jpg",
+    "/images/ngoc-ban/uploads/z7836265261147_f0a14bd6e390d7b5eddc44387bb759c5.jpg",
+    "/images/ngoc-ban/uploads/z7836265310947_5edbce1c1f4c70cf51e1fdb87029ba45.jpg",
+    "/images/ngoc-ban/uploads/z7836265174659_b7cfad99f6ca07f48aecb4dbf0b8556b.jpg",
+    "/images/ngoc-ban/uploads/z7836265380052_fac5a63154715ebb0f056101ad81c283.jpg",
+    "/images/ngoc-ban/uploads/z7836265167485_6b1600a20b3f8ec14450245d119188db.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7836265199014_3b4209db293d94b66ea8d9f7cd7e268d.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Audi RS6"
+      "label": "Dòng xe ",
+      "value": "Link&co 08"
     },
     {
-      "label": "Dịch vụ",
-      "value": "Dán PPF bảo vệ sơn"
+      "label": "Dịch vụ ",
+      "value": "Film cách nhiệt chống nóng "
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Thời gian bảo hành ",
+      "value": "10 năm "
     },
     {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Chất liệu ",
+      "value": "3M Crystaline CR BLK "
     }
   ],
-  "description": "Audi RS6 — Stealth PPF — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Link & Co 08 - FCN Cr BLK 3M ",
+  "content": "",
+  "tag": "Film cách nhiệt",
+  "id": 12,
+  "description": "Link&co 08 - Film Cách Nhiệt 3M Crystaline / Giải pháp cách nhiệt tốt nhất cho mùa hè và tạo sự riêng tư cho bạn — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
