@@ -253,7 +253,13 @@ collections:
     editor:
       preview: false
     fields:
-      - { name: slug,    label: "Slug URL (chữ thường, gạch nối — vd: porsche-911-satin-gold)", widget: string }
+      - {
+          name: slug,
+          label: "Slug URL ⚠ MỖI XE PHẢI KHÁC NHAU",
+          widget: string,
+          pattern: ['^[a-z0-9-]+$', 'Chỉ chữ thường, số và dấu gạch nối (không dấu cách, không chữ HOA, không dấu tiếng Việt)'],
+          hint: "VD: porsche-911-satin-gold · land-cruiser-prado-ppf · khi 'Sao chép' để tạo bài mới PHẢI đổi slug khác (nếu không sẽ ghi đè bài cũ)"
+        }
       - { name: id,      label: "ID (số — dùng để sort thứ tự hiển thị)", widget: number, value_type: int, min: 1, step: 1 }
       - { name: title,   label: "Tiêu đề tác phẩm (dài, có thể vài dòng)", widget: string }
       - { name: tag,     label: "Loại dịch vụ", widget: select, options: ["Wrap đổi màu", "PPF", "Tem xe", "Film cách nhiệt"] }
