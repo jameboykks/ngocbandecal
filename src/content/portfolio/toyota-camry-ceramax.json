@@ -1,36 +1,46 @@
 {
-  "slug": "toyota-camry-ceramax",
-  "id": 11,
-  "title": "Toyota Camry — Ceramax",
-  "tag": "Film cách nhiệt",
-  "cover": "/images/ngoc-ban/portfolio/p011.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p011.webp",
-    "/images/ngoc-ban/portfolio/p085.webp",
-    "/images/ngoc-ban/portfolio/p111.webp",
-    "/images/ngoc-ban/portfolio/p093.webp"
-  ],
-  "size": "wide",
+  "size": "normal",
+  "slug": "mercedes-glc300-matte",
   "featured": false,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7834501363310_9c2553ae465a42ee792ec437e9b6eb58.jpg",
+    "/images/ngoc-ban/uploads/z7834501376804_b255fcbd47990a5ba6b015df1bc93db0.jpg",
+    "/images/ngoc-ban/uploads/z7834501405257_0b1d811e8f5a27b75960c152d4aa6efb.jpg",
+    "/images/ngoc-ban/uploads/z7834501372936_699786f471a413b1b5993e42b8e44bbd.jpg",
+    "/images/ngoc-ban/uploads/z7834501378996_0472076b57b6f41c0511aa557c77f019.jpg",
+    "/images/ngoc-ban/uploads/z7834501383994_b0ff4f5ab70b60b97f14abfa3c88d27f.jpg",
+    "/images/ngoc-ban/uploads/z7834501432252_a76ce02483e7e6a83023029100ee42b8.jpg",
+    "/images/ngoc-ban/uploads/z7834501406712_d855b5544c359590c9fa1b2e7c4d8a73.jpg",
+    "/images/ngoc-ban/uploads/z7834501409760_9fedbf5b66ed17c5f2f743b06e02866b.jpg",
+    "/images/ngoc-ban/uploads/z7834501420910_6aa20ba6cadcc5a840ce1238fc71333f.jpg",
+    "/images/ngoc-ban/uploads/z7834501424769_ec9b077e033caeb10dde68a6e2f53609.jpg",
+    "/images/ngoc-ban/uploads/z7834501431928_c5bea1ae4d24c994031717db1db2afe1.jpg",
+    "/images/ngoc-ban/uploads/z7834501432176_6c3595e8db224dac4cdd8fceef4d7142.jpg",
+    "/images/ngoc-ban/uploads/z7834501395489_7cbfec444649c83207801c3ecbd19199.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7834501390107_5fee58339421ec5f6df95ab601b0e95f.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Toyota Camry"
+      "label": "Dòng xe ",
+      "value": "Mercedes GLC 300 "
     },
     {
-      "label": "Dịch vụ",
-      "value": "Film cách nhiệt"
+      "label": "Chất liệu decal ",
+      "value": "Axfilm Singapore nhập khẩu chính hãng "
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Thời gian bảo hành ",
+      "value": "3  năm "
     },
     {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Thời gian thi công ",
+      "value": "2-3 ngày "
     }
   ],
-  "description": "Toyota Camry — Ceramax — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Toyota Camry — Ceramax",
+  "content": "",
+  "tag": "Wrap đổi màu",
+  "id": 9,
+  "description": "Mercedes GLC300 Matte / Là một trong những tone màu sơn độc đáo và riêng biệt trên thị trường , giúp mang lại vẻ ngoài thể thao, cá tính và sang trọng cho dòng SUV này. \n.... Dưới đây là một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện khắt khe và tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
