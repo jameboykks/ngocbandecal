@@ -1,36 +1,32 @@
 {
-  "slug": "mazda-cx-5-frozen-blue",
-  "id": 9,
-  "title": "Mazda CX-5 — Frozen Blue",
-  "tag": "Wrap đổi màu",
-  "cover": "/images/ngoc-ban/portfolio/p009.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p009.webp",
-    "/images/ngoc-ban/portfolio/p102.webp",
-    "/images/ngoc-ban/portfolio/p097.webp",
-    "/images/ngoc-ban/portfolio/p058.webp"
-  ],
   "size": "normal",
+  "slug": "BMW I8 - Pink White Gradient",
   "featured": false,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7834543948317_60f74c61daa1dc40f41290463ef66ca3.jpg",
+    "/images/ngoc-ban/uploads/z7834543949816_329ba3e027cd9d79bd8fe84113a51193.jpg",
+    "/images/ngoc-ban/uploads/z7834543954615_0f4ff2aaac62c504093f14d606cf57cd.jpg",
+    "/images/ngoc-ban/uploads/z7834543938530_454687197253656360889955c58be661.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7834543938530_454687197253656360889955c58be661.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Mazda CX-5"
+      "label": "Dòng xe ",
+      "value": "BMW I8 "
     },
     {
-      "label": "Dịch vụ",
-      "value": "Wrap đổi màu ô tô"
+      "label": "Chất liệu ",
+      "value": "Decal xuất nhật cao cấp "
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
-    },
-    {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Thời gian thi công ",
+      "value": "2-3 ngày "
     }
   ],
-  "description": "Mazda CX-5 — Frozen Blue — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "BMW I8 -Pink White Gradient",
+  "content": "",
+  "tag": "Wrap đổi màu",
+  "id": 9,
+  "description": "BMW I8 - Pink White Gradient / Sự kết hợp hoàn hảo giữa 2 tone màu Trắng- Hồng hòa quyện vào nhau , tạo nên một tác phẩm tuyệt sắc của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
