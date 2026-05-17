@@ -1,36 +1,56 @@
 {
-  "slug": "lexus-rx-3m-crystalline",
-  "id": 4,
-  "title": "Lexus RX — 3M Crystalline",
-  "tag": "Film cách nhiệt",
-  "cover": "/images/ngoc-ban/portfolio/p004.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p004.webp",
-    "/images/ngoc-ban/portfolio/p046.webp",
-    "/images/ngoc-ban/portfolio/p017.webp",
-    "/images/ngoc-ban/portfolio/p091.webp"
-  ],
   "size": "normal",
+  "slug": "Land Cruiser Prado - PPF 3M 150 Gloss USA ",
   "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7834409915612_14cd626d71ce212b946ea478923626d8.jpg",
+    "/images/ngoc-ban/uploads/z7834409947926_d1734e8b988b842539602d2e10da2316.jpg",
+    "/images/ngoc-ban/uploads/z7834409926108_c702971d6779e879dccea27d9e0fe99f.jpg",
+    "/images/ngoc-ban/uploads/z7834409943597_5aafc887b3b09792726274e14c1787ba.jpg",
+    "/images/ngoc-ban/uploads/z7834409934401_e58acb696b3ca36548f7e63d3edc8ef2.jpg",
+    "/images/ngoc-ban/uploads/z7834409937166_c86f030e950762b485006f216a3025c3.jpg",
+    "/images/ngoc-ban/uploads/z7834409937390_41b2cf5f9bf976bdb950eab4da1ea732.jpg",
+    "/images/ngoc-ban/uploads/z7834409958047_50d4d33804699a73f9dce294515371c7.jpg",
+    "/images/ngoc-ban/uploads/z7834409976589_8ee7c888b61b2670a45652a545ecd000.jpg",
+    "/images/ngoc-ban/uploads/z7834409971450_5407e02d46f2b907f4f48600bc14b79c.jpg",
+    "/images/ngoc-ban/uploads/z7834409962350_48a14165702daa803d3334aa49cdc194.jpg",
+    "/images/ngoc-ban/uploads/z7834409988791_cd3bde1d176b64670fb5064b028ad8cc.jpg",
+    "/images/ngoc-ban/uploads/z7834409988571_a6086803d251cb7fe8123659411e22bd.jpg",
+    "/images/ngoc-ban/uploads/z7834409999997_27c0442e49dddaaacb3db949cc7e1eab.jpg",
+    "/images/ngoc-ban/uploads/z7834410017560_1fcb259586c43476ca9cabf2404efe5b.jpg",
+    "/images/ngoc-ban/uploads/z7834410037379_1ad89e67fc109eb4b6ad361a12ae9495.jpg",
+    "/images/ngoc-ban/uploads/z7834409923529_39b1ad9c80c9e725f9870e80f2e59ef8.jpg",
+    "/images/ngoc-ban/uploads/z7834410008490_c2a6bfd0cf69d224100eadacdd0385c9.jpg",
+    "/images/ngoc-ban/uploads/z7834410040931_c810c0a9afcb6457accb019a0b2097ce.jpg",
+    "/images/ngoc-ban/uploads/z7834410009639_eaa6f749e78b4d63248177301bb62bf1.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7834409914968_5278910f45d41dd916c8f14a6bc07025.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Lexus RX"
+      "label": "Dòng Xe ",
+      "value": "Land Cruiser Prado LC 250"
     },
     {
-      "label": "Dịch vụ",
-      "value": "Film cách nhiệt"
+      "label": "Chất liệu ",
+      "value": "PPF 3M 150 Gloss USA nhập khẩu chính hãng "
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Bảo hành ",
+      "value": "10  năm "
     },
     {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Thời gian thi công ",
+      "value": "4-5 ngày "
+    },
+    {
+      "label": "Chế độ bảo dưỡng PPF miễn phí  ",
+      "value": "3 tháng 1 lần / 5 năm "
     }
   ],
-  "description": "Lexus RX — 3M Crystalline — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Land Cruiser Prado - PPF 3M 150 Gloss USA ",
+  "content": "",
+  "tag": "PPF",
+  "id": 5,
+  "description": "Land Cruiser Prado - PPF 3M 150 Gloss USA => Không quá hào nhoáng ,nhưng đủ đẳng cấp và sang trọng \n— một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ và khắt khe với đội ngũ kỹ thuật giàu kinh nghiệm."
 }
