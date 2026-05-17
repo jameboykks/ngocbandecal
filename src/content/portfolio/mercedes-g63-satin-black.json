@@ -1,36 +1,38 @@
 {
-  "slug": "mercedes-g63-satin-black",
-  "id": 13,
-  "title": "Mercedes G63 — Satin Black",
-  "tag": "Wrap đổi màu",
-  "cover": "/images/ngoc-ban/portfolio/p013.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p013.webp",
-    "/images/ngoc-ban/portfolio/p033.webp",
-    "/images/ngoc-ban/portfolio/p044.webp",
-    "/images/ngoc-ban/portfolio/p096.webp"
-  ],
   "size": "normal",
-  "featured": false,
+  "slug": "vinfast-vf7plus-fcn3m",
+  "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7658073316453_f22056d2b0ab35ffe3ea7770b1e6bf68.jpg",
+    "/images/ngoc-ban/uploads/z7658073336537_3fe11433922056b78bee52e0d3d1dffe.jpg",
+    "/images/ngoc-ban/uploads/z7658073334149_a58e4aadd005b8b1ae88f4dc257f2224.jpg",
+    "/images/ngoc-ban/uploads/z7658073322540_02838694e87ed54ae09b449489822bd2.jpg",
+    "/images/ngoc-ban/uploads/z7658073336537_3fe11433922056b78bee52e0d3d1dffe.jpg",
+    "/images/ngoc-ban/uploads/z7658073332378_9043a16f3b2c27304ac4cfcaf4ab0c86.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7658073316453_f22056d2b0ab35ffe3ea7770b1e6bf68.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Mercedes G63"
+      "label": "Dòng xe ",
+      "value": "Vinfast VF7 "
     },
     {
-      "label": "Dịch vụ",
-      "value": "Wrap đổi màu ô tô"
+      "label": "Dịch vụ ",
+      "value": "Dán Film Cách Nhiệt "
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Thương hiệu ",
+      "value": "3M Crystaline USA ( nhập khẩu chính hãng )"
     },
     {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Thời gian bảo hành ",
+      "value": "10 năm "
     }
   ],
-  "description": "Mercedes G63 — Satin Black — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Vinfast VF7 Plus - Film Cách Nhiệt 3M Crystaline ",
+  "content": "",
+  "tag": "Film cách nhiệt",
+  "id": 11,
+  "description": "Vinfast VF7 Plus - Film Cách Nhiệt 3M Crystaline / Giải pháp cách nhiệt tốt nhất cho mùa hè và tạo sự riêng tư cho bạn — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
