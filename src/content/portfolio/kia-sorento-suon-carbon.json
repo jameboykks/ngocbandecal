@@ -1,36 +1,44 @@
 {
-  "slug": "kia-sorento-suon-carbon",
-  "id": 16,
-  "title": "Kia Sorento — Sườn Carbon",
-  "tag": "Tem xe",
-  "cover": "/images/ngoc-ban/portfolio/p016.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p016.webp",
-    "/images/ngoc-ban/portfolio/p048.webp",
-    "/images/ngoc-ban/portfolio/p063.webp",
-    "/images/ngoc-ban/portfolio/p062.webp"
-  ],
-  "size": "wide",
-  "featured": false,
+  "size": "normal",
+  "slug": "volvo-xc90-white",
+  "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7836351177748_d8d4f334e1c5df8d5ca923d4ca2aecb3.jpg",
+    "/images/ngoc-ban/uploads/z7836351181119_fdcf8bb28f8b29a57c37b287ee5fd6f3.jpg",
+    "/images/ngoc-ban/uploads/z7836351218806_792470c26e8370ce2aeb537a94c2c7bb.jpg",
+    "/images/ngoc-ban/uploads/z7836351347977_6cd8bd4037cd84055bf005ad773c6682.jpg",
+    "/images/ngoc-ban/uploads/z7836351308483_abda9190edf57196ce3b6f6c004c90f4.jpg",
+    "/images/ngoc-ban/uploads/z7836351320607_a978f2022900ad99f5a5ee666ba44637.jpg",
+    "/images/ngoc-ban/uploads/z7836351347977_6cd8bd4037cd84055bf005ad773c6682.jpg",
+    "/images/ngoc-ban/uploads/z7836351284662_b6f40e7b176245f021dd7b0cbd62afeb.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7836351177748_d8d4f334e1c5df8d5ca923d4ca2aecb3.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "Kia Sorento"
+      "value": "Volvo XC90 White "
     },
     {
       "label": "Dịch vụ",
-      "value": "Thiết kế & dán tem xe"
+      "value": "Film cách nhiệt chống nóng "
     },
     {
       "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "value": "FCN 3M USA CR BLK nhập khẩu chính hãng Mỹ"
     },
     {
       "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "value": "1 ngày "
+    },
+    {
+      "label": "Thời gian bảo hành ",
+      "value": "10 năm "
     }
   ],
-  "description": "Kia Sorento — Sườn Carbon — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "Volvo XC90 White - Film Cách Nhiệt 3M USA ",
+  "content": "",
+  "tag": "Film cách nhiệt",
+  "id": 16,
+  "description": "VOLVO XC90 White trang bị gói film cách nhiệt cao cấp nhất \" 3M USA Cr BLK \""
 }
