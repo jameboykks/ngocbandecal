@@ -1,18 +1,20 @@
 {
   "size": "normal",
-  "slug": "vinfast-vf3",
+  "slug": "ford-raptor",
   "featured": true,
   "date": "",
   "gallery": [
-    "/images/ngoc-ban/uploads/z7836360379085_b87bf6c52b2cd224d4e996f89536c476.jpg",
-    "/images/ngoc-ban/uploads/z7836360349340_379246cb83d14a5bc7a2ef056bae65e3.jpg",
-    "/images/ngoc-ban/uploads/z7836360360220_b86b4febd64d6a1dde501b3fb9f9aa42.jpg"
+    "/images/ngoc-ban/uploads/z7836359839011_ba58c9cb12cdd964ce4ac7948be7a0db.jpg",
+    "/images/ngoc-ban/uploads/z7836359892633_94e8ea7a4235a2d5f71e1b9524be7d48.jpg",
+    "/images/ngoc-ban/uploads/z7836359932997_2ba55c4347c73d594a39facdc7628f49.jpg",
+    "/images/ngoc-ban/uploads/z7836359947211_2492a4497490bcf83a74004c43a56f7b.jpg",
+    "/images/ngoc-ban/uploads/z7836359967414_615de429cbfe1a5108ccf2e5c53ae6a8.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/z7836360479687_413088f1c7b6086f37f241dc6f7fb7e3.jpg",
+  "cover": "/images/ngoc-ban/uploads/z7836359920240_a356eaaccbbb963d442a598832a0b7f0.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "Vinfast VF3"
+      "value": "FORD RAPTOR"
     },
     {
       "label": "Dịch vụ",
@@ -20,7 +22,7 @@
     },
     {
       "label": "Chất liệu",
-      "value": "Tem in 3 lớp decal cao cấp "
+      "value": "Tem in 3 lớp UV decal cao cấp "
     },
     {
       "label": "Thời gian thi công",
@@ -28,12 +30,12 @@
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "8 tháng "
+      "value": "18 tháng "
     }
   ],
-  "title": "Vinfast VF3 - Tem dán decal thể thao ",
+  "title": "Ford Raptor - Tem sườn thể thao cao cấp ",
   "content": "",
   "tag": "Tem xe",
-  "id": 17,
-  "description": "Vinfast VF3 với phong cách tem thể thao \" MARTIN \" tạo nên một tác phẩm tuyệt sắc của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
+  "id": 19,
+  "description": "Ford Raptor với phong cách tem thể thao/ tạo nên một tác phẩm tuyệt sắc của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
