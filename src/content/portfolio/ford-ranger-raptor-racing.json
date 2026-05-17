@@ -1,36 +1,53 @@
 {
-  "slug": "ford-ranger-raptor-racing",
-  "id": 12,
-  "title": "Ford Ranger Raptor — Racing",
-  "tag": "Tem xe",
-  "cover": "/images/ngoc-ban/portfolio/p012.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p012.webp",
-    "/images/ngoc-ban/portfolio/p108.webp",
-    "/images/ngoc-ban/portfolio/p094.webp",
-    "/images/ngoc-ban/portfolio/p035.webp"
-  ],
   "size": "normal",
-  "featured": false,
+  "slug": "mercedes-glc200-blue-matte",
+  "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7834533893369_4d39234407b5455f7833e7ee8eb9e3ca.jpg",
+    "/images/ngoc-ban/uploads/z7834533864705_ed1cf9c894bd4e0f0a09b32488a4dcc9.jpg",
+    "/images/ngoc-ban/uploads/z7834533875176_bb1705638ec216dfd5d9469ce1760ee6.jpg",
+    "/images/ngoc-ban/uploads/z7834533882553_da818258a1fd2064e7fca05e5caebbb2.jpg",
+    "/images/ngoc-ban/uploads/z7834533894312_d4ba117eacf75f8e0a544f02b36d1823.jpg",
+    "/images/ngoc-ban/uploads/z7834533900692_217dfecd598f8a4ccb5bda92cc431287.jpg",
+    "/images/ngoc-ban/uploads/z7834533857614_7d2b85d13624825ce6bc8a276efed711.jpg",
+    "/images/ngoc-ban/uploads/z7834533910723_f4160622bc513eb84cbaa4f8f0e20908.jpg",
+    "/images/ngoc-ban/uploads/z7834533915892_a9e1a321642613cac1b9437bc041cf46.jpg",
+    "/images/ngoc-ban/uploads/z7834533920217_dd11091745213573dbede5a69829d29e.jpg",
+    "/images/ngoc-ban/uploads/z7834533921092_61ff3b35358178edb8efb9a4a41bc086.jpg",
+    "/images/ngoc-ban/uploads/z7834534014857_b03d9860267640b8f65cdaf1b03fe362.jpg",
+    "/images/ngoc-ban/uploads/z7834533924971_53efb0260d750e5b87e8da79c9fbf073.jpg",
+    "/images/ngoc-ban/uploads/z7834534034902_32348df3d6985e2934c4e3a731e7c0c1.jpg",
+    "/images/ngoc-ban/uploads/z7834533986052_48b36e816402b92294a2e6d7f1049798.jpg",
+    "/images/ngoc-ban/uploads/z7834533885111_81cbb1f7e3615a7fb7e8979aa64a2f0b.jpg",
+    "/images/ngoc-ban/uploads/z7834533867217_4b7bc1b89949623970d9ef02a25dba7f.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7834533876301_a0ac5272a6ce867f337dea0fd6a8bb03.jpg",
   "specs": [
     {
-      "label": "Dòng xe",
-      "value": "Ford Ranger Raptor"
+      "label": "Dòng xe ",
+      "value": "Mercedes GLC200"
     },
     {
-      "label": "Dịch vụ",
-      "value": "Thiết kế & dán tem xe"
+      "label": "Thương hiệu decal ",
+      "value": "Chất liệu decal Teckwrap USA (nhập khẩu chính hãng từ Mỹ )"
     },
     {
-      "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "label": "Dịch vụ ",
+      "value": "Wrap đổi màu xe "
     },
     {
-      "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "label": "Thời gian thi công ",
+      "value": "2-3 ngày "
+    },
+    {
+      "label": "Thời gian bảo hành ",
+      "value": "3 năm "
     }
   ],
-  "description": "Ford Ranger Raptor — Racing — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "mercedes-glc200-blue-matte",
+  "content": "",
+  "tag": "Wrap đổi màu",
+  "id": 10,
+  "description": "Mercedes GLC200 Wrap Blue Matte / Là một trong những lựa chọn nâng cấp diện mạo phổ biến nhất, giúp mang lại vẻ ngoài thể thao, cá tính và sang trọng cho dòng SUV này. Dưới đây là một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện khắt khe và tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
