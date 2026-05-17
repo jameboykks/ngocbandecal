@@ -29,11 +29,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
           {SERVICES.map((s, i) => {
             const Icon = ICONS[s.icon];
             return (
-              <Tilt key={s.n} max={6} className="group relative luxury-surface border studio-border overflow-hidden cursor-pointer">
+              <Tilt key={s.n} max={6} className="group relative luxury-surface border studio-border overflow-hidden cursor-pointer h-full flex flex-col">
               <div className="absolute inset-x-0 top-0 h-24 overflow-hidden">
                 <img
                   src={s.cover}
@@ -45,7 +45,7 @@ export default function Services() {
                 <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
               </div>
               <motion.div
-                className="relative z-10 p-10 pt-28"
+                className="relative z-10 p-10 pt-28 flex-1 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
@@ -59,19 +59,19 @@ export default function Services() {
                   {s.n}
                 </span>
 
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-full border border-border-gold bg-bg-card/85 flex items-center justify-center mb-6 group-hover:border-accent group-hover:bg-accent transition-colors">
+                <div className="relative z-10 flex-1 flex flex-col">
+                  <div className="w-14 h-14 rounded-full border border-border-gold bg-bg-card/85 flex items-center justify-center mb-6 group-hover:border-accent group-hover:bg-accent transition-colors shrink-0">
                     <Icon size={22} className="text-accent group-hover:text-bg-primary transition-colors" />
                   </div>
-                  <h3 className="font-display text-2xl tracking-wider text-text-primary mb-3">
+                  <h3 className="font-display text-2xl tracking-wider text-text-primary mb-3 text-balance break-words min-h-[4rem]">
                     {s.title}
                   </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-6">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-6 text-balance break-words flex-1">
                     {s.desc}
                   </p>
                   <Link
                     to={`/dich-vu/${s.slug}`}
-                    className="inline-flex items-center gap-2 text-[12px] tracking-[0.25em] uppercase text-accent group-hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-[12px] tracking-[0.25em] uppercase text-accent group-hover:gap-3 transition-all mt-auto"
                   >
                     Xem chi tiết <ArrowUpRight size={14} />
                   </Link>

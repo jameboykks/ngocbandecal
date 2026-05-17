@@ -17,7 +17,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-6 items-stretch">
           {PRICING.map((p, i) => (
             <motion.div
               key={p.name}
@@ -26,7 +26,7 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.7 }}
               className={[
-                'relative p-8 md:p-10 border transition-all duration-500 group',
+                'relative p-8 md:p-10 border transition-all duration-500 group flex flex-col h-full',
                 p.featured
                   ? 'border-accent bg-gradient-to-b from-accent/[0.06] to-transparent lg:scale-[1.04] lg:-translate-y-2'
                   : 'border-border-gold bg-bg-card hover:border-accent/60',
@@ -38,24 +38,24 @@ export default function Pricing() {
                 </div>
               )}
 
-              <div className="text-[11px] tracking-[0.25em] uppercase text-accent mb-2">{p.sub}</div>
-              <h3 className="font-display text-3xl tracking-wider mb-6">{p.name}</h3>
+              <div className="text-[11px] tracking-[0.25em] uppercase text-accent mb-2 min-h-[1.5rem] text-balance">{p.sub}</div>
+              <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-6 min-h-[4rem] md:min-h-[5rem] text-balance break-words">{p.name}</h3>
 
-              <div className="mb-8 pb-8 border-b border-border-gold">
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="text-text-secondary text-sm">Từ</span>
-                  <span className="font-display text-5xl text-gold-gradient">{p.price}</span>
+              <div className="mb-8 pb-8 border-b border-border-gold min-h-[7rem] flex flex-col justify-end">
+                <div className="flex items-baseline gap-1 mb-1 flex-wrap">
+                  <span className="text-text-secondary text-sm shrink-0">Từ</span>
+                  <span className="font-display text-3xl md:text-4xl xl:text-5xl text-gold-gradient leading-tight break-words text-balance">{p.price}</span>
                 </div>
-                <div className="text-xs text-text-secondary">{p.unit}</div>
+                <div className="text-xs text-text-secondary text-balance">{p.unit}</div>
               </div>
 
-              <ul className="space-y-3 mb-10">
+              <ul className="space-y-3 mb-10 flex-1">
                 {p.features.map(f => (
                   <li key={f} className="flex items-start gap-3 text-sm text-text-primary/90">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                       <Check size={12} className="text-accent" />
                     </span>
-                    {f}
+                    <span className="break-words">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -63,7 +63,7 @@ export default function Pricing() {
               <a
                 href={`tel:${SITE.hotlineRaw}`}
                 className={[
-                  'flex items-center justify-center gap-2 w-full py-4 text-[12px] tracking-[0.25em] uppercase font-semibold transition',
+                  'flex items-center justify-center gap-2 w-full py-4 text-[12px] tracking-[0.25em] uppercase font-semibold transition mt-auto',
                   p.featured
                     ? 'bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)]'
                     : 'border border-border-gold text-text-primary hover:border-accent hover:text-accent',

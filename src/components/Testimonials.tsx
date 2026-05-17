@@ -26,11 +26,11 @@ export default function Testimonials() {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="!pb-14"
+          className="!pb-14 [&_.swiper-slide]:h-auto"
         >
           {TESTIMONIALS.map((t, i) => (
-            <SwiperSlide key={i}>
-              <div className="relative h-full p-8 md:p-10 bg-bg-card border border-border-gold gold-hover-glow group">
+            <SwiperSlide key={i} className="h-auto">
+              <div className="relative h-full flex flex-col p-8 md:p-10 bg-bg-card border border-border-gold gold-hover-glow group">
                 <Quote
                   size={72}
                   className="absolute top-4 right-4 text-accent/[0.07] group-hover:text-accent/15 transition-colors"
@@ -40,12 +40,12 @@ export default function Testimonials() {
                     <Star key={j} size={14} className="fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="font-serif italic text-lg leading-relaxed text-text-primary mb-8 relative z-10">
+                <p className="font-serif italic text-lg leading-relaxed text-text-primary mb-8 relative z-10 flex-1 break-words text-balance">
                   "{t.text}"
                 </p>
-                <div className="pt-5 border-t border-border-gold">
-                  <div className="font-display text-xl tracking-wider">{t.name}</div>
-                  <div className="text-xs uppercase tracking-[0.18em] text-text-secondary mt-1">{t.area}</div>
+                <div className="pt-5 border-t border-border-gold mt-auto">
+                  <div className="font-display text-xl tracking-wider break-words">{t.name}</div>
+                  <div className="text-xs uppercase tracking-[0.18em] text-text-secondary mt-1 break-words">{t.area}</div>
                 </div>
               </div>
             </SwiperSlide>

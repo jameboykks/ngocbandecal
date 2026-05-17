@@ -42,7 +42,7 @@ export default function WhyUs() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 items-stretch">
             {WHY_US.map((w, i) => {
               const Icon = ICONS[w.icon];
               return (
@@ -53,15 +53,15 @@ export default function WhyUs() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
                   className={[
-                    'p-7 border studio-border gold-hover-glow group',
+                    'p-7 border studio-border gold-hover-glow group h-full flex flex-col',
                     i % 2 === 0 ? 'luxury-surface' : 'bg-bg-elevated',
                   ].join(' ')}
                 >
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent transition-colors shrink-0">
                     <Icon size={20} className="text-accent group-hover:text-bg-primary transition-colors" />
                   </div>
-                  <h3 className="font-display text-xl tracking-wider mb-3">{w.title}</h3>
-                  <p className="text-sm text-text-secondary leading-relaxed">{w.desc}</p>
+                  <h3 className="font-display text-xl tracking-wider mb-3 text-balance break-words">{w.title}</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed text-balance break-words">{w.desc}</p>
                 </motion.div>
               );
             })}

@@ -17,9 +17,11 @@ function Slider({ item }: { item: Item }) {
   };
 
   return (
-    <div className="group">
+    <div className="group flex flex-col h-full">
       <div className="text-[11px] tracking-[0.25em] uppercase text-accent mb-2">{item.tag}</div>
-      <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-5">{item.title}</h3>
+      <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-5 min-h-[4rem] md:min-h-[5rem] text-balance">
+        {item.title}
+      </h3>
       <div
         ref={ref}
         className="relative aspect-[16/10] overflow-hidden border border-border-gold cursor-ew-resize select-none touch-none"
@@ -84,7 +86,7 @@ export default function BeforeAfter({ items }: { items: Item[] }) {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
           {items.map((it, i) => (
             <motion.div
               key={it.title}
@@ -92,6 +94,7 @@ export default function BeforeAfter({ items }: { items: Item[] }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
+              className="h-full"
             >
               <Slider item={it} />
             </motion.div>
