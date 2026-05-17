@@ -1,36 +1,35 @@
 {
-  "slug": "hyundai-tucson-pearl",
-  "id": 15,
-  "title": "Hyundai Tucson — Pearl",
-  "tag": "Wrap đổi màu",
-  "cover": "/images/ngoc-ban/portfolio/p015.webp",
-  "gallery": [
-    "/images/ngoc-ban/portfolio/p015.webp",
-    "/images/ngoc-ban/portfolio/p071.webp",
-    "/images/ngoc-ban/portfolio/p068.webp",
-    "/images/ngoc-ban/portfolio/p104.webp"
-  ],
   "size": "normal",
-  "featured": false,
+  "slug": "vinfast",
+  "featured": true,
   "date": "",
+  "gallery": [
+    "/images/ngoc-ban/uploads/z7658068804632_a061c4ec2d00dc21d3f141a70c535409.jpg",
+    "/images/ngoc-ban/uploads/z7658068809149_338a237d57afb7e3fc46a780c8082bd3.jpg",
+    "/images/ngoc-ban/uploads/z7658068814124_c2e42fdfd4e3b66a4daa890fe9b6282f.jpg"
+  ],
+  "cover": "/images/ngoc-ban/uploads/z7658068799403_749b5f14de0c094166f11cd9b4fabb84.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "Hyundai Tucson"
+      "value": "Vinfast Lux A "
     },
     {
       "label": "Dịch vụ",
-      "value": "Wrap đổi màu ô tô"
+      "value": "Film cách nhiệt chống nóng "
     },
     {
       "label": "Chất liệu",
-      "value": "Liên hệ để biết chi tiết"
+      "value": "Film chuyển màu nhập khẩu chính hãng USA Coollux "
     },
     {
       "label": "Thời gian thi công",
-      "value": "2-3 ngày"
+      "value": "1 ngày "
     }
   ],
-  "description": "Hyundai Tucson — Pearl — một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.",
-  "content": ""
+  "title": "VInfast Lux A - Film Cách Nhiệt Coollux USA ",
+  "content": "",
+  "tag": "Film cách nhiệt",
+  "id": 13,
+  "description": "giải pháp cách nhiệt tốt nhất cho mùa hè và tạo thêm sự lung linh cho xế yêu của bạn \n. một tác phẩm tiêu biểu của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm."
 }
