@@ -131,16 +131,16 @@ body {
   background: var(--color-accent);
 }
 
-/* Heading display — color uses :where() so Tailwind text-* utilities can override */
-.h-display {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  line-height: 0.98;
-  text-transform: uppercase;
-}
-:where(.h-display) {
-  color: var(--color-text-primary);
+/* Heading display — wrapped in @layer components so Tailwind text-* utilities (in utilities layer) win */
+@layer components {
+  .h-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 0.98;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+  }
 }
 
 /* Radial glow */
