@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Paintbrush, Shield, Sun, PenTool, Sparkles, Wrench } from 'lucide-react';
 import { SERVICES } from '../data/site';
-import Tilt from './Tilt';
 
 const ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   paint: Paintbrush,
@@ -29,41 +28,50 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {SERVICES.map((s, i) => {
             const Icon = ICONS[s.icon];
             return (
-              <Tilt key={s.n} max={6} className="group relative luxury-surface border studio-border overflow-hidden cursor-pointer h-full flex flex-col">
-              <div className="absolute inset-x-0 top-0 h-24 overflow-hidden">
-                <img
-                  src={s.cover}
-                  alt=""
-                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                  className="h-full w-full object-cover opacity-45 grayscale-[25%] transition duration-700 group-hover:scale-105 group-hover:opacity-60"
-                />
-                <span className="absolute inset-0 bg-gradient-to-b from-bg-contrast/30 via-bg-primary/15 to-bg-card" />
-                <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
-              </div>
-              <motion.div
-                className="relative z-10 p-10 pt-28 flex-1 flex flex-col"
+              <motion.article
+                key={s.n}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ delay: i * 0.08, duration: 0.6 }}
+                className="group relative border studio-border bg-bg-card overflow-hidden flex flex-col h-full"
               >
-                {/* Top gold border on hover */}
-                <span className="absolute top-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-accent-light via-accent to-transparent transition-all duration-700" />
+                {/* Image header — much bigger now, full color, no heavy filter */}
+                <Link to={`/dich-vu/${s.slug}`} className="relative block aspect-[16/10] overflow-hidden bg-bg-contrast">
+                  <img
+                    src={s.cover}
+                    alt={s.title}
+                    loading="lazy"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                  />
+                  {/* Subtle bottom gradient for contrast with overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast/80 via-bg-contrast/15 to-transparent" />
 
-                {/* Watermark number */}
-                <span className="absolute top-4 right-5 font-display text-[86px] leading-none text-accent/[0.16] select-none pointer-events-none">
-                  {s.n}
-                </span>
+                  {/* Number watermark — top-right */}
+                  <span className="absolute top-4 right-5 font-display text-[64px] leading-none text-bg-primary/65 select-none pointer-events-none tracking-tight">
+                    {s.n}
+                  </span>
 
-                <div className="relative z-10 flex-1 flex flex-col">
-                  <div className="w-14 h-14 rounded-full border border-border-gold bg-bg-card/85 flex items-center justify-center mb-6 group-hover:border-accent group-hover:bg-accent transition-colors shrink-0">
+                  {/* Icon badge — bottom-left, half-overlapping the image edge */}
+                  <div className="absolute -bottom-7 left-6 w-14 h-14 rounded-full border border-border-gold bg-bg-card flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-colors duration-500 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)]">
                     <Icon size={22} className="text-accent group-hover:text-bg-primary transition-colors" />
                   </div>
-                  <h3 className="font-display text-2xl tracking-wider text-text-primary mb-3 text-balance break-words min-h-[4rem]">
+
+                  {/* Hover gold underline */}
+                  <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-60" />
+                </Link>
+
+                {/* Top gold border on hover */}
+                <span className="absolute top-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-accent-light via-accent to-transparent transition-all duration-700 z-10" />
+
+                {/* Content */}
+                <div className="relative p-8 pt-12 flex-1 flex flex-col">
+                  <h3 className="font-display text-2xl tracking-wider text-text-primary mb-3 text-balance break-words min-h-[3.5rem]">
                     {s.title}
                   </h3>
                   <p className="text-text-secondary text-sm leading-relaxed mb-6 text-balance break-words flex-1">
@@ -71,18 +79,12 @@ export default function Services() {
                   </p>
                   <Link
                     to={`/dich-vu/${s.slug}`}
-                    className="inline-flex items-center gap-2 text-[12px] tracking-[0.25em] uppercase text-accent group-hover:gap-3 transition-all mt-auto"
+                    className="inline-flex items-center gap-2 text-[12px] tracking-[0.25em] uppercase text-accent group-hover:gap-3 transition-all mt-auto self-start"
                   >
                     Xem chi tiết <ArrowUpRight size={14} />
                   </Link>
                 </div>
-
-                {/* Hover glow */}
-                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500" style={{
-                  background: 'radial-gradient(circle at 50% 100%, rgba(201,169,110,0.08), transparent 70%)'
-                }} />
-              </motion.div>
-              </Tilt>
+              </motion.article>
             );
           })}
         </div>

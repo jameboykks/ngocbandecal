@@ -1,40 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, MapPin, Clock, Wrench } from 'lucide-react';
-import { SITE } from '../data/site';
+import { SITE, STUDIO } from '../data/site';
 import Counter from './Counter';
-
-const PHOTOS = {
-  hero: {
-    src: '/images/ngoc-ban/studio-facade-supercars.jpeg',
-    label: 'Front Façade',
-    coord: '16.0544° N · 108.2022° E',
-  },
-  workshop: {
-    src: '/images/ngoc-ban/studio-workshop-cars.jpeg',
-    label: 'Production Bay',
-    spec: 'LED 5000K · Dust-controlled',
-  },
-  lexus: {
-    src: '/images/ngoc-ban/studio-front-lexus.jpeg',
-    label: 'Delivery Bay',
-    spec: 'PPF · Wrap · Detailing',
-  },
-  street: {
-    src: '/images/ngoc-ban/studio-street-front.jpeg',
-    label: 'Street View',
-    spec: '21 Thành Thái',
-  },
-};
-
-const STATS = [
-  { to: 200, suffix: 'm²', label: 'Diện tích studio' },
-  { to: 6, suffix: '', label: 'Khoang thi công' },
-  { to: 9, suffix: '+', label: 'Năm hoạt động' },
-  { to: 24, suffix: '/7', label: 'Hỗ trợ sau bán' },
-];
-
-const MARQUEE = ['Wrap Decal', 'PPF Bảo Vệ Sơn', 'Film Cách Nhiệt', 'Detailing', 'Đánh Bóng', 'Studio Đà Nẵng', 'Đèn LED 5000K', 'Phòng Kiểm Tra Sơn'];
 
 function useLiveTime() {
   const [time, setTime] = useState(() => new Date());
@@ -47,6 +15,9 @@ function useLiveTime() {
   const isOpen = time.getHours() >= 8 && time.getHours() < 18;
   return { clock: `${hh}:${mm}`, isOpen };
 }
+
+type MarqueeItem = string | { text: string };
+const marqueeText = (item: MarqueeItem): string => (typeof item === 'string' ? item : item.text);
 
 function ParallaxImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -87,46 +58,32 @@ export default function StudioProof() {
 
       <div className="container-x relative z-10">
         {/* Header bar — editorial / IDE-inspired */}
-        <div className="flex flex-wrap items-end justify-between gap-6 border-b border-border-gold/40 pb-6 mb-12">
-          <div>
-            <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] mb-4">
-              <span className={`h-2 w-2 rounded-full ${isOpen ? 'bg-emerald-500 animate-pulse shadow-[0_0_12px_rgba(16,185,129,0.7)]' : 'bg-text-muted'}`} />
-              <span className={isOpen ? 'text-emerald-500' : 'text-text-muted'}>
-                {isOpen ? 'On-air · Đang mở cửa' : 'Studio đã đóng'}
-              </span>
-              <span className="text-text-muted">·</span>
-              <span className="text-text-secondary font-mono">{clock} ICT</span>
-              <span className="text-text-muted">·</span>
-              <span className="text-text-secondary">Đà Nẵng, VN</span>
-            </div>
-            <h2 className="h-display text-5xl md:text-6xl lg:text-7xl tracking-tight">
-              KHÔNG GIAN <span className="text-gold-gradient">THẬT</span>
-            </h2>
-            <p className="mt-4 max-w-xl font-serif text-lg italic leading-relaxed text-text-secondary">
-              Không phải showroom render. Không ảnh stock. Đây là xưởng thật — nơi từng chiếc xe được wrap thủ công, kiểm tra dưới đèn LED 5000K trước khi rời studio.
-            </p>
+        <div className="border-b border-border-gold/40 pb-6 mb-12">
+          <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] mb-4">
+            <span className={`h-2 w-2 rounded-full ${isOpen ? 'bg-emerald-500 animate-pulse shadow-[0_0_12px_rgba(16,185,129,0.7)]' : 'bg-text-muted'}`} />
+            <span className={isOpen ? 'text-emerald-500' : 'text-text-muted'}>
+              {isOpen ? STUDIO.liveOpenText : STUDIO.liveClosedText}
+            </span>
+            <span className="text-text-muted">·</span>
+            <span className="text-text-secondary font-mono">{clock} ICT</span>
+            <span className="text-text-muted">·</span>
+            <span className="text-text-secondary">{STUDIO.city}</span>
           </div>
-
-          <div className="flex items-center gap-6 text-right">
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-text-muted mb-1">File</div>
-              <div className="font-mono text-sm text-text-primary">studio_001.scene</div>
-            </div>
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-text-muted mb-1">Coord</div>
-              <div className="font-mono text-sm text-text-primary">{PHOTOS.hero.coord}</div>
-            </div>
-          </div>
+          <h2 className="h-display text-5xl md:text-6xl lg:text-7xl tracking-tight">
+            {STUDIO.headingLine1} <span className="text-gold-gradient">{STUDIO.headingLine2}</span>
+          </h2>
+          <p className="mt-4 max-w-xl font-serif text-lg italic leading-relaxed text-text-secondary">
+            {STUDIO.description}
+          </p>
         </div>
 
         {/* Bento mosaic */}
         <div className="grid grid-cols-12 gap-3 md:gap-4 mb-12">
           {/* Hero — big left (keeps parallax for "wow") */}
           <div className="group relative col-span-12 lg:col-span-8 row-span-2 aspect-[16/11] lg:aspect-auto lg:min-h-[520px] border border-border-gold overflow-hidden bg-bg-contrast">
-            <ParallaxImage src={PHOTOS.hero.src} alt={PHOTOS.hero.label} className="absolute inset-0" />
+            <ParallaxImage src={STUDIO.heroPhoto.src} alt={STUDIO.heroPhoto.label} className="absolute inset-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast via-bg-contrast/30 to-transparent" />
 
-            {/* Corner labels — Antigravity-style metadata */}
             <div className="absolute top-5 left-5 right-5 flex items-start justify-between text-[10px] uppercase tracking-[0.28em]">
               <div className="flex items-center gap-2 px-2.5 py-1 bg-bg-primary/15 backdrop-blur-sm border border-bg-primary/20">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
@@ -137,19 +94,19 @@ export default function StudioProof() {
 
             <div className="absolute bottom-0 left-0 right-0 p-7 md:p-10">
               <div className="h-px w-12 bg-accent mb-4 transition-all duration-500 group-hover:w-20" />
-              <div className="text-[11px] uppercase tracking-[0.3em] text-accent mb-2 font-mono">{PHOTOS.hero.label}</div>
+              <div className="text-[11px] uppercase tracking-[0.3em] text-accent mb-2 font-mono">{STUDIO.heroPhoto.label}</div>
               <h3 className="font-display text-4xl md:text-5xl uppercase tracking-tight text-bg-primary leading-[0.95]">
-                STUDIO NGỌC BÀN
+                {STUDIO.heroPhoto.title}
               </h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-bg-primary/72">
-                Mặt tiền 21 Thành Thái — không gian thi công siêu xe và xe sang ngay tại trung tâm Đà Nẵng.
+                {STUDIO.heroPhoto.desc}
               </p>
             </div>
           </div>
 
           {/* Stats card top-right */}
           <div className="col-span-12 lg:col-span-4 grid grid-cols-2 gap-3 md:gap-4 content-stretch">
-            {STATS.map((s, i) => (
+            {STUDIO.stats.map((s, i) => (
               <motion.div
                 key={s.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -160,7 +117,7 @@ export default function StudioProof() {
               >
                 <div className="absolute top-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-accent via-accent-light to-transparent transition-all duration-700" />
                 <div className="font-display text-3xl md:text-4xl text-gold-gradient leading-none">
-                  <Counter to={s.to} suffix={s.suffix} />
+                  <Counter to={Number(s.value) || 0} suffix={s.suffix ?? ''} />
                 </div>
                 <div className="text-[10px] uppercase tracking-[0.22em] text-text-secondary mt-3 leading-tight text-balance">
                   {s.label}
@@ -171,8 +128,8 @@ export default function StudioProof() {
             {/* Workshop photo — fills below stats */}
             <div className="col-span-2 group relative aspect-[5/3] border border-border-gold overflow-hidden bg-bg-contrast">
               <img
-                src={PHOTOS.workshop.src}
-                alt={PHOTOS.workshop.label}
+                src={STUDIO.workshopPhoto.src}
+                alt={STUDIO.workshopPhoto.label}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover scale-[1.04] group-hover:scale-[1.1] transition-transform duration-[1.4s] ease-out will-change-transform"
               />
@@ -181,8 +138,8 @@ export default function StudioProof() {
                 02 / 04
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{PHOTOS.workshop.label}</div>
-                <div className="text-sm text-bg-primary">{PHOTOS.workshop.spec}</div>
+                <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{STUDIO.workshopPhoto.label}</div>
+                <div className="text-sm text-bg-primary">{STUDIO.workshopPhoto.spec}</div>
               </div>
             </div>
           </div>
@@ -190,8 +147,8 @@ export default function StudioProof() {
           {/* Bottom row — 2 photos */}
           <div className="group relative col-span-6 aspect-[4/3] border border-border-gold overflow-hidden bg-bg-contrast">
             <img
-              src={PHOTOS.lexus.src}
-              alt={PHOTOS.lexus.label}
+              src={STUDIO.lexusPhoto.src}
+              alt={STUDIO.lexusPhoto.label}
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover scale-[1.04] group-hover:scale-[1.1] transition-transform duration-[1.4s] ease-out will-change-transform"
             />
@@ -200,15 +157,15 @@ export default function StudioProof() {
               03 / 04
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-              <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{PHOTOS.lexus.label}</div>
-              <div className="text-sm text-bg-primary">{PHOTOS.lexus.spec}</div>
+              <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{STUDIO.lexusPhoto.label}</div>
+              <div className="text-sm text-bg-primary">{STUDIO.lexusPhoto.spec}</div>
             </div>
           </div>
 
           <div className="group relative col-span-6 aspect-[4/3] border border-border-gold overflow-hidden bg-bg-contrast">
             <img
-              src={PHOTOS.street.src}
-              alt={PHOTOS.street.label}
+              src={STUDIO.streetPhoto.src}
+              alt={STUDIO.streetPhoto.label}
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover scale-[1.04] group-hover:scale-[1.1] transition-transform duration-[1.4s] ease-out will-change-transform"
             />
@@ -217,8 +174,8 @@ export default function StudioProof() {
               04 / 04
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-              <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{PHOTOS.street.label}</div>
-              <div className="text-sm text-bg-primary">{PHOTOS.street.spec}</div>
+              <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{STUDIO.streetPhoto.label}</div>
+              <div className="text-sm text-bg-primary">{STUDIO.streetPhoto.spec}</div>
             </div>
           </div>
         </div>
@@ -252,7 +209,7 @@ export default function StudioProof() {
                 <div className="font-display text-xl md:text-2xl text-text-primary leading-snug">{SITE.hours}</div>
                 <div className="mt-3 flex items-center gap-2 text-[12px] tracking-[0.22em] uppercase">
                   <Wrench size={12} className="text-accent" />
-                  <span className="text-text-secondary">Đặt lịch trước qua Hotline để được phục vụ nhanh</span>
+                  <span className="text-text-secondary">{STUDIO.hoursNote}</span>
                 </div>
               </div>
             </div>
@@ -263,9 +220,9 @@ export default function StudioProof() {
       {/* Marquee strip — full bleed */}
       <div className="relative border-y border-border-gold/60 py-6 bg-bg-secondary overflow-hidden">
         <div className="flex gap-12 whitespace-nowrap animate-marquee will-change-transform">
-          {[...MARQUEE, ...MARQUEE].map((item, i) => (
+          {[...STUDIO.marquee, ...STUDIO.marquee].map((item, i) => (
             <span key={i} className="flex items-center gap-12 font-display text-2xl md:text-3xl uppercase tracking-[0.18em] text-text-primary">
-              {item}
+              {marqueeText(item)}
               <span className="text-accent text-3xl">✦</span>
             </span>
           ))}

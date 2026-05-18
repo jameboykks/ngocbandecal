@@ -201,6 +201,69 @@ collections:
               - { name: after,  label: "Ảnh SAU",          widget: image }
               - { name: tag,    label: "Loại dịch vụ",     widget: string }
 
+      - file: src/content/studio.json
+        name: studio
+        label: "Không Gian Thật (Studio bento section)"
+        fields:
+          - { name: eyebrow,        label: "Eyebrow (chữ nhỏ trên đầu)",                   widget: string }
+          - { name: headingLine1,   label: "Tiêu đề dòng 1 (chữ trắng)",                   widget: string, hint: "VD: KHÔNG GIAN" }
+          - { name: headingLine2,   label: "Tiêu đề dòng 2 (highlight vàng)",              widget: string, hint: "VD: THẬT" }
+          - { name: description,    label: "Mô tả dưới tiêu đề",                            widget: text }
+          - { name: liveOpenText,   label: "Text khi đang mở cửa",                          widget: string, hint: "VD: On-air · Đang mở cửa" }
+          - { name: liveClosedText, label: "Text khi đã đóng cửa",                          widget: string, hint: "VD: Studio đã đóng" }
+          - { name: city,           label: "Thành phố hiển thị",                            widget: string, hint: "VD: Đà Nẵng, VN" }
+
+          - name: heroPhoto
+            label: "Ảnh chính (Hero — ô lớn bên trái)"
+            widget: object
+            fields:
+              - { name: src,   label: "Ảnh",            widget: image }
+              - { name: label, label: "Nhãn (góc dưới, chữ vàng nhỏ)", widget: string, hint: "VD: Front Façade" }
+              - { name: title, label: "Tiêu đề lớn trên ảnh",          widget: string, hint: "VD: STUDIO NGỌC BÀN" }
+              - { name: desc,  label: "Mô tả dưới tiêu đề",             widget: text }
+
+          - name: workshopPhoto
+            label: "Ảnh khoang thi công (02/04)"
+            widget: object
+            fields:
+              - { name: src,   label: "Ảnh",   widget: image }
+              - { name: label, label: "Nhãn", widget: string, hint: "VD: Production Bay" }
+              - { name: spec,  label: "Spec/Mô tả ngắn", widget: string, hint: "VD: LED 5000K · Dust-controlled" }
+
+          - name: lexusPhoto
+            label: "Ảnh khoang bàn giao (03/04)"
+            widget: object
+            fields:
+              - { name: src,   label: "Ảnh",   widget: image }
+              - { name: label, label: "Nhãn", widget: string }
+              - { name: spec,  label: "Spec/Mô tả ngắn", widget: string }
+
+          - name: streetPhoto
+            label: "Ảnh mặt đường (04/04)"
+            widget: object
+            fields:
+              - { name: src,   label: "Ảnh",   widget: image }
+              - { name: label, label: "Nhãn", widget: string }
+              - { name: spec,  label: "Spec/Mô tả ngắn", widget: string }
+
+          - name: stats
+            label: "4 số liệu nổi bật"
+            widget: list
+            min: 4
+            max: 4
+            summary: "{{fields.value}}{{fields.suffix}} {{fields.label}}"
+            fields:
+              - { name: value,  label: "Số (VD: 200)",         widget: string }
+              - { name: suffix, label: "Hậu tố (VD: m², +, /7)", widget: string, required: false }
+              - { name: label,  label: "Nhãn",                  widget: string }
+
+          - { name: hoursNote, label: "Ghi chú dưới Giờ làm việc", widget: string, hint: "VD: Đặt lịch trước qua Hotline để được phục vụ nhanh" }
+
+          - name: marquee
+            label: "Marquee strip (từ khoá chạy ngang dưới cùng)"
+            widget: list
+            field: { name: text, label: "Từ khoá", widget: string }
+
       - file: src/content/showcase.json
         name: showcase
         label: "Cinematic Showcase (heading + nội dung)"

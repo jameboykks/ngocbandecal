@@ -15,6 +15,7 @@ import testimonialsData from '../content/testimonials.json';
 import faqsData from '../content/faqs.json';
 import videosData from '../content/videos.json';
 import showcaseData from '../content/showcase.json';
+import studioData from '../content/studio.json';
 
 const postModules = import.meta.glob<{ default: Post }>('../content/posts/*.json', { eager: true });
 const portfolioModules = import.meta.glob<{ default: PortfolioItem }>('../content/portfolio/*.json', { eager: true });
@@ -84,6 +85,7 @@ export const TESTIMONIALS = testimonialsData.items;
 export const FAQS = faqsData.items;
 export const VIDEOS = videosData.items;
 export const SHOWCASE = showcaseData;
+export const STUDIO = studioData;
 
 export const FILTERS = ['Tất cả', 'Wrap đổi màu', 'PPF', 'Tem xe', 'Film cách nhiệt'];
 

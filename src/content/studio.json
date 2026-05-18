@@ -1,0 +1,47 @@
+{
+  "eyebrow": "Không Gian Thật",
+  "headingLine1": "KHÔNG GIAN",
+  "headingLine2": "THẬT",
+  "description": "Không phải showroom render. Không ảnh stock. Đây là xưởng thật — nơi từng chiếc xe được wrap thủ công, kiểm tra dưới đèn LED 5000K trước khi rời studio.",
+  "liveOpenText": "On-air · Đang mở cửa",
+  "liveClosedText": "Studio đã đóng",
+  "city": "Đà Nẵng, VN",
+  "heroPhoto": {
+    "src": "/images/ngoc-ban/studio-facade-supercars.jpeg",
+    "label": "Front Façade",
+    "title": "STUDIO NGỌC BÀN",
+    "desc": "Mặt tiền 21 Thành Thái — không gian thi công siêu xe và xe sang ngay tại trung tâm Đà Nẵng."
+  },
+  "workshopPhoto": {
+    "src": "/images/ngoc-ban/studio-workshop-cars.jpeg",
+    "label": "Production Bay",
+    "spec": "LED 5000K · Dust-controlled"
+  },
+  "lexusPhoto": {
+    "src": "/images/ngoc-ban/studio-front-lexus.jpeg",
+    "label": "Delivery Bay",
+    "spec": "PPF · Wrap · Detailing"
+  },
+  "streetPhoto": {
+    "src": "/images/ngoc-ban/studio-street-front.jpeg",
+    "label": "Street View",
+    "spec": "21 Thành Thái"
+  },
+  "stats": [
+    { "value": "200", "suffix": "m²", "label": "Diện tích studio" },
+    { "value": "6", "suffix": "", "label": "Khoang thi công" },
+    { "value": "9", "suffix": "+", "label": "Năm hoạt động" },
+    { "value": "24", "suffix": "/7", "label": "Hỗ trợ sau bán" }
+  ],
+  "hoursNote": "Đặt lịch trước qua Hotline để được phục vụ nhanh",
+  "marquee": [
+    "Wrap Decal",
+    "PPF Bảo Vệ Sơn",
+    "Film Cách Nhiệt",
+    "Detailing",
+    "Đánh Bóng",
+    "Studio Đà Nẵng",
+    "Đèn LED 5000K",
+    "Phòng Kiểm Tra Sơn"
+  ]
+}

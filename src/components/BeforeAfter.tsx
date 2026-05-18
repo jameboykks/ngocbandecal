@@ -24,7 +24,7 @@ function Slider({ item }: { item: Item }) {
       </h3>
       <div
         ref={ref}
-        className="relative aspect-[16/10] overflow-hidden border border-border-gold cursor-ew-resize select-none touch-none"
+        className="relative aspect-[4/3] overflow-hidden border border-border-gold cursor-ew-resize select-none touch-none bg-bg-elevated"
         onPointerDown={(e) => {
           dragging.current = true;
           (e.target as Element).setPointerCapture?.(e.pointerId);
@@ -34,13 +34,13 @@ function Slider({ item }: { item: Item }) {
         onPointerUp={() => (dragging.current = false)}
       >
         {/* After (full background) */}
-        <img src={item.after} alt="after" className="absolute inset-0 w-full h-full object-cover pointer-events-none" draggable={false} />
+        <img src={item.after} alt="after" className="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable={false} />
         {/* Before (clipped) */}
         <div
           className="absolute inset-0 overflow-hidden pointer-events-none"
           style={{ clipPath: `polygon(0 0, ${pos}% 0, ${pos}% 100%, 0 100%)` }}
         >
-          <img src={item.before} alt="before" className="absolute inset-0 w-full h-full object-cover" draggable={false} />
+          <img src={item.before} alt="before" className="absolute inset-0 w-full h-full object-contain" draggable={false} />
         </div>
 
         {/* Labels */}
@@ -86,7 +86,7 @@ export default function BeforeAfter({ items }: { items: Item[] }) {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+        <div className="grid xl:grid-cols-2 gap-10 items-stretch max-w-5xl mx-auto xl:max-w-none">
           {items.map((it, i) => (
             <motion.div
               key={it.title}
