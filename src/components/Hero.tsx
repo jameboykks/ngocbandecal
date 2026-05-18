@@ -37,7 +37,7 @@ export default function Hero() {
   const visualY = useTransform(scrollYProgress, [0, 1], ['0%', '8%']);
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '-6%']);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.72], [1, 0]);
-  const heroImage = '/images/ngoc-ban/portfolio/p038.webp';
+  const heroImage = SITE.heroImage || '/images/ngoc-ban/portfolio/p038.webp';
 
   return (
     <section

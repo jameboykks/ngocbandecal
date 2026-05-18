@@ -61,6 +61,13 @@ collections:
           - { name: messenger,   label: "Link Messenger",  widget: string }
           - { name: maps,        label: "Link Google Maps",widget: string }
           - { name: socialProof, label: "Câu social proof",widget: string }
+          - {
+              name: heroImage,
+              label: "Ảnh Hero (section WRAP DECAL STUDIO trang chủ)",
+              widget: image,
+              required: false,
+              hint: "Ảnh lớn bên phải section Hero (desktop) + dưới text (mobile). Tỉ lệ đẹp: 16/11 hoặc dọc. Nên ≥ 1600px chiều ngang."
+            }
 
       - file: src/content/stats.json
         name: stats
