@@ -3,7 +3,6 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, MapPin, Clock, Wrench } from 'lucide-react';
 import { SITE } from '../data/site';
 import Counter from './Counter';
-import Tilt from './Tilt';
 
 const PHOTOS = {
   hero: {
@@ -55,8 +54,8 @@ function ParallaxImage({ src, alt, className = '' }: { src: string; alt: string;
   const my = useMotionValue(0);
   const sx = useSpring(mx, { stiffness: 80, damping: 18 });
   const sy = useSpring(my, { stiffness: 80, damping: 18 });
-  const tx = useTransform(sx, (v) => `${v * 1.5}%`);
-  const ty = useTransform(sy, (v) => `${v * 1.5}%`);
+  const tx = useTransform(sx, (v) => v * 8);
+  const ty = useTransform(sy, (v) => v * 8);
 
   const onMove = (e: React.PointerEvent) => {
     if (!ref.current || window.matchMedia('(pointer: coarse)').matches) return;
@@ -67,7 +66,7 @@ function ParallaxImage({ src, alt, className = '' }: { src: string; alt: string;
   const onLeave = () => { mx.set(0); my.set(0); };
 
   return (
-    <div ref={ref} onPointerMove={onMove} onPointerLeave={onLeave} className={`relative overflow-hidden ${className}`}>
+    <div ref={ref} onPointerMove={onMove} onPointerLeave={onLeave} className={`overflow-hidden ${className}`}>
       <motion.img
         src={src}
         alt={alt}
@@ -84,14 +83,6 @@ export default function StudioProof() {
 
   return (
     <section id="studio" className="section-y bg-bg-primary relative overflow-hidden">
-      {/* Background grid texture */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(201,169,110,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.5) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-        }}
-      />
       <div className="pointer-events-none absolute inset-0 radial-glow opacity-50" />
 
       <div className="container-x relative z-10">
@@ -130,8 +121,8 @@ export default function StudioProof() {
 
         {/* Bento mosaic */}
         <div className="grid grid-cols-12 gap-3 md:gap-4 mb-12">
-          {/* Hero — big left */}
-          <Tilt max={4} className="group col-span-12 lg:col-span-8 row-span-2 aspect-[16/11] lg:aspect-auto lg:min-h-[520px] border border-border-gold overflow-hidden bg-bg-contrast">
+          {/* Hero — big left (keeps parallax for "wow") */}
+          <div className="group relative col-span-12 lg:col-span-8 row-span-2 aspect-[16/11] lg:aspect-auto lg:min-h-[520px] border border-border-gold overflow-hidden bg-bg-contrast">
             <ParallaxImage src={PHOTOS.hero.src} alt={PHOTOS.hero.label} className="absolute inset-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast via-bg-contrast/30 to-transparent" />
 
@@ -154,7 +145,7 @@ export default function StudioProof() {
                 Mặt tiền 21 Thành Thái — không gian thi công siêu xe và xe sang ngay tại trung tâm Đà Nẵng.
               </p>
             </div>
-          </Tilt>
+          </div>
 
           {/* Stats card top-right */}
           <div className="col-span-12 lg:col-span-4 grid grid-cols-2 gap-3 md:gap-4 content-stretch">
@@ -178,8 +169,13 @@ export default function StudioProof() {
             ))}
 
             {/* Workshop photo — fills below stats */}
-            <Tilt max={5} className="col-span-2 group aspect-[5/3] border border-border-gold overflow-hidden bg-bg-contrast">
-              <ParallaxImage src={PHOTOS.workshop.src} alt={PHOTOS.workshop.label} className="absolute inset-0" />
+            <div className="col-span-2 group relative aspect-[5/3] border border-border-gold overflow-hidden bg-bg-contrast">
+              <img
+                src={PHOTOS.workshop.src}
+                alt={PHOTOS.workshop.label}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover scale-[1.04] group-hover:scale-[1.1] transition-transform duration-[1.4s] ease-out will-change-transform"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast/95 via-bg-contrast/20 to-transparent" />
               <div className="absolute top-4 left-4 px-2 py-1 bg-bg-primary/15 backdrop-blur-sm border border-bg-primary/20 text-[9px] uppercase tracking-[0.3em] text-bg-primary font-mono">
                 02 / 04
@@ -188,12 +184,17 @@ export default function StudioProof() {
                 <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{PHOTOS.workshop.label}</div>
                 <div className="text-sm text-bg-primary">{PHOTOS.workshop.spec}</div>
               </div>
-            </Tilt>
+            </div>
           </div>
 
           {/* Bottom row — 2 photos */}
-          <Tilt max={5} className="group col-span-6 aspect-[4/3] border border-border-gold overflow-hidden bg-bg-contrast">
-            <ParallaxImage src={PHOTOS.lexus.src} alt={PHOTOS.lexus.label} className="absolute inset-0" />
+          <div className="group relative col-span-6 aspect-[4/3] border border-border-gold overflow-hidden bg-bg-contrast">
+            <img
+              src={PHOTOS.lexus.src}
+              alt={PHOTOS.lexus.label}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover scale-[1.04] group-hover:scale-[1.1] transition-transform duration-[1.4s] ease-out will-change-transform"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast/95 via-bg-contrast/20 to-transparent" />
             <div className="absolute top-4 left-4 px-2 py-1 bg-bg-primary/15 backdrop-blur-sm border border-bg-primary/20 text-[9px] uppercase tracking-[0.3em] text-bg-primary font-mono">
               03 / 04
@@ -202,10 +203,15 @@ export default function StudioProof() {
               <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{PHOTOS.lexus.label}</div>
               <div className="text-sm text-bg-primary">{PHOTOS.lexus.spec}</div>
             </div>
-          </Tilt>
+          </div>
 
-          <Tilt max={5} className="group col-span-6 aspect-[4/3] border border-border-gold overflow-hidden bg-bg-contrast">
-            <ParallaxImage src={PHOTOS.street.src} alt={PHOTOS.street.label} className="absolute inset-0" />
+          <div className="group relative col-span-6 aspect-[4/3] border border-border-gold overflow-hidden bg-bg-contrast">
+            <img
+              src={PHOTOS.street.src}
+              alt={PHOTOS.street.label}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover scale-[1.04] group-hover:scale-[1.1] transition-transform duration-[1.4s] ease-out will-change-transform"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast/95 via-bg-contrast/20 to-transparent" />
             <div className="absolute top-4 left-4 px-2 py-1 bg-bg-primary/15 backdrop-blur-sm border border-bg-primary/20 text-[9px] uppercase tracking-[0.3em] text-bg-primary font-mono">
               04 / 04
@@ -214,7 +220,7 @@ export default function StudioProof() {
               <div className="text-[10px] uppercase tracking-[0.28em] text-accent mb-1 font-mono">{PHOTOS.street.label}</div>
               <div className="text-sm text-bg-primary">{PHOTOS.street.spec}</div>
             </div>
-          </Tilt>
+          </div>
         </div>
 
         {/* Address card + CTA */}
