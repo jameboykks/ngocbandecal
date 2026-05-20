@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Info */}
           <div className="lg:col-span-3">
-            <h4 className="font-display text-lg tracking-wider mb-5 text-text-primary">Liên Hệ</h4>
+            <h3 className="font-display text-lg tracking-wider mb-5 text-text-primary">Liên Hệ</h3>
             <ul className="space-y-3 text-sm text-text-secondary">
               <li className="flex gap-3"><MapPin size={16} className="text-accent shrink-0 mt-0.5" />{SITE.address}</li>
               <li className="flex gap-3"><Phone size={16} className="text-accent shrink-0 mt-0.5" /><a href={`tel:${SITE.hotlineRaw}`} className="hover:text-accent">{SITE.hotline}</a></li>
@@ -88,7 +88,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="font-display text-lg tracking-wider mb-5 text-text-primary">Dịch Vụ</h4>
+            <h3 className="font-display text-lg tracking-wider mb-5 text-text-primary">Dịch Vụ</h3>
             <ul className="space-y-2.5 text-sm text-text-secondary">
               <li><Link to="/dich-vu/wrap-doi-mau" className="hover:text-accent">Wrap đổi màu</Link></li>
               <li><Link to="/dich-vu/dan-ppf" className="hover:text-accent">Dán PPF</Link></li>
@@ -103,7 +103,7 @@ export default function Footer() {
 
           {/* Map */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-lg tracking-wider mb-5 text-text-primary">Bản Đồ</h4>
+            <h3 className="font-display text-lg tracking-wider mb-5 text-text-primary">Bản Đồ</h3>
             <a
               href={SITE.maps}
               target="_blank"

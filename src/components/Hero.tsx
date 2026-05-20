@@ -92,15 +92,13 @@ export default function Hero() {
             Ngọc Bàn Automotive Studio
           </motion.div>
 
-          <motion.h1
-            custom={1}
-            variants={fadeUp}
+          <h1
             className="h-display max-w-[720px] text-[17vw] leading-[0.88] sm:text-[5.2rem] md:text-[6rem] lg:text-[6rem] xl:text-[6.4rem]"
           >
             WRAP
             <span className="block text-gold-gradient">DECAL</span>
             STUDIO
-          </motion.h1>
+          </h1>
 
           <motion.p custom={2} variants={fadeUp} className="mt-6 w-full max-w-[21rem] pr-2 font-serif text-lg italic leading-relaxed text-text-secondary sm:max-w-[30rem] sm:text-xl md:text-2xl">
             Dán PPF, wrap đổi màu, film cách nhiệt và tem xe cao cấp cho những chiếc xe cần bề mặt đẹp, đường cắt gọn và bảo vệ sơn zin.
