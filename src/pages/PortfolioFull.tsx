@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X, ExternalLink } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { PORTFOLIO, FILTERS, BRANDS } from '../data/site';
+import SEO from '../components/SEO';
 
 const BRAND_FILTERS = ['Tất cả hãng', ...BRANDS.slice(0, 12)];
 
@@ -23,6 +24,11 @@ export default function PortfolioFull() {
 
   return (
     <>
+      <SEO
+        title="Tác Phẩm — Gallery Dự Án Wrap PPF Decal"
+        description="Hơn 5.000 chiếc xe đã được wrap đổi màu, dán PPF, film cách nhiệt tại Ngọc Bàn Decal Đà Nẵng. Xem gallery các tác phẩm tiêu biểu."
+        path="/tac-pham"
+      />
       <PageHero
         eyebrow="Tác Phẩm"
         title="GALLERY"

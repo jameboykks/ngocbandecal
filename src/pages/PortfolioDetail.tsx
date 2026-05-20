@@ -3,6 +3,7 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Phone, X, ZoomIn } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import { PORTFOLIO, SITE } from '../data/site';
 
 export default function PortfolioDetail() {
@@ -28,6 +29,12 @@ export default function PortfolioDetail() {
 
   return (
     <>
+      <SEO
+        title={`${item.title} · ${item.tag}`}
+        description={item.description || `${item.title} — tác phẩm ${item.tag.toLowerCase()} thi công tại Ngọc Bàn Decal Đà Nẵng. Thi công tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.`}
+        path={`/tac-pham/${item.slug}`}
+        image={item.cover}
+      />
       <PageHero
         eyebrow={item.tag}
         title={item.title}

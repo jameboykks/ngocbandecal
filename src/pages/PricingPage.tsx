@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import Pricing from '../components/Pricing';
 import FAQ from '../components/FAQ';
 import { ExternalLink, ZoomIn } from 'lucide-react';
@@ -66,6 +67,11 @@ const TABLE = [
 export default function PricingPage() {
   return (
     <>
+      <SEO
+        title="Bảng Giá Wrap PPF Detailing Đà Nẵng"
+        description="Bảng giá tham khảo các gói wrap đổi màu, PPF, film cách nhiệt và detailing tại Ngọc Bàn Decal Đà Nẵng. Liên hệ 0969.646.801 để báo giá chi tiết."
+        path="/bang-gia"
+      />
       <PageHero
         eyebrow="Bảng Giá Tham Khảo"
         title="MINH BẠCH"

@@ -2,12 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import { POSTS } from '../data/site';
 
 export default function Blog() {
   const [feature, ...rest] = POSTS;
   return (
     <>
+      <SEO
+        title="Blog & Tin Tức Wrap Decal"
+        description="Mẹo chọn chất liệu wrap, hướng dẫn chăm sóc xe sau wrap/PPF, xu hướng wrap decal mới nhất từ đội ngũ Ngọc Bàn Decal."
+        path="/blog"
+      />
       <PageHero
         eyebrow="Blog & Tin Tức"
         title="KIẾN THỨC"

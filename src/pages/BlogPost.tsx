@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import { POSTS, SITE } from '../data/site';
 
 export default function BlogPost() {
@@ -13,6 +14,12 @@ export default function BlogPost() {
 
   return (
     <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        image={post.cover}
+      />
       <PageHero
         eyebrow={post.cat}
         title={post.title}

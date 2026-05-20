@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import { SITE } from '../data/site';
 
 const Facebook = () => (
@@ -29,6 +30,11 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Liên Hệ Ngọc Bàn Decal Đà Nẵng"
+        description="Địa chỉ: 21 Thành Thái, Khuê Trung, Cẩm Lệ, Đà Nẵng. Hotline 0969.646.801. Đặt lịch wrap/PPF/film cách nhiệt 24/7 qua Zalo, Messenger."
+        path="/lien-he"
+      />
       <PageHero
         eyebrow="Liên Hệ"
         title="GẶP NHAU"

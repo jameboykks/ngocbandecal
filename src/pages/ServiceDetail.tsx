@@ -2,6 +2,7 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check, Phone, ArrowRight, ArrowLeft } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import { SERVICES, PORTFOLIO, SITE } from '../data/site';
 
 export default function ServiceDetail() {
@@ -22,6 +23,12 @@ export default function ServiceDetail() {
 
   return (
     <>
+      <SEO
+        title={`${s.title}`}
+        description={s.desc}
+        path={`/dich-vu/${s.slug}`}
+        image={s.cover}
+      />
       <PageHero
         eyebrow={`Dịch vụ ${s.n}`}
         title={s.title}

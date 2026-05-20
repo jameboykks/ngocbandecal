@@ -1,0 +1,14 @@
+# Ngọc Bàn Decal — robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+
+# Block Decap CMS config / OAuth callbacks
+Disallow: /api/auth
+
+# Allow image/model assets for richer search results
+Allow: /images/
+Allow: /models/
+
+Sitemap: https://ngocbandecal.vn/sitemap.xml

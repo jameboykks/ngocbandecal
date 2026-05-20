@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import BrandMarquee from '../components/BrandMarquee';
 import StudioProof from '../components/StudioProof';
@@ -18,6 +19,11 @@ import { BEFORE_AFTER } from '../data/site';
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Ngọc Bàn Wrap Decal Đà Nẵng — Dán PPF, Wrap Đổi Màu, Film Cách Nhiệt"
+        description="Trung tâm wrap đổi màu, dán PPF, film cách nhiệt ô tô số 1 Đà Nẵng. 9+ năm kinh nghiệm, 5000+ khách hàng. Hotline 0969.646.801."
+        path="/"
+      />
       <Hero />
       <BrandMarquee />
       <StudioProof />

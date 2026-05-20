@@ -59,7 +59,7 @@ export default function Hero() {
         <div className="absolute bottom-0 left-10 right-12 top-[7%] overflow-hidden border border-accent/18 bg-gradient-to-br from-bg-contrast-soft via-steel/40 to-bg-contrast shadow-[0_45px_120px_-60px_rgba(0,0,0,0.8)]">
           <img
             src={heroImage}
-            alt=""
+            alt="Xe sang sau khi wrap đổi màu và dán PPF tại Ngọc Bàn Decal Đà Nẵng"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
             className="absolute inset-0 h-full w-full object-cover object-[58%_50%]"
           />
@@ -129,7 +129,7 @@ export default function Hero() {
             <div className="relative aspect-[16/11] bg-gradient-to-br from-bg-contrast-soft via-steel/50 to-bg-contrast">
               <img
                 src={heroImage}
-                alt=""
+                alt="Xe sang sau khi wrap đổi màu và dán PPF tại Ngọc Bàn Decal Đà Nẵng"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 className="absolute inset-0 h-full w-full object-cover object-center"
               />

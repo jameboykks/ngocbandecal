@@ -2,11 +2,17 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 import { SERVICES } from '../data/site';
 
 export default function ServicesList() {
   return (
     <>
+      <SEO
+        title="Dịch Vụ — Wrap, PPF, Film Cách Nhiệt, Detailing"
+        description="6 nhóm dịch vụ chính tại Ngọc Bàn Decal: wrap đổi màu, dán PPF, film cách nhiệt, tem xe, đánh bóng và chăm sóc xe chuyên sâu."
+        path="/dich-vu"
+      />
       <PageHero
         eyebrow="Dịch vụ Ngọc Bàn"
         title="GIẢI PHÁP TOÀN DIỆN"
