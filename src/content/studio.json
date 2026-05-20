@@ -7,23 +7,23 @@
   "liveClosedText": "Studio đã đóng",
   "city": "Đà Nẵng, VN",
   "heroPhoto": {
-    "src": "/images/ngoc-ban/studio-facade-supercars.jpeg",
+    "src": "/images/ngoc-ban/studio-facade-supercars.webp",
     "label": "Front Façade",
     "title": "STUDIO NGỌC BÀN",
     "desc": "Mặt tiền 21 Thành Thái — không gian thi công siêu xe và xe sang ngay tại trung tâm Đà Nẵng."
   },
   "workshopPhoto": {
-    "src": "/images/ngoc-ban/studio-workshop-cars.jpeg",
+    "src": "/images/ngoc-ban/studio-workshop-cars.webp",
     "label": "Production Bay",
     "spec": "LED 5000K · Dust-controlled"
   },
   "lexusPhoto": {
-    "src": "/images/ngoc-ban/studio-front-lexus.jpeg",
+    "src": "/images/ngoc-ban/studio-front-lexus.webp",
     "label": "Delivery Bay",
     "spec": "PPF · Wrap · Detailing"
   },
   "streetPhoto": {
-    "src": "/images/ngoc-ban/studio-street-front.jpeg",
+    "src": "/images/ngoc-ban/studio-street-front.webp",
     "label": "Street View",
     "spec": "21 Thành Thái"
   },

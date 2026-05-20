@@ -17,7 +17,7 @@ export default function WhyUs() {
         className="absolute inset-0 opacity-[0.08] bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('/images/ngoc-ban/studio-front-lexus.jpeg')",
+            "url('/images/ngoc-ban/studio-front-lexus.webp')",
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-primary/95 to-bg-primary" />

@@ -14,7 +14,7 @@ type Props = {
 };
 
 const BASE = 'https://www.ngocbandecal.vn';
-const DEFAULT_IMG = `${BASE}/images/ngoc-ban/studio-facade-supercars.jpeg`;
+const DEFAULT_IMG = `${BASE}/images/ngoc-ban/studio-facade-supercars.webp`;
 
 export default function SEO({ title, description, path, image, noindex }: Props) {
   const fullTitle = title ? `${title} — Ngọc Bàn Decal` : 'Ngọc Bàn Wrap Decal Đà Nẵng — Dán PPF, Wrap Đổi Màu, Film Cách Nhiệt';

@@ -8,17 +8,17 @@ const PRICE_IMAGES = [
   {
     title: 'Bảng giá PPF Film ô tô',
     desc: 'Các gói PPF theo thương hiệu, dòng xe và thời gian bảo hành.',
-    src: '/images/ngoc-ban/price-ppf.jfif',
+    src: '/images/ngoc-ban/price-ppf.webp',
   },
   {
     title: 'Bảng giá wrap đổi màu',
     desc: 'Các gói wrap đổi màu theo sedan, SUV, MPV và bảo hành.',
-    src: '/images/ngoc-ban/price-wrap.jfif',
+    src: '/images/ngoc-ban/price-wrap.webp',
   },
   {
     title: 'Bảng giá detailing',
     desc: 'Rửa xe, vệ sinh nội thất, đánh bóng, tẩy ố và các gói chăm sóc xe.',
-    src: '/images/ngoc-ban/price-detailing.jfif',
+    src: '/images/ngoc-ban/price-detailing.webp',
   },
 ];
 

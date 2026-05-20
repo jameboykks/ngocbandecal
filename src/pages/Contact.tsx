@@ -102,7 +102,7 @@ export default function Contact() {
             <figure className="mt-10 overflow-hidden border border-border-gold bg-bg-contrast">
               <div className="relative aspect-[16/10]">
                 <img
-                  src="/images/ngoc-ban/studio-street-front.jpeg"
+                  src="/images/ngoc-ban/studio-street-front.webp"
                   alt="Mặt tiền Ngọc Bàn Decal"
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover"
