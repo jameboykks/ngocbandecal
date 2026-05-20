@@ -38,26 +38,68 @@ for (const s of SOURCES) {
   console.log(`✓ ${s.name} → square + landscape`);
 }
 
-// Simple SVG logo (1200×1200) — gold "NGỌC BÀN" on dark backdrop.
-// Used for the optional "Biểu tượng" / logo upload.
-const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#dfc693"/>
-      <stop offset="50%" stop-color="#c9a96e"/>
-      <stop offset="100%" stop-color="#a3843a"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="1200" fill="#17130f"/>
-  <text x="600" y="540" font-family="'Oswald','Be Vietnam Pro',sans-serif" font-size="180" font-weight="700" text-anchor="middle" fill="url(#g)" letter-spacing="6">NGỌC BÀN</text>
-  <text x="600" y="710" font-family="'Be Vietnam Pro',sans-serif" font-size="68" text-anchor="middle" fill="#dfc693" letter-spacing="14">WRAP DECAL STUDIO</text>
-  <rect x="430" y="780" width="340" height="2" fill="#c9a96e"/>
-  <text x="600" y="850" font-family="'Be Vietnam Pro',sans-serif" font-size="44" text-anchor="middle" fill="#dfc693" opacity="0.7">ĐÀ NẴNG · TỪ 2017</text>
+// Logo: 1200×1200 dark backdrop + gold border + text rendered via
+// Sharp's Pango text feature (reliable on Vercel/Linux without
+// needing Oswald installed — uses whatever sans-serif Pango finds).
+const bg = await sharp({
+  create: { width: 1200, height: 1200, channels: 4, background: '#17130f' },
+}).png().toBuffer();
+
+// Gold border (8px) using a simple stroked rect
+const borderSvg = `<svg width="1200" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="60" y="60" width="1080" height="1080" fill="none" stroke="#c9a96e" stroke-width="3"/>
+  <rect x="80" y="80" width="1040" height="1040" fill="none" stroke="#a3843a" stroke-width="1"/>
 </svg>`;
 
-await sharp(Buffer.from(logoSvg))
+// Big "NGỌC BÀN" wordmark via Pango (built into libvips → works
+// even where TrueType "Oswald" isn't installed).
+const wordmark = await sharp({
+  text: {
+    text: '<span foreground="#dfc693" weight="800" letter_spacing="6144">NGỌC BÀN</span>',
+    rgba: true,
+    width: 900,
+    align: 'center',
+    font: 'sans 200',
+  },
+}).png().toBuffer();
+
+// Subtitle line
+const subtitle = await sharp({
+  text: {
+    text: '<span foreground="#c9a96e" letter_spacing="12288">WRAP DECAL STUDIO</span>',
+    rgba: true,
+    width: 800,
+    align: 'center',
+    font: 'sans 56',
+  },
+}).png().toBuffer();
+
+// Bottom line
+const tagline = await sharp({
+  text: {
+    text: '<span foreground="#dfc693" letter_spacing="10240">ĐÀ NẴNG · TỪ 2017</span>',
+    rgba: true,
+    width: 700,
+    align: 'center',
+    font: 'sans 40',
+  },
+}).png().toBuffer();
+
+// Get heights so we can center vertically
+const wmMeta = await sharp(wordmark).metadata();
+const subMeta = await sharp(subtitle).metadata();
+const tagMeta = await sharp(tagline).metadata();
+
+await sharp(bg)
+  .composite([
+    { input: Buffer.from(borderSvg), top: 0, left: 0 },
+    { input: wordmark, top: Math.round((1200 - wmMeta.height) / 2 - 80), left: Math.round((1200 - wmMeta.width) / 2) },
+    { input: subtitle, top: Math.round((1200 - wmMeta.height) / 2 - 80) + wmMeta.height + 30, left: Math.round((1200 - subMeta.width) / 2) },
+    { input: Buffer.from(`<svg width="340" height="2"><rect width="340" height="2" fill="#c9a96e"/></svg>`), top: 850, left: 430 },
+    { input: tagline, top: 880, left: Math.round((1200 - tagMeta.width) / 2) },
+  ])
   .png({ quality: 90 })
   .toFile(join(OUT_DIR, 'logo-1200.png'));
 
-console.log(`✓ logo-1200.png`);
+console.log(`✓ logo-1200.png (Pango-rendered, no Oswald dependency)`);
 console.log(`\nDone. Files in /public/images/ngoc-ban/ads/`);
