@@ -4,13 +4,13 @@
 //
 // Page-view tracking on every React Router route change.
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SITE } from '../data/site';
 
 declare global {
   interface Window {
-    dataLayer: unknown[];
+    dataLayer: IArguments[];
     gtag: (...args: unknown[]) => void;
   }
 }
@@ -25,41 +25,54 @@ function loadGtagOnce() {
   if (scriptLoaded || !TRACKING_ID) return;
   scriptLoaded = true;
 
-  // 1. Insert gtag.js script
+  // 1. Bootstrap dataLayer + gtag function FIRST — using arguments
+  //    (not rest spread) so gtag.js sees the standard Arguments shape.
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function gtag() {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments);
+    };
+  }
+  window.gtag('js', new Date());
+
+  // 2. Configure each ID. Leave send_page_view at default true so the
+  //    first hit fires automatically; SPA route changes call config
+  //    again with the updated page_path.
+  if (gaId) window.gtag('config', gaId);
+  if (adsId) window.gtag('config', adsId);
+
+  // 3. Inject gtag.js loader script (AFTER dataLayer is primed so the
+  //    queued commands are processed in order).
   const script = document.createElement('script');
   script.src = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
   script.async = true;
   document.head.appendChild(script);
-
-  // 2. Bootstrap dataLayer + gtag function
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
-  window.gtag('js', new Date());
-
-  // 3. Configure each ID separately (one config per property)
-  if (gaId) window.gtag('config', gaId, { send_page_view: false });
-  if (adsId) window.gtag('config', adsId);
 }
 
 export default function Analytics() {
   const location = useLocation();
+  const isFirstRender = useRef(true);
 
-  // Load gtag once on mount
+  // Load gtag once on mount — config() auto-fires the first page_view
   useEffect(() => {
     loadGtagOnce();
   }, []);
 
-  // Fire a page_view event on every SPA route change
+  // SPA route changes: re-fire page_view for any navigation AFTER mount.
+  // The first one is already covered by gtag('config', gaId) above.
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (!gaId || typeof window.gtag !== 'function') return;
     window.gtag('event', 'page_view', {
       page_path: location.pathname + location.search,
       page_location: window.location.href,
       page_title: document.title,
     });
-  }, [location]);
+  }, [location.pathname, location.search]);
 
   // Global click delegation: any tel: / zalo / messenger link auto-fires an event.
   useEffect(() => {
