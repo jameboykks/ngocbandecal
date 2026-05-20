@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+/* Google Fonts moved to index.html with preload+swap pattern so they don't render-block. */
 @import "tailwindcss";
 
 @theme {

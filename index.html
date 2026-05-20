@@ -31,6 +31,19 @@
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <!-- Preload LCP hero image so browser starts fetching before JS hydrates -->
     <link rel="preload" as="image" href="/images/ngoc-ban/studio-facade-supercars.webp" fetchpriority="high" />
+    <!-- Non-blocking Google Fonts: load as print, swap to all once loaded -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
