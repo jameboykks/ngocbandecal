@@ -2,6 +2,8 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { blogPostSchema, breadcrumbSchema } from '../utils/schemas';
 import { POSTS, SITE } from '../data/site';
 
 export default function BlogPost() {
@@ -19,6 +21,16 @@ export default function BlogPost() {
         description={post.excerpt}
         path={`/blog/${post.slug}`}
         image={post.cover}
+      />
+      <JsonLd
+        data={[
+          blogPostSchema(post),
+          breadcrumbSchema([
+            { label: 'Trang chủ', path: '/' },
+            { label: 'Blog', path: '/blog' },
+            { label: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
       />
       <PageHero
         eyebrow={post.cat}

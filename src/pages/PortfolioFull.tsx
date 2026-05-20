@@ -5,6 +5,8 @@ import { ArrowRight, X, ExternalLink } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { PORTFOLIO, FILTERS, BRANDS } from '../data/site';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { breadcrumbSchema } from '../utils/schemas';
 
 const BRAND_FILTERS = ['Tất cả hãng', ...BRANDS.slice(0, 12)];
 
@@ -28,6 +30,12 @@ export default function PortfolioFull() {
         title="Tác Phẩm — Gallery Dự Án Wrap PPF Decal"
         description="Hơn 5.000 chiếc xe đã được wrap đổi màu, dán PPF, film cách nhiệt tại Ngọc Bàn Decal Đà Nẵng. Xem gallery các tác phẩm tiêu biểu."
         path="/tac-pham"
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { label: 'Trang chủ', path: '/' },
+          { label: 'Tác phẩm', path: '/tac-pham' },
+        ])}
       />
       <PageHero
         eyebrow="Tác Phẩm"
@@ -94,13 +102,14 @@ export default function PortfolioFull() {
                     ].join(' ')}
                   >
                     <img src={p.cover ?? p.img} alt={p.title ?? p.car ?? ''} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <span className="absolute inset-0 bg-gradient-to-t from-bg-primary/95 via-bg-primary/40 to-transparent opacity-70 group-hover:opacity-95 transition-opacity" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                      <div className="text-[10px] tracking-[0.25em] uppercase text-accent mb-1">{p.tag}</div>
-                      <div className="font-display text-xl tracking-wider text-text-primary">{p.title ?? p.car}</div>
+                    {/* Darker, taller gradient so white title reads on any car colour */}
+                    <span className="absolute inset-0 bg-gradient-to-t from-bg-contrast/95 via-bg-contrast/60 to-transparent transition-opacity" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <div className="text-[10px] tracking-[0.3em] font-semibold uppercase text-accent-light mb-1.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{p.tag}</div>
+                      <div className="font-display text-lg md:text-xl tracking-wider text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] leading-tight">{p.title ?? p.car}</div>
                     </div>
-                    <span className="absolute top-3 right-3 w-9 h-9 border border-border-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                      <ArrowRight size={14} className="text-accent" />
+                    <span className="absolute top-3 right-3 w-9 h-9 border border-accent-light/70 bg-bg-contrast/40 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                      <ArrowRight size={14} className="text-accent-light" />
                     </span>
                   </motion.button>
                 ))}

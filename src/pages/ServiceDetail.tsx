@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Check, Phone, ArrowRight, ArrowLeft } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { breadcrumbSchema, serviceSchema } from '../utils/schemas';
 import { SERVICES, PORTFOLIO, SITE } from '../data/site';
 
 export default function ServiceDetail() {
@@ -28,6 +30,16 @@ export default function ServiceDetail() {
         description={s.desc}
         path={`/dich-vu/${s.slug}`}
         image={s.cover}
+      />
+      <JsonLd
+        data={[
+          serviceSchema(s),
+          breadcrumbSchema([
+            { label: 'Trang chủ', path: '/' },
+            { label: 'Dịch vụ', path: '/dich-vu' },
+            { label: s.title, path: `/dich-vu/${s.slug}` },
+          ]),
+        ]}
       />
       <PageHero
         eyebrow={`Dịch vụ ${s.n}`}

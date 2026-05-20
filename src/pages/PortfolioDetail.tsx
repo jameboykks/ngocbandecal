@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Phone, X, ZoomIn } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { breadcrumbSchema, portfolioSchema } from '../utils/schemas';
 import { PORTFOLIO, SITE } from '../data/site';
 
 export default function PortfolioDetail() {
@@ -34,6 +36,16 @@ export default function PortfolioDetail() {
         description={item.description || `${item.title} — tác phẩm ${item.tag.toLowerCase()} thi công tại Ngọc Bàn Decal Đà Nẵng. Thi công tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm.`}
         path={`/tac-pham/${item.slug}`}
         image={item.cover}
+      />
+      <JsonLd
+        data={[
+          portfolioSchema(item),
+          breadcrumbSchema([
+            { label: 'Trang chủ', path: '/' },
+            { label: 'Tác phẩm', path: '/tac-pham' },
+            { label: item.title, path: `/tac-pham/${item.slug}` },
+          ]),
+        ]}
       />
       <PageHero
         eyebrow={item.tag}

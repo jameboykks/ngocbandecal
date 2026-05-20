@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { breadcrumbSchema } from '../utils/schemas';
 import { trackContactFormSubmit } from '../components/Analytics';
 import { SITE } from '../data/site';
 
@@ -36,6 +38,12 @@ export default function Contact() {
         title="Liên Hệ Ngọc Bàn Decal Đà Nẵng"
         description="Địa chỉ: 21 Thành Thái, Khuê Trung, Cẩm Lệ, Đà Nẵng. Hotline 0969.646.801. Đặt lịch wrap/PPF/film cách nhiệt 24/7 qua Zalo, Messenger."
         path="/lien-he"
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { label: 'Trang chủ', path: '/' },
+          { label: 'Liên hệ', path: '/lien-he' },
+        ])}
       />
       <PageHero
         eyebrow="Liên Hệ"

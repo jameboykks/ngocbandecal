@@ -3,6 +3,143 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/san-pham/poscher-718-cayman-voi-tone-mau-do-ruc-ro-giua-pho-ket-hop-tem-suon-the-thao-den-bong-thi-cong-boi-team-ngoc-ban-decal-dan-tem-xe-da-nang/:rest*",
+      "destination": "/tac-pham/porsche-718-gloss-red",
+      "permanent": true
+    },
+    {
+      "source": "/san-pham/:slug*",
+      "destination": "/tac-pham",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/wrap-doi-mau/:rest*",
+      "destination": "/dich-vu/wrap-doi-mau",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/wrap-decal-noc-den/:rest*",
+      "destination": "/dich-vu/wrap-doi-mau",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/wrap-ppf-bao-ve-xe-o-to/:rest*",
+      "destination": "/dich-vu/dan-ppf",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/dan-film-cach-nhiet-3m/:rest*",
+      "destination": "/dich-vu/film-cach-nhiet",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/dan-decal-film-cach-nhiet-nha-kinh/:rest*",
+      "destination": "/dich-vu/film-cach-nhiet",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/tem-xe/:rest*",
+      "destination": "/dich-vu/tem-xe",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/tem-xem-o-to-dep/:rest*",
+      "destination": "/dich-vu/tem-xe",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/dan-decal-noi-that/:rest*",
+      "destination": "/dich-vu/tem-xe",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/dan-decal-xe-may/:rest*",
+      "destination": "/dich-vu/tem-xe",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/dan-quang-cao-tren-xe-o-to/:rest*",
+      "destination": "/dich-vu/tem-xe",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/rua-xe-detaling-cham-soc-xe-chuyen-sau/:rest*",
+      "destination": "/dich-vu/cham-soc-xe",
+      "permanent": true
+    },
+    {
+      "source": "/danh-muc-san-pham/:rest*",
+      "destination": "/dich-vu",
+      "permanent": true
+    },
+    {
+      "source": "/thuong-hieu/:rest*",
+      "destination": "/tac-pham",
+      "permanent": true
+    },
+    {
+      "source": "/author/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:rest*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:rest*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/shop/:rest*",
+      "destination": "/tac-pham",
+      "permanent": true
+    },
+    {
+      "source": "/gioi-thieu/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/chinh-sach-doi-tra/:rest*",
+      "destination": "/dieu-khoan",
+      "permanent": true
+    },
+    {
+      "source": "/chinh-sach-giao-hang-kiem-hang/:rest*",
+      "destination": "/dieu-khoan",
+      "permanent": true
+    },
+    {
+      "source": "/huong-dan-mua-hang/:rest*",
+      "destination": "/bang-gia",
+      "permanent": true
+    },
+    {
+      "source": "/tem-vinfast-vf3-chao-mung-dai-le-30-4-1-5-thi-cong-tai-ngoc-ban-decal-dan-tem-xe-da-nang/:rest*",
+      "destination": "/tac-pham",
+      "permanent": true
+    },
+    {
+      "source": "/tong-hop-mau-tem-xe-vinfast-limo-green-2025-ngoc-ban-decal-dan-tem-xe-da-nang/:rest*",
+      "destination": "/tac-pham",
+      "permanent": true
+    },
+    {
+      "source": "/tong-hop-mau-tem-xe-ford-transit-2025-ngoc-ban-decal-dan-tem-xe-da-nang/:rest*",
+      "destination": "/tac-pham",
+      "permanent": true
+    },
+    {
+      "source": "/tem-suon-xe-vinfast-vf3-thi-cong-tai-ngoc-ban-decal-dan-tem-xe-da-nang/:rest*",
+      "destination": "/tac-pham",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!admin|api|assets|images|favicon|icons|robots|sitemap).*)",

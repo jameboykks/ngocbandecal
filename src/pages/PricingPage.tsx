@@ -1,8 +1,11 @@
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 import Pricing from '../components/Pricing';
 import FAQ from '../components/FAQ';
 import { ExternalLink, ZoomIn } from 'lucide-react';
+import { breadcrumbSchema, faqSchema } from '../utils/schemas';
+import { FAQS } from '../data/site';
 
 const PRICE_IMAGES = [
   {
@@ -71,6 +74,15 @@ export default function PricingPage() {
         title="Bảng Giá Wrap PPF Detailing Đà Nẵng"
         description="Bảng giá tham khảo các gói wrap đổi màu, PPF, film cách nhiệt và detailing tại Ngọc Bàn Decal Đà Nẵng. Liên hệ 0969.646.801 để báo giá chi tiết."
         path="/bang-gia"
+      />
+      <JsonLd
+        data={[
+          faqSchema(FAQS),
+          breadcrumbSchema([
+            { label: 'Trang chủ', path: '/' },
+            { label: 'Bảng giá', path: '/bang-gia' },
+          ]),
+        ]}
       />
       <PageHero
         eyebrow="Bảng Giá Tham Khảo"

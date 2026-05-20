@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { breadcrumbSchema } from '../utils/schemas';
 import { POSTS } from '../data/site';
 
 export default function Blog() {
@@ -13,6 +15,12 @@ export default function Blog() {
         title="Blog & Tin Tức Wrap Decal"
         description="Mẹo chọn chất liệu wrap, hướng dẫn chăm sóc xe sau wrap/PPF, xu hướng wrap decal mới nhất từ đội ngũ Ngọc Bàn Decal."
         path="/blog"
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { label: 'Trang chủ', path: '/' },
+          { label: 'Blog', path: '/blog' },
+        ])}
       />
       <PageHero
         eyebrow="Blog & Tin Tức"

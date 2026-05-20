@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { breadcrumbSchema } from '../utils/schemas';
 import { SERVICES } from '../data/site';
 
 export default function ServicesList() {
@@ -12,6 +14,12 @@ export default function ServicesList() {
         title="Dịch Vụ — Wrap, PPF, Film Cách Nhiệt, Detailing"
         description="6 nhóm dịch vụ chính tại Ngọc Bàn Decal: wrap đổi màu, dán PPF, film cách nhiệt, tem xe, đánh bóng và chăm sóc xe chuyên sâu."
         path="/dich-vu"
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { label: 'Trang chủ', path: '/' },
+          { label: 'Dịch vụ', path: '/dich-vu' },
+        ])}
       />
       <PageHero
         eyebrow="Dịch vụ Ngọc Bàn"
