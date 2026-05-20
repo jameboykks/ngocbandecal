@@ -191,7 +191,7 @@ export default function StudioProof() {
               <div className="flex-1 min-w-0">
                 <div className="text-[10px] uppercase tracking-[0.28em] text-text-muted mb-2 font-mono">addr.studio</div>
                 <div className="font-display text-xl md:text-2xl text-text-primary leading-snug">{SITE.address}</div>
-                <a href={SITE.maps} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all">
+                <a href={SITE.maps} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.22em] text-accent-dark hover:gap-3 transition-all">
                   Mở Google Maps <ArrowRight size={14} />
                 </a>
               </div>

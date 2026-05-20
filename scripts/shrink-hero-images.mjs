@@ -1,7 +1,8 @@
-// Aggressively re-compress the LCP-critical hero/studio images to ≤1200px
-// wide at quality 65. They're displayed in a max ~600px container on mobile
-// so 1800px source was overkill (~270-370KB each → ~80-150KB).
-import { readFile, writeFile, stat } from 'node:fs/promises';
+// Aggressive squeeze pass 3 for studio images. Lighthouse still flags
+// each one as "larger than needed for displayed dimensions (312x234)".
+// Drop max width to 900px (covers up to 2x retina at 450px display)
+// and quality 60 to cut another 30-40%.
+import { readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -16,25 +17,28 @@ const TARGETS = [
   'public/images/ngoc-ban/studio-street-front.webp',
 ];
 
-const MAX_WIDTH = 1200;
-const QUALITY = 65;
+const MAX_WIDTH = 900;
+const QUALITY = 60;
 
 let totalBefore = 0, totalAfter = 0;
 for (const rel of TARGETS) {
   const path = join(ROOT, rel);
   try {
     const buf = await readFile(path);
-    const before = buf.length;
     const out = await sharp(buf)
       .resize({ width: MAX_WIDTH, withoutEnlargement: true })
       .webp({ quality: QUALITY, effort: 6 })
       .toBuffer();
-    await writeFile(path, out);
-    totalBefore += before;
-    totalAfter += out.length;
-    console.log(`✓ ${rel} (${(before/1024).toFixed(0)}KB → ${(out.length/1024).toFixed(0)}KB)`);
+    if (out.length < buf.length) {
+      await writeFile(path, out);
+      totalBefore += buf.length;
+      totalAfter += out.length;
+      console.log(`✓ ${rel} (${(buf.length/1024).toFixed(0)}KB → ${(out.length/1024).toFixed(0)}KB)`);
+    } else {
+      console.log(`~ ${rel} (already smaller)`);
+    }
   } catch (err) {
     console.error(`✗ ${rel}: ${err.message}`);
   }
 }
-console.log(`\nSaved ${((totalBefore - totalAfter)/1024).toFixed(0)}KB across ${TARGETS.length} files.`);
+console.log(`\nSaved ${((totalBefore - totalAfter)/1024).toFixed(0)}KB.`);

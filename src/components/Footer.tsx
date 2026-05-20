@@ -43,7 +43,7 @@ export default function Footer() {
             </p>
 
             <form id="footer-form" onSubmit={submit} className="bg-bg-card border border-border-gold p-5">
-              <div className="text-[11px] tracking-[0.25em] uppercase text-accent mb-3">Đăng Ký Nhận Tư Vấn</div>
+              <div className="text-[11px] tracking-[0.25em] uppercase text-accent-dark font-semibold mb-3">Đăng Ký Nhận Tư Vấn</div>
               <div className="grid sm:grid-cols-2 gap-3 mb-3">
                 <input
                   type="text"

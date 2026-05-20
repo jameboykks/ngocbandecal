@@ -15,7 +15,7 @@ function StepLabel({ p, i, progress }: { p: typeof PROCESS[number]; i: number; p
   const scale = useTransform(progress, [i - 0.5, i, i + 1], [0.97, 1.02, 0.97]);
   return (
     <motion.div style={{ opacity, scale }} className="flex items-center gap-4 py-2 origin-left">
-      <span className="font-display text-3xl text-accent w-12">{p.n}</span>
+      <span className="font-display text-3xl text-accent-dark w-12">{p.n}</span>
       <span className="font-display text-2xl tracking-wider">{p.title}</span>
     </motion.div>
   );
@@ -36,7 +36,7 @@ function StepVisual({ p, i, progress }: { p: typeof PROCESS[number]; i: number; 
       <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="text-[10px] tracking-[0.4em] uppercase text-accent mb-2">Bước {p.n}</div>
+            <div className="text-[10px] tracking-[0.4em] uppercase text-accent-dark mb-2">Bước {p.n}</div>
             <div className="font-display text-3xl md:text-5xl tracking-wider mb-3">{p.title}</div>
             <p className="text-text-secondary max-w-md">{p.desc}</p>
           </div>

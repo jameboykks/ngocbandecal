@@ -17,7 +17,7 @@ export default function FAQ() {
             <p className="font-serif italic text-lg text-text-secondary mb-8">
               Những câu hỏi khách hàng quan tâm nhất khi quyết định wrap, dán PPF hay film cách nhiệt cho xe.
             </p>
-            <a href="tel:0969646801" className="inline-flex items-center gap-2 text-[12px] tracking-[0.25em] uppercase text-accent hover:text-accent-light transition">
+            <a href="tel:0969646801" className="inline-flex items-center gap-2 text-[12px] tracking-[0.25em] uppercase text-accent-dark hover:text-accent-light transition">
               Hỏi trực tiếp →
             </a>
           </div>
@@ -31,7 +31,7 @@ export default function FAQ() {
                     className="w-full flex items-start justify-between gap-6 py-6 text-left group"
                   >
                     <span className="flex gap-5 items-start">
-                      <span className="font-display text-sm text-accent shrink-0 mt-1">0{i + 1}</span>
+                      <span className="font-display text-sm text-accent-dark shrink-0 mt-1">0{i + 1}</span>
                       <span className="font-display text-lg md:text-xl tracking-wider text-text-primary group-hover:text-accent transition">
                         {f.q}
                       </span>

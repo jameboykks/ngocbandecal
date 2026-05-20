@@ -90,7 +90,7 @@ export default function QuoteCalculator() {
                   <div className={[
                     'w-9 h-9 rounded-full border flex items-center justify-center font-display text-sm transition',
                     i < step ? 'bg-accent border-accent text-bg-primary' :
-                    i === step ? 'border-accent text-accent bg-accent/10' :
+                    i === step ? 'border-accent text-accent-dark bg-accent/10' :
                     'border-border-gold text-text-muted',
                   ].join(' ')}>
                     {i < step ? <Check size={14} /> : i + 1}
@@ -187,7 +187,7 @@ export default function QuoteCalculator() {
 
               {step === 3 && (
                 <div className="text-center">
-                  <div className="text-[11px] tracking-[0.3em] uppercase text-accent mb-2">Khoảng giá tham khảo</div>
+                  <div className="text-[11px] tracking-[0.3em] uppercase text-accent-dark mb-2">Khoảng giá tham khảo</div>
                   <div className="font-display text-4xl md:text-6xl text-gold-gradient mb-2">
                     {fmt(range[0])} – {fmt(range[1])}
                   </div>
