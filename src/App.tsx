@@ -17,10 +17,14 @@ import PricingPage from './pages/PricingPage';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Analytics from './components/Analytics';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <LoadingSplash />
       <CustomCursor />
       <ScrollToTop />
@@ -40,6 +44,8 @@ export default function App() {
             <Route path="/lien-he" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/chinh-sach-bao-mat" element={<PrivacyPolicy />} />
+            <Route path="/dieu-khoan" element={<TermsOfService />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

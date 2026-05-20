@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
+import { trackContactFormSubmit } from '../components/Analytics';
 import { SITE } from '../data/site';
 
 const Facebook = () => (
@@ -21,6 +22,7 @@ export default function Contact() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone) return;
+    trackContactFormSubmit(form.service || undefined);
     const text = `Tên: ${form.name}%0ASĐT: ${form.phone}%0ADịch vụ: ${form.service || 'Chưa chọn'}%0AYêu cầu: ${form.msg || 'Tư vấn'}`;
     window.open(`https://zalo.me/${SITE.hotlineRaw}?msg=${text}`, '_blank');
     setSent(true);

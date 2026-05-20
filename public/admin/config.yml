@@ -68,6 +68,27 @@ collections:
               required: false,
               hint: "Ảnh lớn bên phải section Hero (desktop) + dưới text (mobile). Tỉ lệ đẹp: 16/11 hoặc dọc. Nên ≥ 1600px chiều ngang."
             }
+          - {
+              name: gaId,
+              label: "Google Analytics 4 ID",
+              widget: string,
+              required: false,
+              hint: "VD: G-XXXXXXXXXX — paste từ Google Analytics → Admin → Data Streams → Measurement ID. Để trống nếu chưa setup."
+            }
+          - {
+              name: adsId,
+              label: "Google Ads Conversion ID",
+              widget: string,
+              required: false,
+              hint: "VD: AW-123456789 — từ Google Ads → Tools → Conversions → Tag setup. Để trống nếu chưa chạy ads."
+            }
+          - {
+              name: adsCallLabel,
+              label: "Google Ads — Call Conversion Label",
+              widget: string,
+              required: false,
+              hint: "VD: aBcDeFgHiJkL — label của conversion type 'Phone calls' (sau AW-xxx/). Để trống nếu chưa setup."
+            }
 
       - file: src/content/stats.json
         name: stats

@@ -123,10 +123,10 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-border-gold flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[12px] text-text-muted">
           <div>© {new Date().getFullYear()} {SITE.fullName}. All rights reserved.</div>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-accent">Chính sách bảo hành</a>
-            <a href="#" className="hover:text-accent">Điều khoản</a>
-            <a href="#" className="hover:text-accent">Bảo mật</a>
+          <div className="flex flex-wrap gap-5">
+            <Link to="/dieu-khoan" className="hover:text-accent">Điều khoản dịch vụ</Link>
+            <Link to="/chinh-sach-bao-mat" className="hover:text-accent">Chính sách bảo mật</Link>
+            <Link to="/lien-he" className="hover:text-accent">Liên hệ</Link>
           </div>
         </div>
       </div>
