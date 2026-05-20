@@ -60,6 +60,10 @@ export default function Hero() {
           <img
             src={heroImage}
             alt="Xe sang sau khi wrap đổi màu và dán PPF tại Ngọc Bàn Decal Đà Nẵng"
+            width="1200"
+            height="800"
+            fetchPriority="high"
+            decoding="async"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
             className="absolute inset-0 h-full w-full object-cover object-[58%_50%]"
           />
@@ -130,6 +134,10 @@ export default function Hero() {
               <img
                 src={heroImage}
                 alt="Xe sang sau khi wrap đổi màu và dán PPF tại Ngọc Bàn Decal Đà Nẵng"
+                width="800"
+                height="550"
+                fetchPriority="high"
+                decoding="async"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 className="absolute inset-0 h-full w-full object-cover object-center"
               />
