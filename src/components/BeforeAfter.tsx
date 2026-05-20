@@ -34,13 +34,13 @@ function Slider({ item }: { item: Item }) {
         onPointerUp={() => (dragging.current = false)}
       >
         {/* After (full background) */}
-        <img src={item.after} alt="after" className="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable={false} />
+        <img src={item.after} alt="after" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable={false} />
         {/* Before (clipped) */}
         <div
           className="absolute inset-0 overflow-hidden pointer-events-none"
           style={{ clipPath: `polygon(0 0, ${pos}% 0, ${pos}% 100%, 0 100%)` }}
         >
-          <img src={item.before} alt="before" className="absolute inset-0 w-full h-full object-contain" draggable={false} />
+          <img src={item.before} alt="before" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-contain" draggable={false} />
         </div>
 
         {/* Labels */}
