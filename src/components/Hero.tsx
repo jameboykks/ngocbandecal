@@ -61,7 +61,7 @@ export default function Hero() {
             src={heroImage}
             alt=""
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
-            className="absolute inset-0 h-full w-full object-cover object-[58%_50%] opacity-72 grayscale saturate-0 contrast-[1.08] brightness-[0.7]"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_50%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast via-bg-contrast/30 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-bg-contrast/35 via-transparent to-bg-contrast/60" />
@@ -131,7 +131,7 @@ export default function Hero() {
                 src={heroImage}
                 alt=""
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-75 grayscale saturate-0 contrast-[1.08] brightness-[0.76]"
+                className="absolute inset-0 h-full w-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg-contrast via-bg-contrast/20 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between border-t border-accent/25 pt-4">
