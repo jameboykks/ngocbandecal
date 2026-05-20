@@ -9,7 +9,14 @@ import { readFile, readdir, writeFile, mkdir, appendFile } from 'node:fs/promise
 import { existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import puppeteer from 'puppeteer';
+
+// Dual env: local dev uses full `puppeteer` (ships its own Chromium that
+// works on Windows/macOS). Vercel build env is Amazon Linux without
+// libnss3 etc, so we swap to puppeteer-core + @sparticuz/chromium which
+// bundles a serverless-friendly Chromium with the required shared libs.
+const IS_SERVERLESS = !!(process.env.VERCEL || process.env.CI);
+const puppeteer = (await import(IS_SERVERLESS ? 'puppeteer-core' : 'puppeteer')).default;
+const chromium = IS_SERVERLESS ? (await import('@sparticuz/chromium')).default : null;
 
 // Mirror every log line to disk so we can monitor progress in real time
 // (stdout buffering from npm/background harnesses hides per-URL output).
@@ -113,10 +120,19 @@ await new Promise((resolve, reject) => {
 console.log('[prerender] preview server ready');
 
 // ──────────────────── Puppeteer crawl ────────────────────
-const browser = await puppeteer.launch({
-  headless: true,
-  args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
-});
+const browser = await puppeteer.launch(
+  IS_SERVERLESS
+    ? {
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: chromium.headless,
+      }
+    : {
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+      },
+);
 
 let ok = 0;
 let fail = 0;
