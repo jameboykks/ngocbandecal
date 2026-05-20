@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const SITE = 'https://ngocbandecal.vn';
+const SITE = 'https://www.ngocbandecal.vn';
 const today = new Date().toISOString().slice(0, 10);
 
 const STATIC_ROUTES = [

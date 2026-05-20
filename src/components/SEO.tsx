@@ -13,7 +13,7 @@ type Props = {
   noindex?: boolean;
 };
 
-const BASE = 'https://ngocbandecal.vn';
+const BASE = 'https://www.ngocbandecal.vn';
 const DEFAULT_IMG = `${BASE}/images/ngoc-ban/studio-facade-supercars.jpeg`;
 
 export default function SEO({ title, description, path, image, noindex }: Props) {
