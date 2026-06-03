@@ -1,28 +1,30 @@
 {
   "size": "normal",
-  "slug": "vinfast",
+  "slug": "xetai",
   "featured": true,
   "date": "",
   "gallery": [
-    "/images/ngoc-ban/uploads/z7897950116576_cebedd8d7feab29b025f321fb4de907f.jpg",
-    "/images/ngoc-ban/uploads/z7897950125137_2e25af573b9372bd1006afd2b061dd38.jpg",
-    "/images/ngoc-ban/uploads/z7897950129237_2dd892fc4428be99c0f2dbda3c625943.jpg",
-    "/images/ngoc-ban/uploads/z7897950120526_14d4738726d9b86e9f482fc025d5a0b9.jpg",
-    "/images/ngoc-ban/uploads/z7897950135530_ad2b93bbf0a1c72f864914e63f1ea576.jpg"
+    "/images/ngoc-ban/uploads/z7897951125336_f632cd25daeaa7abdb35dcc4b807dab1.jpg",
+    "/images/ngoc-ban/uploads/z7897951099601_29db435ab45bdbd6b89b6a912ce21ccf.jpg",
+    "/images/ngoc-ban/uploads/z7897951108594_a64e0ec627cb76b1240086116137eba4.jpg",
+    "/images/ngoc-ban/uploads/z7897951120046_f6b63b2188f707d5cb8cebf3f02f12c7.jpg",
+    "/images/ngoc-ban/uploads/z7897951132325_5375f7f4742315f000febbdb72d2c8a6.jpg",
+    "/images/ngoc-ban/uploads/z7897951115692_1e82ad82918dd8af82a35a009f97219f.jpg",
+    "/images/ngoc-ban/uploads/z7897951136391_5ed70a3e8b103ed0af08cf4b943b49af.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/z7897950163454_7ede02acb37dde4e478e8a1ce01e9f6c.jpg",
+  "cover": "/images/ngoc-ban/uploads/z7897951125336_f632cd25daeaa7abdb35dcc4b807dab1.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "Vinfast VF7 "
+      "value": "Kia K250"
     },
     {
       "label": "Dịch vụ",
-      "value": "Dán Film Cách Nhiệt 3M "
+      "value": "Tem xe "
     },
     {
       "label": "Chất liệu",
-      "value": "Film cách nhiệt nhậu khẩu chính hãng 3M USA "
+      "value": "Tem in 3 lớp cao cấp "
     },
     {
       "label": "Thời gian thi công",
@@ -30,16 +32,16 @@
     },
     {
       "label": "Báo giá",
-      "value": "14.800.000"
+      "value": "Liên hệ để được báo giá "
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "10 năm "
+      "value": "8 tháng "
     }
   ],
-  "title": "Vinfast VF7-  Film Cách Nhiệt 3M Crystaline ",
+  "title": "Kia k250 - Tem thiết kế lương hiệu ",
   "content": "",
-  "tag": "Film cách nhiệt",
-  "id": 32,
-  "description": "Giải pháp cách nhiệt hiệu quả nhất cho xế yêu của bạn - một tác phẩm xuất sắc của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "tag": "Tem xe",
+  "id": 34,
+  "description": "Biện pháp Maketing hiệu quả nhất cho công ty của bạn - một tác phẩm xuất sắc của Ngọc Bàn Wrap Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
