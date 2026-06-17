@@ -1,49 +1,42 @@
 {
   "size": "normal",
-  "slug": "porsche-taycan",
+  "slug": "ford-raptor74",
   "featured": true,
-  "date": "14-6-2026",
+  "date": "15-6-2026",
   "gallery": [
-    "/images/ngoc-ban/uploads/z7947320499091_2fb95e9342018b4f4f838ab29ac4bc25.jpg",
-    "/images/ngoc-ban/uploads/z7947320566297_50b4b129b819b75f2c590a411a224b47.jpg",
-    "/images/ngoc-ban/uploads/z7947320551812_e4b710bf1f748be016d3e6e76a7f874f.jpg",
-    "/images/ngoc-ban/uploads/z7947320587557_4cc2652523359c094ea194300e913cee.jpg",
-    "/images/ngoc-ban/uploads/z7947320508724_780aac25a48466b3bff45436e2abeaed.jpg",
-    "/images/ngoc-ban/uploads/z7947320471436_8fb3ca70ccdfb13b1e726ef047f32a0a.jpg",
-    "/images/ngoc-ban/uploads/z7947320500571_d154fd92efd445cd231772e4d1dba567.jpg",
-    "/images/ngoc-ban/uploads/z7947320500571_d154fd92efd445cd231772e4d1dba567.jpg",
-    "/images/ngoc-ban/uploads/z7947320493611_79aa9cd9fe7db272e98c22cd85248635.jpg",
-    "/images/ngoc-ban/uploads/z7947320514721_e798b9ceb8d194f1ef9600f7871d8533.jpg",
-    "/images/ngoc-ban/uploads/z7947320522256_fef680faa2886fcc91086f6881f3f05a.jpg",
-    "/images/ngoc-ban/uploads/z7947320530670_e8b51ffed0a6dda8f0fb188ae5a6d08c.jpg",
-    "/images/ngoc-ban/uploads/z7947320535920_926a502c3843d5c90da6d5b027ca0653.jpg",
-    "/images/ngoc-ban/uploads/z7947320543080_849d94eae82e87e9026c030bc149ae4d.jpg",
-    "/images/ngoc-ban/uploads/z7947320560664_489d4c1e397f71fea69dd36482546cbd.jpg",
-    "/images/ngoc-ban/uploads/z7947320568525_1c1e9b500a15f1d434a1a1a66a709297.jpg",
-    "/images/ngoc-ban/uploads/z7947320574476_7e7f237e22527adb748981a3cacd31d6.jpg",
-    "/images/ngoc-ban/uploads/z7947320586721_94bb2ebebbdb8c0b933ed3983e821042.jpg",
-    "/images/ngoc-ban/uploads/z7947320596282_71c97f9421430eee89dad085c17e6833.jpg",
-    "/images/ngoc-ban/uploads/z7947320600556_e20f93b5bf738c512b3cf1f7073afdd2.jpg",
-    "/images/ngoc-ban/uploads/z7947320442641_d0645e41e6fc692824c3873bcb2f0cfb.jpg",
-    "/images/ngoc-ban/uploads/z7947320436261_4b7fb302201a8f2e3e2634d09787ac69.jpg",
-    "/images/ngoc-ban/uploads/z7947320405110_31f2a09e8d237d42923a4d2a56c2cbc1.jpg",
-    "/images/ngoc-ban/uploads/z7947320452504_fa149f423a8fe77572fd7c9634a65283.jpg",
-    "/images/ngoc-ban/uploads/z7947320458671_3ac017da3679dc101a39c67520647236.jpg",
-    "/images/ngoc-ban/uploads/z7947320458671_3ac017da3679dc101a39c67520647236.jpg"
+    "/images/ngoc-ban/uploads/z7947322085273_5e52b771be2ba967ad6a3ee8102507de.jpg",
+    "/images/ngoc-ban/uploads/z7947321994948_8e8aaba8b7ffff231ada8100668150ac.jpg",
+    "/images/ngoc-ban/uploads/z7947321958622_f5909d9f7ef6af581452b094ddcf465d.jpg",
+    "/images/ngoc-ban/uploads/z7947321962721_d169eae08c1ef95214a20f1ff4048d1a.jpg",
+    "/images/ngoc-ban/uploads/z7947321974541_789765d2290afa2af65a3bdbdd7ceda4.jpg",
+    "/images/ngoc-ban/uploads/z7947321990089_aed400f03238d900be9d99b9217248e1.jpg",
+    "/images/ngoc-ban/uploads/z7947321981602_ccf1997c7214ad210dd884f6d7a13737.jpg",
+    "/images/ngoc-ban/uploads/z7947322010315_160c3b7cd8149b197250a889d8d19784.jpg",
+    "/images/ngoc-ban/uploads/z7947322018080_8d31b6fe1b397e4d1e8e5766f1d80f73.jpg",
+    "/images/ngoc-ban/uploads/z7947322020180_7243d1c83a304bcf984b6d24ba5b427a.jpg",
+    "/images/ngoc-ban/uploads/z7947322026259_21bec659cbae7b01ed3f110e072154af.jpg",
+    "/images/ngoc-ban/uploads/z7947322030949_e410a4901f3c2a15dbe821a3152377ee.jpg",
+    "/images/ngoc-ban/uploads/z7947322040258_12fbf5b4dd4e4fd3e6725a965e38aceb.jpg",
+    "/images/ngoc-ban/uploads/z7947322045801_e65f8238fc73622a1c07dbdb8881cb80.jpg",
+    "/images/ngoc-ban/uploads/z7947322061753_c84406b114239b2955b788f830033d8a.jpg",
+    "/images/ngoc-ban/uploads/z7947322061405_9fdcd6dee42d2235fc72207f49a8aef3.jpg",
+    "/images/ngoc-ban/uploads/z7947322094319_3d236c88d3a3714aac9113ce966fd23d.jpg",
+    "/images/ngoc-ban/uploads/z7947322130049_b2bbcd18f3af6387ad98b87d9a4d1a98.jpg",
+    "/images/ngoc-ban/uploads/z7947322115910_207ccfdc528d3d1477026ff6f0b3de06.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/z7947320499091_2fb95e9342018b4f4f838ab29ac4bc25.jpg",
+  "cover": "/images/ngoc-ban/uploads/z7947322085273_5e52b771be2ba967ad6a3ee8102507de.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "PORSCHE TAYCAN"
+      "value": "FORD RAPTOR / 74A-33337"
     },
     {
       "label": "Dịch vụ",
-      "value": "DÁN PPF ĐỔI MÀU "
+      "value": "DÁN PPF BẢO VỆ SƠN "
     },
     {
       "label": "Chất liệu",
-      "value": "PPF TPU MÀU CAO CẤP -  Thương hiệu Terminax chính hãng ( Anh Quốc ) "
+      "value": "PPF TPU 50 GLOSS CAO CẤP -  Thương hiệu 3M chính hãng ( MỸ ) "
     },
     {
       "label": "Thời gian thi công",
@@ -55,12 +48,12 @@
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "10 năm "
+      "value": "5 năm "
     }
   ],
-  "title": "Porsche Taycan - PPF TPU CORLOR TERMINAX / Phong Cách Sang Trọng , Đẳng Cấp Khác Biệt !",
+  "title": "FORD RAPTOR - PPF TPU 3M USA 50 GLOSS ",
   "content": "",
   "tag": "PPF",
-  "id": 38,
-  "description": "PORSCHE TAYCAN / Kiểu dáng thể thao , hiện đại , kết hợp với tone màu xám chì chất liệu PPF TPU - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "id": 40,
+  "description": "FORD RAPTOR BLACK / Kiểu dáng thể thao , mạnh mẽ , tone màu đen bóng kết hợp với vật liệu liệu PPF TPU - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
