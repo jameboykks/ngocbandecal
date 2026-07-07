@@ -1,34 +1,51 @@
 {
   "size": "normal",
-  "slug": "opmoda",
+  "slug": "audia5",
   "featured": true,
-  "date": "",
+  "date": "5/7/2026",
   "gallery": [
-    "/images/ngoc-ban/uploads/z8001300461159_146caa666b859eba5ff1b26c4624ae90.jpg",
-    "/images/ngoc-ban/uploads/z8001300437262_c2858d1a75e5abb48ec824c952fbfbdc.jpg",
-    "/images/ngoc-ban/uploads/z8001300427062_3c4649fa86a4f4ecd5c9e21935d8bd88.jpg",
-    "/images/ngoc-ban/uploads/z8001300438341_da145d3d28b24da2767f220da2dac154.jpg",
-    "/images/ngoc-ban/uploads/z8001300445297_136915cb4eb43c91469d2297527a1d50.jpg",
-    "/images/ngoc-ban/uploads/z8001300456041_456eb9aa08265ea0f6210de51659dfab.jpg",
-    "/images/ngoc-ban/uploads/z8001300452547_13405072e69b1ce11e44b08958241048.jpg"
+    "/images/ngoc-ban/uploads/z8018693280686_dc9f998e6944ed6a0a51e98e61573bbe.jpg",
+    "/images/ngoc-ban/uploads/z8018693284799_741238b83a670103c7a949900ac2d8bf.jpg",
+    "/images/ngoc-ban/uploads/z8018693274486_73e87fb56eec394d7dabc48b3e4e541c.jpg",
+    "/images/ngoc-ban/uploads/z8018693307636_d3ad6e98d48c7b839f02f7df0d8b7502.jpg",
+    "/images/ngoc-ban/uploads/z8018693322830_a2c0b9b12fdfd1f86a174b738c7af2c1.jpg",
+    "/images/ngoc-ban/uploads/z8018693327173_82c749cff712f59277edaab8b9a2e745.jpg",
+    "/images/ngoc-ban/uploads/z8018693311403_53ece61bd1ff5c305194429d887e6679.jpg",
+    "/images/ngoc-ban/uploads/z8018693324124_cfd025ff1c3ffe6468d33290b82d0494.jpg",
+    "/images/ngoc-ban/uploads/z8018693352711_03a74a5e5063de799931978a8debf676.jpg",
+    "/images/ngoc-ban/uploads/z8018693311198_a09309aa768407c3bc4771d443d733cf.jpg",
+    "/images/ngoc-ban/uploads/z8018693358816_a0ca7b6fd6e321e6fd9f0f43d0f58c7d.jpg",
+    "/images/ngoc-ban/uploads/z8018693328355_c57aa0a8d1c9430216f677dd47c25e17.jpg",
+    "/images/ngoc-ban/uploads/z8018693346716_4840cb43ecac2f7b74e2a06d69bcde2b.jpg",
+    "/images/ngoc-ban/uploads/z8018693367560_644d1f8e7f6778f423ee345a756416a6.jpg",
+    "/images/ngoc-ban/uploads/z8018693342899_bf77e727644f8030fb71a80ac5189f2d.jpg",
+    "/images/ngoc-ban/uploads/z8018693348646_4574853c0e9f713a78f2fd47b38f5c4e.jpg",
+    "/images/ngoc-ban/uploads/z8018693296583_20deb2ff2e0fe9ae5dda5d06f11de7c1.jpg",
+    "/images/ngoc-ban/uploads/z8018693287100_7a4c02d25a642e44dea46968485c2ac3.jpg",
+    "/images/ngoc-ban/uploads/z8018693317174_cba467a1ba6ff1cd964a6defd55e71d9.jpg",
+    "/images/ngoc-ban/uploads/z8018693290628_2f26ba8a9466fe539c9a918e0bca049e.jpg",
+    "/images/ngoc-ban/uploads/z8018693332655_7c23ce6e62172687a2bcb719997802e2.jpg",
+    "/images/ngoc-ban/uploads/z8018693298409_6bfa5001ba058044b77168a286998300.jpg",
+    "/images/ngoc-ban/uploads/z8018693355208_7799905fd5114f10454396d69cbd5d89.jpg",
+    "/images/ngoc-ban/uploads/z8018693365782_46b63dfdccb5376eb2c19b53b4a8b66e.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/z8001300461159_146caa666b859eba5ff1b26c4624ae90.jpg",
+  "cover": "/images/ngoc-ban/uploads/z8018693280686_dc9f998e6944ed6a0a51e98e61573bbe.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "OPMODA"
+      "value": "AUDI "
     },
     {
       "label": "Dịch vụ",
-      "value": "Dán Tem Xe "
+      "value": "DÁN PPF ĐỔI MÀU "
     },
     {
       "label": "Chất liệu",
-      "value": "DECAL IN 3 LỚP CAO CẤP "
+      "value": "PPF TPU CORLOR nhập khẩu chính hãng Singapore "
     },
     {
       "label": "Thời gian thi công",
-      "value": "1 ngày"
+      "value": "3 ngày"
     },
     {
       "label": "Báo giá",
@@ -36,12 +53,12 @@
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "12 THÁNG "
+      "value": "5 năm "
     }
   ],
-  "title": "OPMODA - Tăng tính thể thao cho xe với mẫu tem sườn SPORT",
+  "title": "AUDI A5 SPORTBACK - PPF TPU CORLOR Amethyst ",
   "content": "",
-  "tag": "Tem xe",
-  "id": 43,
-  "description": "OPMODA kết hợp tem sườn thể thao - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "tag": "PPF",
+  "id": 46,
+  "description": "AUDI A5 SPORTBACK khoác màu áo mới màu tím ánh hồng - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
