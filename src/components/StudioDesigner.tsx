@@ -65,8 +65,14 @@ export default function StudioDesigner() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image, styleId, customText }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Không tạo được ảnh.');
+      // The server may return a non-JSON error page (e.g. a serverless crash or
+      // timeout) — parse defensively so we surface a clear message.
+      const raw = await res.text();
+      let data: { image?: string; remaining?: number; error?: string } = {};
+      try { data = raw ? JSON.parse(raw) : {}; } catch { /* non-JSON body */ }
+      if (!res.ok || !data.image) {
+        throw new Error(data.error || `Máy chủ gặp lỗi (${res.status}). Vui lòng thử lại sau ít phút.`);
+      }
       setResult(data.image);
       if (typeof data.remaining === 'number') setRemaining(data.remaining);
     } catch (e) {

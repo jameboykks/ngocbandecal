@@ -3,7 +3,7 @@
 // Supports two swappable providers: OpenAI (gpt-image-1) and Google Gemini
 // (gemini-2.5-flash-image, aka "Nano Banana"). Pick via IMAGE_PROVIDER env.
 
-import { buildWrapPrompt } from '../../src/data/wrapStyles';
+import { buildWrapPrompt } from './prompt';
 
 type Provider = 'openai' | 'gemini' | 'fal';
 
