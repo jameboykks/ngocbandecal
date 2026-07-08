@@ -7,6 +7,7 @@ import BrandMarquee from '../components/BrandMarquee';
 import StudioProof from '../components/StudioProof';
 import Services from '../components/Services';
 import HorizontalShowcase from '../components/HorizontalShowcase';
+import StudioDesigner from '../components/StudioDesigner';
 import BeforeAfter from '../components/BeforeAfter';
 import Pricing from '../components/Pricing';
 import QuoteCalculator from '../components/QuoteCalculator';
@@ -38,6 +39,7 @@ export default function Home() {
       <StudioProof />
       <Services />
       <HorizontalShowcase />
+      <StudioDesigner />
       <LazyMount minHeight="900px" rootMargin="600px">
         <Suspense fallback={null}>
           <Configurator3D />
