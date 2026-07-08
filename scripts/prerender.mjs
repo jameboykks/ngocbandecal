@@ -137,83 +137,101 @@ const browser = await puppeteer.launch(
 let ok = 0;
 let fail = 0;
 
-try {
-  for (const url of urls) {
-    await log(`→ ${url}`);
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1366, height: 900 });
+// Render URLs concurrently with a small worker pool sharing one browser.
+// Prerender time scales with page count (portfolio/blog keep growing), so a
+// sequential crawl is the main build bottleneck — a pool of N cuts it ~Nx.
+// Tune with PRERENDER_CONCURRENCY; 4 is safe for Vercel build memory.
+const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY) || 4;
 
-    // Block analytics + heavy third-party so networkidle resolves predictably
-    await page.setRequestInterception(true);
-    page.on('request', req => {
-      const u = req.url();
-      if (
-        u.includes('googletagmanager.com') ||
-        u.includes('google-analytics.com') ||
-        u.includes('googleadservices.com') ||
-        u.includes('doubleclick.net')
-      ) {
-        return req.abort();
-      }
-      req.continue();
+async function renderPage(url) {
+  await log(`→ ${url}`);
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1366, height: 900 });
+
+  // Block analytics + heavy third-party so networkidle resolves predictably
+  await page.setRequestInterception(true);
+  page.on('request', req => {
+    const u = req.url();
+    if (
+      u.includes('googletagmanager.com') ||
+      u.includes('google-analytics.com') ||
+      u.includes('googleadservices.com') ||
+      u.includes('doubleclick.net')
+    ) {
+      return req.abort();
+    }
+    req.continue();
+  });
+
+  try {
+    // `networkidle*` can hang if a page keeps a connection open (gltf loaders,
+    // image lazy loading). domcontentloaded + a generous fixed delay is more
+    // reliable for a SPA whose initial render is synchronous after JS parse.
+    await page.goto(ORIGIN + url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+    // Wait for React + framer-motion + initial lazy content to render
+    await page.waitForFunction(
+      () => document.getElementById('root')?.children.length > 0,
+      { timeout: 10000 },
+    );
+    await new Promise(r => setTimeout(r, 1200));
+
+    // Dedupe head + mark root so client-side main.tsx uses hydrateRoot.
+    // React 19's head element hoisting persists tags after component unmount,
+    // so route changes during initial render (e.g. <Route path="*" element={<Home />} />
+    // briefly matching before the URL is parsed) leak stale title/meta into <head>.
+    // Strategy: <title> keep FIRST (React hoists titles at top of head; the page-
+    // specific one is rendered first), other meta/canonical keep LAST (React
+    // appends them after static index.html tags; the page-specific one ends up last).
+    await page.evaluate(() => {
+      const head = document.head;
+      const titles = [...head.querySelectorAll('title')];
+      titles.slice(1).forEach(el => el.remove());
+
+      const dedupeKeepLast = (selector, keyAttr) => {
+        const els = [...head.querySelectorAll(selector)];
+        const lastByKey = new Map();
+        els.forEach(el => lastByKey.set(el.getAttribute(keyAttr), el));
+        els.forEach(el => {
+          if (lastByKey.get(el.getAttribute(keyAttr)) !== el) el.remove();
+        });
+      };
+      dedupeKeepLast('meta[name]', 'name');
+      dedupeKeepLast('meta[property]', 'property');
+
+      const canonicals = [...head.querySelectorAll('link[rel="canonical"]')];
+      canonicals.slice(0, -1).forEach(el => el.remove());
+
+      const root = document.getElementById('root');
+      if (root) root.setAttribute('data-prerendered', 'true');
     });
 
-    try {
-      // `networkidle*` can hang if a page keeps a connection open (gltf loaders,
-      // image lazy loading). domcontentloaded + a generous fixed delay is more
-      // reliable for a SPA whose initial render is synchronous after JS parse.
-      await page.goto(ORIGIN + url, { waitUntil: 'domcontentloaded', timeout: 20000 });
-      // Wait for React + framer-motion + initial lazy content to render
-      await page.waitForFunction(
-        () => document.getElementById('root')?.children.length > 0,
-        { timeout: 10000 },
-      );
-      await new Promise(r => setTimeout(r, 1200));
-
-      // Dedupe head + mark root so client-side main.tsx uses hydrateRoot.
-      // React 19's head element hoisting persists tags after component unmount,
-      // so route changes during initial render (e.g. <Route path="*" element={<Home />} />
-      // briefly matching before the URL is parsed) leak stale title/meta into <head>.
-      // Strategy: <title> keep FIRST (React hoists titles at top of head; the page-
-      // specific one is rendered first), other meta/canonical keep LAST (React
-      // appends them after static index.html tags; the page-specific one ends up last).
-      await page.evaluate(() => {
-        const head = document.head;
-        const titles = [...head.querySelectorAll('title')];
-        titles.slice(1).forEach(el => el.remove());
-
-        const dedupeKeepLast = (selector, keyAttr) => {
-          const els = [...head.querySelectorAll(selector)];
-          const lastByKey = new Map();
-          els.forEach(el => lastByKey.set(el.getAttribute(keyAttr), el));
-          els.forEach(el => {
-            if (lastByKey.get(el.getAttribute(keyAttr)) !== el) el.remove();
-          });
-        };
-        dedupeKeepLast('meta[name]', 'name');
-        dedupeKeepLast('meta[property]', 'property');
-
-        const canonicals = [...head.querySelectorAll('link[rel="canonical"]')];
-        canonicals.slice(0, -1).forEach(el => el.remove());
-
-        const root = document.getElementById('root');
-        if (root) root.setAttribute('data-prerendered', 'true');
-      });
-
-      const html = await page.content();
-      const outPath =
-        url === '/' ? join(DIST, 'index.html') : join(DIST, url, 'index.html');
-      await mkdir(dirname(outPath), { recursive: true });
-      await writeFile(outPath, html, 'utf8');
-      await log(`✓ ${url}`);
-      ok++;
-    } catch (err) {
-      await log(`✗ ${url}: ${err.message}`);
-      fail++;
-    } finally {
-      await page.close();
-    }
+    const html = await page.content();
+    const outPath =
+      url === '/' ? join(DIST, 'index.html') : join(DIST, url, 'index.html');
+    await mkdir(dirname(outPath), { recursive: true });
+    await writeFile(outPath, html, 'utf8');
+    await log(`✓ ${url}`);
+    ok++;
+  } catch (err) {
+    await log(`✗ ${url}: ${err.message}`);
+    fail++;
+  } finally {
+    await page.close();
   }
+}
+
+try {
+  let cursor = 0;
+  const worker = async () => {
+    while (true) {
+      const i = cursor++;
+      if (i >= urls.length) break;
+      await renderPage(urls[i]);
+    }
+  };
+  await Promise.all(
+    Array.from({ length: Math.min(CONCURRENCY, urls.length) }, worker),
+  );
 } finally {
   await browser.close();
   server.kill();
