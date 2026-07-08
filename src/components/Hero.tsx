@@ -1,9 +1,13 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { SITE } from '../data/site';
 import Counter from './Counter';
 import Magnetic from './Magnetic';
+
+const Zalo = ({ size = 16 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
 
 const STATS_C = [
   { to: 5000, suffix: '+', label: 'Khách hàng' },
@@ -107,12 +111,14 @@ export default function Hero() {
           <motion.div custom={3} variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
             <Magnetic strength={0.3}>
               <a
-                href={`tel:${SITE.hotlineRaw}`}
+                href={SITE.zalo}
+                target="_blank"
+                rel="noopener"
                 data-cursor="link"
                 className="group inline-flex items-center gap-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-bg-primary transition-all duration-500 hover:shadow-[0_25px_60px_-15px_rgba(201,169,110,0.7)]"
               >
-                <Phone size={16} />
-                Gọi ngay {SITE.hotline}
+                <Zalo size={16} />
+                Nhận báo giá qua Zalo
                 <ArrowRight size={16} className="transition group-hover:translate-x-1" />
               </a>
             </Magnetic>

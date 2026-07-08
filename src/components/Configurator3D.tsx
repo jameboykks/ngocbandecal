@@ -1,7 +1,11 @@
 import { Component, Suspense, lazy, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { Phone, RotateCw, Maximize2, Minimize2, Car, Armchair, PanelRightClose, PanelRightOpen, Gauge } from 'lucide-react';
+import { RotateCw, Maximize2, Minimize2, Car, Armchair, PanelRightClose, PanelRightOpen, Gauge } from 'lucide-react';
 import { SITE } from '../data/site';
+
+const Zalo = ({ size = 14 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
 
 const Car3D = lazy(() => import('./Car3D'));
 
@@ -561,11 +565,13 @@ export default function Configurator3D() {
                       {controlsContent}
                     </div>
                     <a
-                      href={`tel:${SITE.hotlineRaw}`}
+                      href={`${SITE.zalo}?msg=${encodeURIComponent(`Xin báo giá: ${car.name} - ${color.name} - ${FINISH.find(f => f.id === finish)?.name ?? ''}`)}`}
+                      target="_blank"
+                      rel="noopener"
                       data-cursor="link"
                       className="mt-5 flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[11px] tracking-[0.22em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
                     >
-                      <Phone size={12} /> Báo Giá
+                      <Zalo size={12} /> Báo Giá
                     </a>
                   </div>
                 </>
@@ -573,11 +579,13 @@ export default function Configurator3D() {
             </div>
 
             <a
-              href={`tel:${SITE.hotlineRaw}`}
+              href={`${SITE.zalo}?msg=${encodeURIComponent(`Xin báo giá: ${car.name} - ${color.name} - ${FINISH.find(f => f.id === finish)?.name ?? ''}`)}`}
+              target="_blank"
+              rel="noopener"
               data-cursor="link"
               className="mt-4 flex items-center justify-center gap-3 w-full py-4 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
             >
-              <Phone size={14} /> Báo Giá · {car.name} · {color.name} · {FINISH.find(f => f.id === finish)?.name}
+              <Zalo size={14} /> Báo Giá · {car.name} · {color.name} · {FINISH.find(f => f.id === finish)?.name}
             </a>
           </div>
 

@@ -1,7 +1,11 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ArrowLeft, Check, Phone } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check } from 'lucide-react';
 import { SITE } from '../data/site';
+
+const Zalo = ({ size = 14 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
 
 const TYPES = [
   { id: 'sedan', name: 'Sedan / 4 chỗ', mult: 1 },
@@ -195,21 +199,14 @@ export default function QuoteCalculator() {
                     Cho {type.name} · {svc.name} · {mat.name}
                   </p>
 
-                  <div className="grid sm:grid-cols-2 gap-3 mb-6">
-                    <a
-                      href={`tel:${SITE.hotlineRaw}`}
-                      data-cursor="link"
-                      className="flex items-center justify-center gap-2 py-4 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-bold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
-                    >
-                      <Phone size={14} /> Gọi Báo Giá Chính Xác
-                    </a>
+                  <div className="mb-6">
                     <a
                       href={`${SITE.zalo}?msg=Xin%20báo%20giá:%20${encodeURIComponent(type.name)}%20-%20${encodeURIComponent(svc.name)}%20-%20${encodeURIComponent(mat.name)}`}
                       target="_blank" rel="noopener"
                       data-cursor="link"
-                      className="flex items-center justify-center gap-2 py-4 border border-border-gold text-text-primary text-[12px] tracking-[0.25em] uppercase hover:border-accent hover:text-accent transition"
+                      className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-bold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
                     >
-                      Chat Zalo Tư Vấn
+                      <Zalo size={14} /> Gọi Báo Giá Chính Xác
                     </a>
                   </div>
                   <button

@@ -54,7 +54,9 @@ export default function CTA() {
             <MessageCircle size={16} /> Messenger
           </a>
           <a
-            href="#footer-form"
+            href={SITE.zalo}
+            target="_blank"
+            rel="noopener"
             className="flex items-center justify-center gap-2 py-4 border border-border-gold text-text-primary text-[12px] tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition"
           >
             <Calendar size={16} /> Đặt Lịch

@@ -5,6 +5,10 @@ import { SITE } from '../data/site';
 import MegaMenu from './MegaMenu';
 import Magnetic from './Magnetic';
 
+const Zalo = ({ size = 16 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
+
 const LINKS = [
   { to: '/', label: 'Trang chủ' },
   { to: '/bang-gia', label: 'Bảng giá' },
@@ -85,11 +89,13 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Magnetic strength={0.25} className="hidden md:block">
               <a
-                href={`tel:${SITE.hotlineRaw}`}
+                href={SITE.zalo}
+                target="_blank"
+                rel="noopener"
                 data-cursor="link"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary font-semibold text-[12px] tracking-[0.2em] uppercase hover:shadow-[0_10px_30px_-10px_rgba(201,169,110,0.7)] transition"
               >
-                <Phone size={14} /> Đặt Lịch
+                <Zalo size={14} /> Đặt Lịch
               </a>
             </Magnetic>
             <button

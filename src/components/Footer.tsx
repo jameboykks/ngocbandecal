@@ -34,9 +34,9 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           {/* Brand + form */}
           <div className="lg:col-span-5">
-            <a href="#home" className="font-display text-4xl tracking-wider inline-block mb-4">
+            <Link to="/" className="font-display text-4xl tracking-wider inline-block mb-4">
               NGỌC <span className="text-gold-gradient">BÀN</span>
-            </a>
+            </Link>
             <p className="text-sm text-text-secondary leading-relaxed mb-6 max-w-md">
               Trung tâm wrap decal, dán PPF, film cách nhiệt và chăm sóc xe ô tô chuyên nghiệp số 1 Đà Nẵng.
               Hơn 5.000 khách hàng đã tin tưởng đồng hành.

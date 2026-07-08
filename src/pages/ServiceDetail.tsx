@@ -1,11 +1,15 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Check, Phone, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Check, ArrowRight, ArrowLeft } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
 import JsonLd from '../components/JsonLd';
 import { breadcrumbSchema, serviceSchema } from '../utils/schemas';
 import { SERVICES, PORTFOLIO, SITE } from '../data/site';
+
+const Zalo = ({ size = 14 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -104,18 +108,12 @@ export default function ServiceDetail() {
                 Giá thực tế tuỳ dòng xe và chất liệu lựa chọn. Liên hệ trực tiếp để nhận báo giá chính xác.
               </p>
               <a
-                href={`tel:${SITE.hotlineRaw}`}
-                className="flex items-center justify-center gap-2 w-full py-4 mb-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
-              >
-                <Phone size={14} /> Gọi Báo Giá
-              </a>
-              <a
-                href={SITE.zalo}
+                href={`${SITE.zalo}?msg=${encodeURIComponent(`Xin báo giá dịch vụ: ${s.title}`)}`}
                 target="_blank"
                 rel="noopener"
-                className="flex items-center justify-center gap-2 w-full py-4 border border-border-gold text-text-primary text-[12px] tracking-[0.25em] uppercase hover:border-accent hover:text-accent transition"
+                className="flex items-center justify-center gap-2 w-full py-4 mb-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
               >
-                Chat Zalo
+                <Zalo size={14} /> Báo Giá Qua Zalo
               </a>
 
               <div className="mt-8 pt-6 border-t border-border-gold space-y-3 text-sm text-text-secondary">

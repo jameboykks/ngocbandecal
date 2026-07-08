@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, MessageCircle, Calendar, Menu } from 'lucide-react';
 import { SITE } from '../data/site';
 
@@ -55,11 +56,11 @@ export default function FloatingContact() {
         ].join(' ')}
       >
         <div className="grid grid-cols-5 text-center text-text-secondary">
-          <a href="#services" className="flex flex-col items-center gap-1 py-3 hover:text-accent transition">
+          <Link to="/dich-vu" className="flex flex-col items-center gap-1 py-3 hover:text-accent transition">
             <Menu size={18} />
-            <span className="text-[10px] uppercase tracking-wider">Menu</span>
-          </a>
-          <a href="#footer-form" className="flex flex-col items-center gap-1 py-3 hover:text-accent transition">
+            <span className="text-[10px] uppercase tracking-wider">Dịch vụ</span>
+          </Link>
+          <a href={SITE.zalo} target="_blank" rel="noopener" className="flex flex-col items-center gap-1 py-3 hover:text-accent transition">
             <Calendar size={18} />
             <span className="text-[10px] uppercase tracking-wider">Đặt lịch</span>
           </a>

@@ -1,67 +1,88 @@
 {
   "items": [
     {
-      "name": "PORSCHE"
+      "name": "PORSCHE",
+      "logo": "/images/brands/porsche.webp"
     },
     {
-      "name": "MERCEDES"
+      "name": "MERCEDES",
+      "logo": "/images/brands/mercedes.webp"
     },
     {
-      "name": "BMW"
+      "name": "BMW",
+      "logo": "/images/brands/bmw.webp"
     },
     {
-      "name": "AUDI"
+      "name": "AUDI",
+      "logo": "/images/brands/audi.webp"
     },
     {
-      "name": "LAND ROVER"
+      "name": "LAND ROVER",
+      "logo": "/images/brands/land-rover.webp"
     },
     {
-      "name": "LEXUS"
+      "name": "LEXUS",
+      "logo": "/images/brands/lexus.webp"
     },
     {
-      "name": "VOLVO"
+      "name": "VOLVO",
+      "logo": "/images/brands/volvo.webp"
     },
     {
-      "name": "VINFAST"
+      "name": "VINFAST",
+      "logo": "/images/brands/vinfast.webp"
     },
     {
-      "name": "FORD"
+      "name": "FORD",
+      "logo": "/images/brands/ford.webp"
     },
     {
-      "name": "HONDA"
+      "name": "HONDA",
+      "logo": "/images/brands/honda.webp"
     },
     {
-      "name": "TOYOTA"
+      "name": "TOYOTA",
+      "logo": "/images/brands/toyota.webp"
     },
     {
-      "name": "KIA"
+      "name": "KIA",
+      "logo": "/images/brands/kia.webp"
     },
     {
-      "name": "HYUNDAI"
+      "name": "HYUNDAI",
+      "logo": "/images/brands/hyundai.webp"
     },
     {
-      "name": "MAZDA"
+      "name": "MAZDA",
+      "logo": "/images/brands/mazda.webp"
     },
     {
-      "name": "PEUGEOT"
+      "name": "PEUGEOT",
+      "logo": "/images/brands/peugeot.webp"
     },
     {
-      "name": "MITSUBISHI"
+      "name": "MITSUBISHI",
+      "logo": "/images/brands/mitsubishi.webp"
     },
     {
-      "name": "NISSAN"
+      "name": "NISSAN",
+      "logo": "/images/brands/nissan.webp"
     },
     {
-      "name": "CHEVROLET"
+      "name": "CHEVROLET",
+      "logo": "/images/brands/chevrolet.webp"
     },
     {
-      "name": "SUZUKI"
+      "name": "SUZUKI",
+      "logo": "/images/brands/suzuki.webp"
     },
     {
-      "name": "JEEP"
+      "name": "JEEP",
+      "logo": "/images/brands/jeep.webp"
     },
     {
-      "name": "VOLKSWAGEN "
+      "name": "VOLKSWAGEN",
+      "logo": "/images/brands/volkswagen.webp"
     }
   ]
 }

@@ -69,6 +69,8 @@ export const WHY_US = whyUsData.items.map((w, i) =>
   i === 0 ? { ...w, title: `${years}+ Năm Kinh Nghiệm` } : w,
 );
 
+export type Brand = { name: string; logo?: string };
+export const BRAND_ITEMS: Brand[] = brandsData.items;
 export const BRANDS = brandsData.items.map(b => b.name);
 export const SERVICES = servicesData.items;
 export const PORTFOLIO: PortfolioItem[] = Object.values(portfolioModules)

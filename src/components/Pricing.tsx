@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
-import { Check, Phone, Sparkles } from 'lucide-react';
+import { Check, Sparkles } from 'lucide-react';
 import { PRICING, SITE } from '../data/site';
+
+const Zalo = ({ size = 14 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
 
 export default function Pricing() {
   return (
@@ -61,7 +65,9 @@ export default function Pricing() {
               </ul>
 
               <a
-                href={`tel:${SITE.hotlineRaw}`}
+                href={`${SITE.zalo}?msg=${encodeURIComponent(`Xin báo giá gói: ${p.name}`)}`}
+                target="_blank"
+                rel="noopener"
                 className={[
                   'flex items-center justify-center gap-2 w-full py-4 text-[12px] tracking-[0.25em] uppercase font-semibold transition mt-auto',
                   p.featured
@@ -69,7 +75,7 @@ export default function Pricing() {
                     : 'border border-border-gold text-text-primary hover:border-accent hover:text-accent',
                 ].join(' ')}
               >
-                <Phone size={14} /> Liên Hệ Báo Giá
+                <Zalo size={14} /> Liên Hệ Báo Giá
               </a>
             </motion.div>
           ))}

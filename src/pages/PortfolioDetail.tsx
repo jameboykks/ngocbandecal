@@ -1,12 +1,16 @@
 import { useMemo, useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Phone, X, ZoomIn } from 'lucide-react';
+import { ArrowLeft, ArrowRight, X, ZoomIn } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
 import JsonLd from '../components/JsonLd';
 import { breadcrumbSchema, portfolioSchema } from '../utils/schemas';
 import { PORTFOLIO, SITE } from '../data/site';
+
+const Zalo = ({ size = 14 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.74 1.45 5.18 3.71 6.79L4.93 21l3.62-1.83c1.07.31 2.22.48 3.45.48 5.52 0 10-3.94 10-8.85S17.52 2 12 2Z"/></svg>
+);
 
 export default function PortfolioDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -131,20 +135,13 @@ export default function PortfolioDetail() {
               )}
 
               <a
-                href={`tel:${SITE.hotlineRaw}`}
-                data-cursor="link"
-                className="flex items-center justify-center gap-2 w-full py-4 mb-3 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
-              >
-                <Phone size={14} /> Báo Giá Cho Xe Của Bạn
-              </a>
-              <a
-                href={SITE.zalo}
+                href={`${SITE.zalo}?msg=${encodeURIComponent(`Xin báo giá cho xe tương tự: ${item.title}`)}`}
                 target="_blank"
                 rel="noopener"
                 data-cursor="link"
-                className="flex items-center justify-center gap-2 w-full py-4 border border-border-gold text-text-primary text-[12px] tracking-[0.25em] uppercase hover:border-accent hover:text-accent transition"
+                className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-br from-accent-light via-accent to-accent-dark text-bg-primary text-[12px] tracking-[0.25em] uppercase font-semibold hover:shadow-[0_15px_40px_-15px_rgba(201,169,110,0.7)] transition"
               >
-                Chat Zalo Tư Vấn
+                <Zalo size={14} /> Báo Giá Cho Xe Của Bạn
               </a>
             </div>
           </aside>
