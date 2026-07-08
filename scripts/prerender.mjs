@@ -135,15 +135,16 @@ const browser = await puppeteer.launch(
 );
 
 let ok = 0;
-let fail = 0;
+const failed = [];
 
 // Render URLs concurrently with a small worker pool sharing one browser.
 // Prerender time scales with page count (portfolio/blog keep growing), so a
 // sequential crawl is the main build bottleneck — a pool of N cuts it ~Nx.
-// Tune with PRERENDER_CONCURRENCY; 4 is safe for Vercel build memory.
-const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY) || 4;
+// Keep concurrency modest: too many parallel pages starve each other on a
+// constrained build CPU and trip the render timeout. Tune via PRERENDER_CONCURRENCY.
+const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY) || 3;
 
-async function renderPage(url) {
+async function renderPage(url, { gotoTimeout = 30000, waitTimeout = 25000, settle = 1200 } = {}) {
   await log(`→ ${url}`);
   const page = await browser.newPage();
   await page.setViewport({ width: 1366, height: 900 });
@@ -167,13 +168,13 @@ async function renderPage(url) {
     // `networkidle*` can hang if a page keeps a connection open (gltf loaders,
     // image lazy loading). domcontentloaded + a generous fixed delay is more
     // reliable for a SPA whose initial render is synchronous after JS parse.
-    await page.goto(ORIGIN + url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+    await page.goto(ORIGIN + url, { waitUntil: 'domcontentloaded', timeout: gotoTimeout });
     // Wait for React + framer-motion + initial lazy content to render
     await page.waitForFunction(
       () => document.getElementById('root')?.children.length > 0,
-      { timeout: 10000 },
+      { timeout: waitTimeout },
     );
-    await new Promise(r => setTimeout(r, 1200));
+    await new Promise(r => setTimeout(r, settle));
 
     // Dedupe head + mark root so client-side main.tsx uses hydrateRoot.
     // React 19's head element hoisting persists tags after component unmount,
@@ -212,9 +213,10 @@ async function renderPage(url) {
     await writeFile(outPath, html, 'utf8');
     await log(`✓ ${url}`);
     ok++;
+    return true;
   } catch (err) {
     await log(`✗ ${url}: ${err.message}`);
-    fail++;
+    return false;
   } finally {
     await page.close();
   }
@@ -226,16 +228,37 @@ try {
     while (true) {
       const i = cursor++;
       if (i >= urls.length) break;
-      await renderPage(urls[i]);
+      if (!(await renderPage(urls[i]))) failed.push(urls[i]);
     }
   };
   await Promise.all(
     Array.from({ length: Math.min(CONCURRENCY, urls.length) }, worker),
   );
+
+  // Retry stragglers one-at-a-time with the full CPU and generous timeouts.
+  // Contention during the parallel pass (constrained build machines) is the
+  // usual cause of a timeout, and a sequential retry reliably recovers them.
+  if (failed.length) {
+    const retry = failed.splice(0);
+    await log(`[prerender] retrying ${retry.length} page(s) sequentially...`);
+    for (const url of retry) {
+      if (!(await renderPage(url, { gotoTimeout: 45000, waitTimeout: 40000, settle: 1500 }))) {
+        failed.push(url);
+      }
+    }
+  }
 } finally {
   await browser.close();
   server.kill();
 }
 
-console.log(`\n[prerender] done — ${ok} ok, ${fail} failed`);
-if (fail > 0) process.exitCode = 1;
+await log(`\n[prerender] done — ${ok} ok, ${failed.length} failed`);
+// A few un-prerendered routes must NOT fail the whole deploy — the SPA still
+// serves them client-side (React renders in the browser). Only hard-fail when
+// nothing rendered at all, which signals a systemic problem (e.g. preview down).
+if (ok === 0) {
+  console.error('[prerender] no pages rendered — failing build.');
+  process.exitCode = 1;
+} else if (failed.length) {
+  await log(`[prerender] WARNING: ${failed.length} route(s) served client-side only: ${failed.join(', ')}`);
+}
