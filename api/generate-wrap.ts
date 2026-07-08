@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { generateWrapSheet } from './_lib/generate';
-import { checkRateLimit, getClientIp } from './_lib/rateLimit';
+import { generateWrapSheet } from './_lib/generate.js';
+import { checkRateLimit, getClientIp } from './_lib/rateLimit.js';
 
 // gpt-image-1 (high quality) can take ~30-60s — allow the function room to run.
 export const config = { maxDuration: 60 };
