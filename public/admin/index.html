@@ -6,6 +6,10 @@
     <meta name="robots" content="noindex" />
     <title>Quản lý nội dung — Ngọc Bàn Decal</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Absolute config path so Decap loads /admin/config.yml regardless of
+         www / apex domain or a missing trailing slash (otherwise a relative
+         fetch resolves to /config.yml and returns the SPA index.html). -->
+    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
     <style>
       :root { color-scheme: light; }
       body { margin: 0; font-family: system-ui, sans-serif; }
