@@ -1,22 +1,20 @@
 {
   "size": "normal",
-  "slug": "vf3",
+  "slug": "gac-gs3",
   "featured": true,
   "date": "",
   "gallery": [
-    "/images/ngoc-ban/uploads/1784815627581_2199586397526060729_3457406148187071172_875902c83c7ea080c8efe7674a453463.jpg",
-    "/images/ngoc-ban/uploads/1784815627604_2199586397526060729_3457406148187071172_88cf5588e706b55f908149a487031450.jpg",
-    "/images/ngoc-ban/uploads/1784815627620_2199586397526060729_3457406148187071172_058b163a1bb37652f3d6e272bd2cfac7.jpg",
-    "/images/ngoc-ban/uploads/1784815627633_2199586397526060729_3457406148187071172_3774bdb670e31a8c788180b4e6b03105.jpg",
-    "/images/ngoc-ban/uploads/1784815627643_2199586397526060729_3457406148187071172_343369006bee5510d125958bafe44045.jpg",
-    "/images/ngoc-ban/uploads/1784815627653_2199586397526060729_3457406148187071172_865a3ff0c835aa55436013b94a766571.jpg",
-    "/images/ngoc-ban/uploads/1784815627663_2199586397526060729_3457406148187071172_828c3959036c742da7c7d4f56faf03e9.jpg"
+    "/images/ngoc-ban/uploads/1786282191191_2199586397526060729_3457406148187071172_5ac0eae6911757a93f4905c2f52bbbe8.jpg",
+    "/images/ngoc-ban/uploads/1786282191165_2199586397526060729_3457406148187071172_b9f8f2c4e4dc9736d209468b08eb04be.jpg",
+    "/images/ngoc-ban/uploads/1786282191238_2199586397526060729_3457406148187071172_1613d4b1674249cef2c468574ac1f2fd.jpg",
+    "/images/ngoc-ban/uploads/1786282191225_2199586397526060729_3457406148187071172_f28d63dc9a28b2bb450a57bd08cfca7f.jpg",
+    "/images/ngoc-ban/uploads/1786282191210_2199586397526060729_3457406148187071172_65ac2790a5e6d1197e40b161c1638015.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/1784815627581_2199586397526060729_3457406148187071172_875902c83c7ea080c8efe7674a453463.jpg",
+  "cover": "/images/ngoc-ban/uploads/1786282191191_2199586397526060729_3457406148187071172_5ac0eae6911757a93f4905c2f52bbbe8.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "vinfast"
+      "value": "GAC"
     },
     {
       "label": "Dịch vụ",
@@ -24,11 +22,11 @@
     },
     {
       "label": "Chất liệu",
-      "value": "DECAL IN 3 LỚP CAO CẤP "
+      "value": "DECAL IN UV 3 LỚP CAO CẤP "
     },
     {
       "label": "Thời gian thi công",
-      "value": "3H"
+      "value": "5H"
     },
     {
       "label": "Báo giá",
@@ -36,12 +34,12 @@
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "5 năm "
+      "value": "18 THÁNG "
     }
   ],
-  "title": "Vinfast VF3 - Tem sườn thiết kế theo sở thích cá nhân ",
+  "title": "GAC S3-  TEM SƯỜN THỂ THAO ",
   "content": "",
   "tag": "Tem xe",
-  "id": 47,
-  "description": "VINFAST VF3 cá nhân hóa theo sở thích cá nhân  - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "id": 48,
+  "description": "GAC GS3 thể hiện bản lĩnh, cá nhân hóa với mẫu tem sườn thể thao, in chất liệu UV cao cấp , chống phai màu theo thời gian - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
