@@ -1,33 +1,39 @@
 {
   "size": "normal",
-  "slug": "vinfast-vf6",
+  "slug": "porsche-macan",
   "featured": true,
   "date": "",
   "gallery": [
-    "/images/ngoc-ban/uploads/1786282207572_2199586397526060729_3457406148187071172_9fa69d64740a5ff8d45d98b62ba7fc44.jpg",
-    "/images/ngoc-ban/uploads/1786282207561_2199586397526060729_3457406148187071172_bcfe26c40320c4f4c749d585dd43f6e3.jpg",
-    "/images/ngoc-ban/uploads/1786282207516_2199586397526060729_3457406148187071172_098581a2aa4d6196fa1b798f8f1173db.jpg",
-    "/images/ngoc-ban/uploads/1786282207488_2199586397526060729_3457406148187071172_429ee8cbaced47ab46b4f8ac348d1582.jpg",
-    "/images/ngoc-ban/uploads/1786282207583_2199586397526060729_3457406148187071172_9c853e6e0725568719565d7caf029a7d.jpg",
-    "/images/ngoc-ban/uploads/1786282207549_2199586397526060729_3457406148187071172_4bd39a6ca1f19f185ac8e9af00ef4600.jpg"
+    "/images/ngoc-ban/uploads/1786283859076_2199586397526060729_3457406148187071172_0a9e917306dec873f329784cfc1fac96.jpg",
+    "/images/ngoc-ban/uploads/1786283859144_2199586397526060729_3457406148187071172_a6934598c0ed7ae3d35d436e3346bbdd.jpg",
+    "/images/ngoc-ban/uploads/1786283859102_2199586397526060729_3457406148187071172_7b27d2b2a9f60a7152494a510dc70594.jpg",
+    "/images/ngoc-ban/uploads/1786283859119_2199586397526060729_3457406148187071172_e7a26a4768cb77d4dda866ed28412f51.jpg",
+    "/images/ngoc-ban/uploads/1786283859132_2199586397526060729_3457406148187071172_3413911c64542f8e1bda8ecdeb2fc605.jpg",
+    "/images/ngoc-ban/uploads/1786283859155_2199586397526060729_3457406148187071172_45918401eca8d05017c2f84031da5d32.jpg",
+    "/images/ngoc-ban/uploads/1786283859180_2199586397526060729_3457406148187071172_3a29b9c9690e9ff1fc48ad01401a745d.jpg",
+    "/images/ngoc-ban/uploads/1786283859186_2199586397526060729_3457406148187071172_b877fd635f8594d41461cde24048a0a8.jpg",
+    "/images/ngoc-ban/uploads/1786283859172_2199586397526060729_3457406148187071172_05a470e4b8e41609012f7e698a51bd12.jpg",
+    "/images/ngoc-ban/uploads/1786283859230_2199586397526060729_3457406148187071172_437acbbc18e3946ecff67d9e53f5e1d4.jpg",
+    "/images/ngoc-ban/uploads/1786283859212_2199586397526060729_3457406148187071172_b455b815d3cd626bf9ba4437d5753123.jpg",
+    "/images/ngoc-ban/uploads/1786283859218_2199586397526060729_3457406148187071172_3f0a71b299ce758c79a9ab7700f50e5d.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/1786282207572_2199586397526060729_3457406148187071172_9fa69d64740a5ff8d45d98b62ba7fc44.jpg",
+  "cover": "/images/ngoc-ban/uploads/1786283859076_2199586397526060729_3457406148187071172_0a9e917306dec873f329784cfc1fac96.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "Vinfast VF6 "
+      "value": "PORSCHE MACAN"
     },
     {
       "label": "Dịch vụ",
-      "value": "DÁN TEM XE - DECAL NÓC ĐEN "
+      "value": "DÁN PPF bảo vệ sơn "
     },
     {
       "label": "Chất liệu",
-      "value": "DECAL IN 3 LỚP CAO CẤP "
+      "value": "PPF 3M 200 USA nhập khẩu chính hãng "
     },
     {
       "label": "Thời gian thi công",
-      "value": "1 ngày "
+      "value": "2-3 ngày "
     },
     {
       "label": "Báo giá",
@@ -35,12 +41,12 @@
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "12 THÁNG "
+      "value": "10 năm"
     }
   ],
-  "title": "VINFAST VF6 - DÁN DECAL NÓC ĐEN and TEM XE ",
+  "title": "PORSCHE MACCAN - PPF 3M 200 GLOSS USA ",
   "content": "",
-  "tag": "Tem xe",
-  "id": 50,
-  "description": "VINFAST VF6- một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "tag": "PPF",
+  "id": 51,
+  "description": "Porsche Macan - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
