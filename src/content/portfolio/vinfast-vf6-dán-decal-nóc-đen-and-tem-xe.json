@@ -1,18 +1,35 @@
 {
   "size": "normal",
-  "slug": "ford-everest",
+  "slug": "porsche-718",
   "featured": true,
-  "date": "",
+  "date": "24/9/2026",
   "gallery": [
-    "/images/ngoc-ban/uploads/1786284273172_2199586397526060729_3457406148187071172_aec6625dc3ccb224d7455df9d3d063a9.jpg",
-    "/images/ngoc-ban/uploads/1786284273189_2199586397526060729_3457406148187071172_b1c4f7fe8c492783d20976a0d5f377c4.jpg",
-    "/images/ngoc-ban/uploads/1786284273144_2199586397526060729_3457406148187071172_74a5f3cde98946864a32f47f82ff04f0.jpg"
+    "/images/ngoc-ban/uploads/1790604753276_2199586397526060729_3457406148187071172_9d376759f052dabd7d477c60db841fc9.jpg",
+    "/images/ngoc-ban/uploads/1790604753285_2199586397526060729_3457406148187071172_dbd2956b6dd91df2ccb780fe36967a62.jpg",
+    "/images/ngoc-ban/uploads/1790604753150_2199586397526060729_3457406148187071172_c6e3bb53c74e93b80740da5e5936335f.jpg",
+    "/images/ngoc-ban/uploads/1790604753197_2199586397526060729_3457406148187071172_fb315c440e77398f9d930e24a6b2d587.jpg",
+    "/images/ngoc-ban/uploads/1790604753227_2199586397526060729_3457406148187071172_bea042d50fd92d13f2a9123b2b71f644.jpg",
+    "/images/ngoc-ban/uploads/1790604753281_2199586397526060729_3457406148187071172_c7f5f31886f3d7ab29e73f2c874898c5.jpg",
+    "/images/ngoc-ban/uploads/1790604753265_2199586397526060729_3457406148187071172_da7263b39ae17fb7bfb02ee6e1fe612b.jpg",
+    "/images/ngoc-ban/uploads/1790604753290_2199586397526060729_3457406148187071172_bd1a8ca6a3573237a848c515437b4fb8.jpg",
+    "/images/ngoc-ban/uploads/1790604753299_2199586397526060729_3457406148187071172_b7e8b2e1b1584da9b2075791b6c72a68.jpg",
+    "/images/ngoc-ban/uploads/1790604753295_2199586397526060729_3457406148187071172_0ff9309db9e209b4cba06e56555aae2c.jpg",
+    "/images/ngoc-ban/uploads/1790604753208_2199586397526060729_3457406148187071172_90515edf020f89ab57dafa01031e33fe.jpg",
+    "/images/ngoc-ban/uploads/1790604753218_2199586397526060729_3457406148187071172_cada2abf27689f804a82b0d76023831b.jpg",
+    "/images/ngoc-ban/uploads/1790604753241_2199586397526060729_3457406148187071172_7a8480a52a2d7a8c9e7e0a3fe66c10e4.jpg",
+    "/images/ngoc-ban/uploads/1790604753248_2199586397526060729_3457406148187071172_a00f4c912f778724724b846dcc0e716b.jpg",
+    "/images/ngoc-ban/uploads/1790604753318_2199586397526060729_3457406148187071172_b2cc4734fb678cf3cc404eff304ba6f3.jpg",
+    "/images/ngoc-ban/uploads/1790604753185_2199586397526060729_3457406148187071172_0fd2fe0b6de1d5a367c7cfb2e4799d1b.jpg",
+    "/images/ngoc-ban/uploads/1790604753313_2199586397526060729_3457406148187071172_3bf333f3d9536950de45a21094e05315.jpg",
+    "/images/ngoc-ban/uploads/1790604753270_2199586397526060729_3457406148187071172_e96fa8890105319098ac6611abcd8557.jpg",
+    "/images/ngoc-ban/uploads/1790604753235_2199586397526060729_3457406148187071172_3633ba32191891e1546e29104fd36f3d.jpg",
+    "/images/ngoc-ban/uploads/1790604753323_2199586397526060729_3457406148187071172_009e6418da04ee4ee7d634c524d93227.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/1786284273172_2199586397526060729_3457406148187071172_aec6625dc3ccb224d7455df9d3d063a9.jpg",
+  "cover": "/images/ngoc-ban/uploads/1790604753276_2199586397526060729_3457406148187071172_9d376759f052dabd7d477c60db841fc9.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "FORD EVEREST "
+      "value": "PORSCHE 718 BOXSTER"
     },
     {
       "label": "Dịch vụ",
@@ -20,7 +37,7 @@
     },
     {
       "label": "Chất liệu",
-      "value": "PPF TECKWRAP USA nhập khẩu chính hãng "
+      "value": "PPF 3M USA 150 nhập khẩu chính hãng "
     },
     {
       "label": "Thời gian thi công",
@@ -28,16 +45,16 @@
     },
     {
       "label": "Báo giá",
-      "value": "Liên hệ để nhận báo giá "
+      "value": "85.000.000"
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "5 năm"
+      "value": "10 năm"
     }
   ],
-  "title": "FORD EVEREST - PPF TECKWRAP USA ",
+  "title": "PORSCHE 718 BOXSTER - PPF 3M USA 150 GLOSS",
   "content": "",
   "tag": "PPF",
-  "id": 50,
-  "description": "FORD EVEREST- một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "id": 51,
+  "description": "PORSCHE 718 BOXSTER- một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
