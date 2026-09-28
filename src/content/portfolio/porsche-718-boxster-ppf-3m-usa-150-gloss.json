@@ -1,35 +1,22 @@
 {
   "size": "normal",
-  "slug": "bmw735i",
+  "slug": "vf8",
   "featured": true,
-  "date": "23/9/2026",
+  "date": "20/9/2026",
   "gallery": [
-    "/images/ngoc-ban/uploads/1790604844582_2199586397526060729_3457406148187071172_41d513de84646dd4e3da959fe55cf940.jpg",
-    "/images/ngoc-ban/uploads/1790604844538_2199586397526060729_3457406148187071172_4aa52bae099457c39c07aaa518cbd546.jpg",
-    "/images/ngoc-ban/uploads/1790604844491_2199586397526060729_3457406148187071172_5264536c1cf762eae2740d64439fee25.jpg",
-    "/images/ngoc-ban/uploads/1790604844533_2199586397526060729_3457406148187071172_227bb11f740374bda2af1cb7aac43905.jpg",
-    "/images/ngoc-ban/uploads/1790604844543_2199586397526060729_3457406148187071172_3fe4bb322d9d88fc03b45318cf892168.jpg",
-    "/images/ngoc-ban/uploads/1790604844556_2199586397526060729_3457406148187071172_a8800dbf17ed0dba56f7b51981d8bddf.jpg",
-    "/images/ngoc-ban/uploads/1790604844497_2199586397526060729_3457406148187071172_b593b0327f0cd1b53d09852af4bf9f6f.jpg",
-    "/images/ngoc-ban/uploads/1790604844524_2199586397526060729_3457406148187071172_78f6c6d12d4d139361ec456a6a67ae38.jpg",
-    "/images/ngoc-ban/uploads/1790604844528_2199586397526060729_3457406148187071172_e95e090836668430eb5cc93779b8e99a.jpg",
-    "/images/ngoc-ban/uploads/1790604844576_2199586397526060729_3457406148187071172_d064978c04e3f7b7c8a1904966ba7a2b.jpg",
-    "/images/ngoc-ban/uploads/1790604844377_2199586397526060729_3457406148187071172_bab8c81f6df67d21ff6bbad03a77df5b.jpg",
-    "/images/ngoc-ban/uploads/1790604844398_2199586397526060729_3457406148187071172_5dc82e17f928b0a01aed8a56b76a2b28.jpg",
-    "/images/ngoc-ban/uploads/1790604844412_2199586397526060729_3457406148187071172_00149cf88c17f49dd090379822e07319.jpg",
-    "/images/ngoc-ban/uploads/1790604844424_2199586397526060729_3457406148187071172_230fba3fdec43226177be6236bc1ff68.jpg",
-    "/images/ngoc-ban/uploads/1790604844455_2199586397526060729_3457406148187071172_6bd19ec060fc7d9af2f1ba17ff665bdc.jpg",
-    "/images/ngoc-ban/uploads/1790604844464_2199586397526060729_3457406148187071172_6c1cc27f9f9bc64e839c6af14654f229.jpg",
-    "/images/ngoc-ban/uploads/1790604844472_2199586397526060729_3457406148187071172_fab81492a36620518aca91034a4d6170.jpg",
-    "/images/ngoc-ban/uploads/1790604844479_2199586397526060729_3457406148187071172_028c48a7f1ce8c4d994fe61a9841b4af.jpg",
-    "/images/ngoc-ban/uploads/1790604844485_2199586397526060729_3457406148187071172_ffdb6c622ca413bc3acbdf41fd993e52.jpg",
-    "/images/ngoc-ban/uploads/1790604844519_2199586397526060729_3457406148187071172_8629b7edd449241649ea82c9bd343358.jpg"
+    "/images/ngoc-ban/uploads/1790604984584_2199586397526060729_3457406148187071172_0c47265d5f6eff4750fbc856f64bc728.jpg",
+    "/images/ngoc-ban/uploads/1790604984571_2199586397526060729_3457406148187071172_35b76f0771a1e013f76e0871022899cd.jpg",
+    "/images/ngoc-ban/uploads/1790604984560_2199586397526060729_3457406148187071172_75b508ce3a180d28744297aba8d407fc.jpg",
+    "/images/ngoc-ban/uploads/1790604984546_2199586397526060729_3457406148187071172_a10a3065d385f0a1cfc3f6521983da47.jpg",
+    "/images/ngoc-ban/uploads/1790604984504_2199586397526060729_3457406148187071172_5447dd4ffc79231d73eb4872ae684db9.jpg",
+    "/images/ngoc-ban/uploads/1790604984595_2199586397526060729_3457406148187071172_120c23a1e69fe39ed7cef5fa7d945315.jpg",
+    "/images/ngoc-ban/uploads/1790604984530_2199586397526060729_3457406148187071172_c8eabbdc22b2ad23132565edd729550b.jpg"
   ],
-  "cover": "/images/ngoc-ban/uploads/1790604844508_2199586397526060729_3457406148187071172_50d6633dfd189fb67e4abce85952b5b9.jpg",
+  "cover": "/images/ngoc-ban/uploads/1790604984584_2199586397526060729_3457406148187071172_0c47265d5f6eff4750fbc856f64bc728.jpg",
   "specs": [
     {
       "label": "Dòng xe",
-      "value": "BMW 735I "
+      "value": "VINFAST VF8"
     },
     {
       "label": "Dịch vụ",
@@ -37,7 +24,7 @@
     },
     {
       "label": "Chất liệu",
-      "value": "PPF 3M USA 100 GLOSS nhập khẩu chính hãng "
+      "value": "PPF NAR CHINA"
     },
     {
       "label": "Thời gian thi công",
@@ -45,16 +32,16 @@
     },
     {
       "label": "Báo giá",
-      "value": "75.000.000"
+      "value": "30.000.000"
     },
     {
       "label": "Thời gian bảo hành ",
-      "value": "7 năm"
+      "value": "4 năm"
     }
   ],
-  "title": "BMW 735i - Loại Bỏ PPF Cũ Sau Nhiều Năm Sử Dụng, Thay Thế Sản Phẩm Mới với PPF 3M USA 100 GLOSS",
+  "title": "VINFAST VF8 ALL NEW - Bảo Vệ Sơn Zin Ngay Từ Lúc Mới Mua với Gói PPF NAR ",
   "content": "",
   "tag": "PPF",
-  "id": 52,
-  "description": "BMW 735i - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
+  "id": 53,
+  "description": "VINFAST VF8 - một tác phẩm xuất sắc của Ngọc Bàn Decal. Quá trình thi công được thực hiện tỉ mỉ bởi đội ngũ kỹ thuật giàu kinh nghiệm. Am hiểu và thi công rất nhiều dòng xe sang , xe có giá trị cao !"
 }
